@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      container: {
+        padding: '15px',
+        center: true,
+      },
+
+      extend: {
+        colors: {
+          white: '#fff',
+          black: '#000',
+          gray: '#707070',
+          blue: '#0A84FE',
+          red: '#ff0a0a',
+          green: '#39ca1c',
+          'green-light': '#C3EFBC',
+          yellow: '#FED42D',
+          'blue-light': '#e8f2ff',
+          'gray-light': '#DADADA',
+          'dark-03': 'rgba(0, 0, 0, 0.3)',
+          'dark-05': 'rgba(0, 0, 0, 0.5)',
+        },
+      },
+    },
+  };
+</script>
+
+<title>Эмэйз</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--online-booking">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Онлайн запись</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-name">Имя</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="online-name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-tel">
+            Контактный телефон
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="online-tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <!--* Scroll Top Button -->
+    <button class="scroll-top-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="21"
+        viewBox="0 0 14 21"
+      >
+        <g transform="translate(-85.333 21) rotate(-90)">
+          <g transform="translate(0 85.333)">
+            <path
+              d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+              transform="translate(0 -85.333)"
+              fill="currentColor"
+            />
+          </g>
+        </g>
+      </svg>
+    </button>
+
+    <div class="site-wrapper">
+      <div id="warning">Переверни смартфон!</div>
+
+      <section class="banner-2 py-[10px] bg-blue-light">
+  <div class="container">
+    <img
+      class="w-full h-[65px] object-cover"
+      src="img/banner-2.jpg"
+      alt="img"
+    />
+  </div>
+</section>
+
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <a class="mobile-menu__phone" href="tel:+74994990917">
+        +7 (499) 499 09 17
+      </a>
+      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <div class="header__wrapper"></div>
+  </div>
+</header>
+
+
+      <main class="main">
+        <section class="">
+  <h1 class="text-xl font-light text-center py-[10px]">Предложения</h1>
+
+  <div
+    class="h-[420px] w-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start pt-[20px]"
+    style="background-image: url('img/offer-menu/offer-menu-bg.jpg')"
+  >
+    <div class="container">
+      <div class="w-[30px] h-[30px] mx-auto mb-[35px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26.596"
+          height="29.892"
+          viewBox="0 0 26.596 29.892"
+        >
+          <g transform="translate(-131.335 -250.931)">
+            <path
+              d="M-2701.044-291.221h-15.962a2.534,2.534,0,0,1-.748.112,2.533,2.533,0,0,1-1.005-.207,2.54,2.54,0,0,1-1.534-2.333,2.541,2.541,0,0,1,1.417-2.279,2.539,2.539,0,0,1-1.417-2.278,2.538,2.538,0,0,1,1.308-2.222,2.539,2.539,0,0,1-1.308-2.221,2.537,2.537,0,0,1,1.2-2.156l-2.9-2.905,13.29-13.29.008.01.009-.01,13.289,13.29-3.182,3.184a2.534,2.534,0,0,1,.829,1.878,2.537,2.537,0,0,1-1.308,2.221,2.54,2.54,0,0,1,1.308,2.222,2.538,2.538,0,0,1-1.416,2.278,2.54,2.54,0,0,1,1.416,2.279,2.539,2.539,0,0,1-1.534,2.333,2.528,2.528,0,0,1-1,.207A2.536,2.536,0,0,1-2701.044-291.221Zm-14.172-6.984a2.539,2.539,0,0,1-1.416,2.278,2.54,2.54,0,0,1,1.416,2.279,2.53,2.53,0,0,1-.471,1.475h13.323a2.529,2.529,0,0,1-.472-1.475,2.541,2.541,0,0,1,1.417-2.279,2.537,2.537,0,0,1-1.417-2.278,2.54,2.54,0,0,1,1.309-2.222,2.539,2.539,0,0,1-1.309-2.221,2.539,2.539,0,0,1,2.54-2.54c.046,0,.091,0,.137,0l-8.543-8.541-8.582,8.582a2.539,2.539,0,0,1,2.068,2.5,2.537,2.537,0,0,1-1.308,2.221A2.539,2.539,0,0,1-2715.216-298.205Zm14.919,5.827a1.271,1.271,0,0,0,1.27-1.27,1.271,1.271,0,0,0-1.27-1.271,1.262,1.262,0,0,0-.771.262,1.261,1.261,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2700.3-292.379Zm-17.458,0a1.271,1.271,0,0,0,1.27-1.27,1.272,1.272,0,0,0-1.27-1.271,1.266,1.266,0,0,0-.771.262,1.265,1.265,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.263,1.263,0,0,1-.77-.259A1.263,1.263,0,0,0-2717.754-292.379Zm16.506-1.27a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2701.248-293.648Zm-17.458,0a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2718.707-293.648Zm18.41-3.287a1.271,1.271,0,0,0,1.27-1.27,1.271,1.271,0,0,0-1.27-1.271,1.262,1.262,0,0,0-.771.262,1.261,1.261,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2700.3-296.935Zm-17.458,0a1.271,1.271,0,0,0,1.27-1.27,1.272,1.272,0,0,0-1.27-1.271,1.266,1.266,0,0,0-.771.262,1.265,1.265,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.263,1.263,0,0,1-.77-.259A1.263,1.263,0,0,0-2717.754-296.935Zm16.506-1.27a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2701.248-298.205Zm-17.458,0a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2718.707-298.205Zm18.41-3.173a1.271,1.271,0,0,0,1.27-1.27,1.271,1.271,0,0,0-1.27-1.271,1.262,1.262,0,0,0-.771.262,1.261,1.261,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2700.3-301.379Zm-17.458,0a1.271,1.271,0,0,0,1.27-1.27,1.272,1.272,0,0,0-1.27-1.271,1.266,1.266,0,0,0-.771.262,1.265,1.265,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2717.754-301.379Zm16.506-1.27a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2701.248-302.648Zm-17.458,0a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2718.707-302.648Zm10.005-12.9,9.747,9.747,1.821-1.82L-2708.7-319.18l0,0-.008-.007-11.564,11.565,1.82,1.82,9.748-9.747h0Z"
+              transform="translate(2853.335 571.931)"
+              fill="#0a84fe"
+            />
+            <path
+              d="M.317.317V.635H17.141V.317H.317M0,0H17.458V.952H0Z"
+              transform="translate(135.581 279.758)"
+              fill="none"
+              opacity="0.5"
+            />
+            <path
+              d="M-2714.7-312.112h-5.714A1.589,1.589,0,0,1-2722-313.7v-5.713a1.589,1.589,0,0,1,1.587-1.588h5.714a1.589,1.589,0,0,1,1.587,1.588v5.713A1.589,1.589,0,0,1-2714.7-312.112Zm-6.032-7.618v6.349h6.349v-6.349Z"
+              transform="translate(2861.8 585.522)"
+              fill="#0a84fe"
+            />
+            <path
+              d="M1.587.317a1.271,1.271,0,0,0-1.27,1.27V7.3a1.271,1.271,0,0,0,1.27,1.27H7.3A1.271,1.271,0,0,0,8.57,7.3V1.587A1.271,1.271,0,0,0,7.3.317H1.587m0-.317H7.3A1.587,1.587,0,0,1,8.888,1.587V7.3A1.587,1.587,0,0,1,7.3,8.888H1.587A1.587,1.587,0,0,1,0,7.3V1.587A1.587,1.587,0,0,1,1.587,0Z"
+              transform="translate(140.024 264.522)"
+              fill="none"
+            />
+            <path
+              d="M.317.317V6.031H6.031V.317H.317M0,0H6.348V6.348H0Z"
+              transform="translate(141.294 265.791)"
+              fill="none"
+            />
+            <path
+              d="M1.587.317a1.271,1.271,0,0,0-1.27,1.27V3.562a1.271,1.271,0,0,0,1.27,1.27H7.1a1.271,1.271,0,0,0,1.27-1.27V1.587A1.271,1.271,0,0,0,7.1.317H1.587m0-.317H7.1A1.587,1.587,0,0,1,8.69,1.587V3.562A1.587,1.587,0,0,1,7.1,5.149H1.587A1.587,1.587,0,0,1,0,3.562V1.587A1.587,1.587,0,0,1,1.587,0Z"
+              transform="translate(133.091 263.772) rotate(-90)"
+              fill="none"
+            />
+            <path
+              d="M.317.317v1.94H6.055V.317H.317M0,0H6.373V2.575H0Z"
+              transform="translate(134.378 262.53) rotate(-90)"
+              fill="none"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <div
+        class="w-[270px] h-[270px] bg-cover bg-center bg-no-repeat mx-auto relative"
+        style="background-image: url('img/offer-menu/offer-menu-circle.png')"
+      >
+        <div class="flex flex-col items-center text-white pt-[40px] mb-[10px]">
+          <span class="text-xl"> Москоу Кантр… </span>
+          <p>ID: 7579086</p>
+        </div>
+        <div class="w-[80px] h-[80px] mx-auto">
+          <img
+            class="w-full h-full rounded-full"
+            src="img/offer-menu/offer-menu-map.jpg"
+            alt="img"
+          />
+        </div>
+
+        <button
+          class="absolute bottom-[70px] left-[35px] w-[50px] h-[50px] flex items-center justify-center bg-white rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26.949"
+            height="26.948"
+            viewBox="0 0 26.949 26.948"
+          >
+            <g transform="translate(-23 -347)">
+              <path
+                d="M10.58,9.528l8.257-8.257A.744.744,0,0,0,17.785.218L9.528,8.475,1.271.218A.744.744,0,0,0,.218,1.271L8.475,9.528.218,17.785a.744.744,0,0,0,1.053,1.053L9.528,10.58l8.257,8.257a.744.744,0,1,0,1.053-1.053Z"
+                transform="translate(36.474 347) rotate(45)"
+                fill="#0a84fe"
+              />
+            </g>
+          </svg>
+        </button>
+        <button
+          class="absolute bottom-[25px] left-[80px] w-[50px] h-[50px] flex items-center justify-center bg-green rounded-full"
+        >
+          <svg
+            id="g4885"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18.51"
+            height="23.873"
+            viewBox="0 0 18.51 23.873"
+          >
+            <path
+              id="path11535"
+              d="M1354.617,3445.8a11.149,11.149,0,0,0-2.133-1.1l-.76,1.045,4.319,3.139.76-1.046A10.031,10.031,0,0,0,1354.617,3445.8Zm-3.381.614-.76,1.046,4.319,3.139.76-1.045Zm-1.313,1.807-10.252,14.109,2.348.763,9.9-13.427Zm2.415,1.782-9.844,13.4,1.332,2.092,10.416-14.136Zm-12.931,12.931-1.114,5.634,4.923-2.715-1.4-2.085Z"
+              transform="translate(-1338.293 -3444.695)"
+              fill="#fff"
+            />
+          </svg>
+        </button>
+        <button
+          class="absolute bottom-[25px] right-[80px] w-[50px] h-[50px] flex items-center justify-center bg-white rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24.703"
+            height="26.238"
+            viewBox="0 0 24.703 26.238"
+          >
+            <g
+              id="rules_acl_subnet_icon_216802"
+              transform="translate(-4.084 -2.043)"
+            >
+              <rect
+                width="11.931"
+                height="1.836"
+                transform="translate(16.856 13.017)"
+                fill="#0a84fe"
+              />
+              <rect
+                width="8.26"
+                height="1.836"
+                transform="translate(16.856 17.606)"
+                fill="#0a84fe"
+              />
+              <rect
+                width="11.931"
+                height="1.836"
+                transform="translate(16.856 8.428)"
+                fill="#0a84fe"
+              />
+              <g transform="translate(4.084 2.043)">
+                <path
+                  d="M20.867,22.615v3.748H5.874V15.119h7.5V13.245H9.622V7.622a3.749,3.749,0,0,1,7.185-1.5l1.718-.75A5.623,5.623,0,0,0,7.748,7.622v5.622H5.874A1.876,1.876,0,0,0,4,15.119V26.363a1.876,1.876,0,0,0,1.874,1.874H20.867a1.876,1.876,0,0,0,1.874-1.874V22.615Z"
+                  transform="translate(-4 -2)"
+                  fill="#0a84fe"
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+        <button
+          class="absolute bottom-[70px] right-[35px] w-[50px] h-[50px] flex items-center justify-center bg-white rounded-full"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23.355"
+            height="26.228"
+            viewBox="0 0 23.355 26.228"
+          >
+            <g transform="translate(19934.145 12718.212)">
+              <g transform="translate(-8.645)">
+                <path
+                  d="M5.981-13.894H3.469v2.062H2.037v-2.062H.484v-1.185H2.037v-1.027H.484v-1.177H2.037V-22.75H6.063a4.1,4.1,0,0,1,2.782.892,3.034,3.034,0,0,1,1.027,2.415,3.1,3.1,0,0,1-.986,2.463,4.138,4.138,0,0,1-2.8.874H3.469v1.027H5.981ZM3.469-17.284H6.063a2.56,2.56,0,0,0,1.77-.547,2.04,2.04,0,0,0,.607-1.6,2.011,2.011,0,0,0-.63-1.541,2.419,2.419,0,0,0-1.7-.6H3.469Z"
+                  transform="translate(-19919.484 -12691)"
+                  fill="#0a84fe"
+                />
+                <g transform="translate(-19266.371 -12953.772) rotate(90)">
+                  <g
+                    id="insignia"
+                    transform="translate(236.06 658.629) rotate(-90)"
+                  >
+                    <path
+                      d="M10.876,18.215,0,24.838V0H22.355V24.838Z"
+                      fill="none"
+                      stroke="#0a84fe"
+                      stroke-width="1"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->
+
+<!-- <div class="accordion-chevron accordion">
+  <button
+    class="accordion-chevron__control accordion-control-btn"
+    type="button"
+  >
+    Создать обращение
+
+    <svg>
+      <use xlink:href="img/sprite.svg#chevron"></use>
+    </svg>
+  </button>
+
+  <div class="accordion-chevron__content accordion-content">
+    <div class="accordion-chevron__inner">
+      <p>
+        Короткая кожанная куртка с классическими лацканами, ветрозащитным
+        клапанов, боковыми карманами и регулируемым поясом на талии.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<!-- SWITCH -->
+<!-- <label class="switch" for="checkbox">
+  <input type="checkbox" id="checkbox" />
+  <div class="slider round"></div>
+</label> -->

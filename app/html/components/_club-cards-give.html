@@ -1,0 +1,171 @@
+<section class="club-cards club-cards--give">
+  <div class="container">
+    <h1 class="club-cards__title">Вручить карту</h1>
+
+    <p class="club-cards__text">
+      Номер карты и QR код <br />
+      сгенерируются автоматически
+    </p>
+
+    <div class="club-cards__create block-card">
+      <div class="block-card__top">
+        <span class="block-card__percent">10%</span>
+
+        <div class="block-card__info">
+          <div class="block-card__details">
+            <span>ИМЯ ВЛАДЕЛЬЦА</span>
+            <span>00/00</span>
+          </div>
+
+          <div>Classic</div>
+        </div>
+      </div>
+      <div class="block-card__bottom">
+        <img src="img/qr-code.png" alt="img" />
+        000000000000
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="container">
+    <div class="club-cards__item">
+      <div>Имя Владельца</div>
+      <div>ID кабинета</div>
+    </div>
+    <div class="club-cards__item">
+      <div>Имя карты</div>
+      <div>Classic</div>
+    </div>
+    <div class="club-cards__item">
+      <div>Вид карты</div>
+      <div>Скидочная</div>
+    </div>
+
+    <div class="club-accordion accordion">
+      <button
+        class="club-accordion__control accordion-control-btn"
+        type="button"
+      >
+        Допуск
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="6"
+          viewBox="0 0 8 6"
+        >
+          <path d="M0,53.333l4,6,4-6Z" transform="translate(0 -53.333)" />
+        </svg>
+      </button>
+
+      <div class="club-accordion__content accordion-content">
+        <div class="club-accordion__inner">
+          <div class="inner-box">
+            <div class="inner-title">Открыть для бронирования</div>
+            <p class="inner-text">
+              Меняйте период, в зависимости от задач, условий, погоды и сезона:
+            </p>
+          </div>
+          <div class="inner-switch">
+            <div>
+              <span>Открыть</span>
+              <p>Указать период</p>
+            </div>
+
+            <label class="switch" for="open">
+              <input type="checkbox" id="open" checked />
+              <div class="slider round"></div>
+            </label>
+          </div>
+          <div class="inner-date">
+            <div class="inner-left">
+              <p>Начало периода</p>
+              <div class="inner-cols">
+                <div>
+                  <p>Время</p>
+                  <p class="inner-time">06:46</p>
+                </div>
+
+                <div>
+                  <p>Дата</p>
+                  <p class="inner-time">10.03.22</p>
+                </div>
+              </div>
+            </div>
+            <div class="inner-right">
+              <p>Конец периода</p>
+              <div class="inner-cols">
+                <div>
+                  <p>Время</p>
+                  <p class="inner-time">06:46</p>
+                </div>
+
+                <div>
+                  <p>Дата</p>
+                  <p class="color-blue inner-time">10.03.22</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="inner-box">
+            <div class="inner-title">Заблокировать временно</div>
+            <p class="inner-text">
+              Вы можете временно приостановить действие клубной карты, услуг или
+              бронирование по ней
+            </p>
+          </div>
+          <div class="inner-switch">
+            <div>
+              <span>Заблокировать</span>
+              <p>Указать период</p>
+            </div>
+
+            <label class="switch" for="blocked">
+              <input type="checkbox" id="blocked" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="club-accordion accordion">
+      <button
+        class="club-accordion__control accordion-control-btn"
+        type="button"
+      >
+        Комментарий
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="6"
+          viewBox="0 0 8 6"
+        >
+          <path d="M0,53.333l4,6,4-6Z" transform="translate(0 -53.333)" />
+        </svg>
+      </button>
+
+      <div class="club-accordion__content accordion-content">
+        <div class="club-accordion__inner">
+          <textarea
+            class="club-textarea"
+            placeholder="Вставьте текст или напишите…"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <label class="radio">
+      <input class="radio__input" type="checkbox" />
+      <span class="radio__box"></span>
+      <span class="radio__text"> Согласие на обработку данных </span>
+    </label>
+
+    <button class="club-cards__btn btn" type="button">Отправить</button>
+    <button class="club-cards__remove" type="remove">
+      Удалить Клубную карту
+    </button>
+  </div>
+</section>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      container: {
+        padding: '15px',
+        center: true,
+      },
+
+      extend: {
+        colors: {
+          white: '#fff',
+          black: '#000',
+          gray: '#707070',
+          blue: '#0A84FE',
+          red: '#ff0a0a',
+          green: '#39ca1c',
+          'green-light': '#C3EFBC',
+          yellow: '#FED42D',
+          'blue-light': '#e8f2ff',
+          'gray-light': '#DADADA',
+          'dark-03': 'rgba(0, 0, 0, 0.3)',
+          'dark-05': 'rgba(0, 0, 0, 0.5)',
+        },
+      },
+    },
+  };
+</script>
+
+<title>Эмэйз</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--online-booking">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Онлайн запись</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-name">Имя</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="online-name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-tel">
+            Контактный телефон
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="online-tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="site-wrapper">
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <a class="mobile-menu__phone" href="tel:+74994990917">
+        +7 (499) 499 09 17
+      </a>
+      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <div class="header__wrapper"></div>
+  </div>
+</header>
+
+
+      <main class="main">
+        <section class="py-[20px]">
+  <div class="container">
+    <div class="text-xl text-center font-light mb-[20px]">Игра</div>
+
+    <div class="relative">
+      <div class="accordion-border accordion mb-[20px]">
+        <button
+          class="accordion-border__control accordion-control-btn h-[60px] px-[15px] py-[18px]"
+          type="button"
+        >
+          Поле большое
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8"
+            height="6"
+            viewBox="0 0 8 6"
+          >
+            <path d="M0,53.333l4,6,4-6Z" transform="translate(0 -53.333)" />
+          </svg>
+        </button>
+
+        <div class="accordion-border__content accordion-content">
+          <div class="accordion-border__inner">
+            <p>Поле большое</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-[90px] h-[90px] mx-auto border rounded-[15px] mb-[20px]"
+      ></div>
+
+      <div class="mb-[25px]">
+        <div class="text-[32px] font-light leading-none">Фильтр</div>
+        <div class="">Создайте Условия и Описание</div>
+      </div>
+
+      <div class="flex items-center justify-between mb-[15px]">
+        <span class="text-xl">Сектор</span>
+        <button class="text-blue" type="button">сбросить</button>
+      </div>
+      <div class="flex items-center mb-[20px]">
+        <span class="text-xl mr-[35px]">Номер</span>
+        <button class="text-red" type="button">задать номер</button>
+      </div>
+
+      <div class="mb-[20px]">
+        <div class="accordion accordion py-[18px] border-b border-gray">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-[20px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.629"
+                viewBox="0 0 30.305 28.629"
+              >
+                <g transform="translate(0 0)">
+                  <g transform="translate(15 13.853)">
+                    <rect
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                    />
+                    <path
+                      d="M.924,5.3V1H2.771V5.3H.924M0,6.3H3.694V0H0Z"
+                      transform="translate(6.304) rotate(90)"
+                    />
+                  </g>
+                  <g transform="translate(21.756 13.853)">
+                    <rect
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                    />
+                    <path
+                      d="M.924,7.549V1H2.771V7.549H.924M0,8.549H3.694V0H0Z"
+                      transform="translate(8.549) rotate(90)"
+                    />
+                  </g>
+                  <g transform="translate(12 0)">
+                    <rect
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V3.694a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(9 0)">
+                    <rect
+                      width="2"
+                      height="12.929"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V12.006a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(3 0)">
+                    <rect
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V7.388a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(12 5.541)">
+                    <rect
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V7.388a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(6 0)">
+                    <rect
+                      width="2"
+                      height="11.082"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924v9.235a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(3 9.235)">
+                    <rect
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V6.465a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(0 0)">
+                    <rect width="2" height="13.853" rx="1" />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V12.929a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                    />
+                  </g>
+                  <g transform="translate(12 14.776)">
+                    <rect
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V3.694a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(9 13.853)">
+                    <rect
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V6.465a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(3 17.547)">
+                    <rect
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V2.771a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(0 14.776)">
+                    <rect width="2" height="8.312" rx="1" />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V7.388a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                    />
+                  </g>
+                  <g transform="translate(12 20.317)">
+                    <rect
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V7.388a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(9 22.164)">
+                    <rect
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V5.541a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(6 12.006)">
+                    <rect
+                      width="2"
+                      height="16.623"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V15.7a.964.964,0,0,0,1,.924A.964.964,0,0,0,2,15.7V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(3 22.164)">
+                    <rect
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      transform="translate(0)"
+                    />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V5.541a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                      transform="translate(0)"
+                    />
+                  </g>
+                  <g transform="translate(0 24.011)">
+                    <rect width="2" height="4.618" rx="1" />
+                    <path
+                      d="M1,.924v0H1M1,0A.964.964,0,0,0,0,.924V3.694a.964.964,0,0,0,1,.924.964.964,0,0,0,1-.924V.924A.964.964,0,0,0,1,0Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              Место. Ландшафт
+            </div>
+            <button
+              class="accordion__control accordion-control-btn text-blue"
+              type="button"
+            >
+              показать
+            </button>
+          </div>
+
+          <div class="accordion__content accordion-content">
+            <div class="accordion__inner">
+              <div class="mb-[40px]">
+                <div
+                  class="flex items-center justify-between mt-[40px] mb-[15px]"
+                >
+                  <span class="text-xl text-gray">Место</span>
+                  <button class="text-blue" type="button">сбросить</button>
+                </div>
+
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input
+                    class="checkbox-square__input"
+                    type="checkbox"
+                    checked
+                  />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    FREE ZONE
+                  </span>
+                  <small class="text-red ml-auto mr-[40px]">26</small>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Трава
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Гравий
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Английский
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Дикий
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+              </div>
+              <div class="mb-[40px]">
+                <div
+                  class="flex items-center justify-between mt-[40px] mb-[15px]"
+                >
+                  <span class="text-xl text-gray">Ландшафт</span>
+                  <button class="text-blue" type="button">сбросить</button>
+                </div>
+
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input
+                    class="checkbox-square__input"
+                    type="checkbox"
+                    checked
+                  />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Поле, равнина
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Редкие деревья
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Лесопосадка
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Лес
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Газон
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Возвышенность
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Низменность
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+              </div>
+              <div class="mb-[40px]">
+                <div
+                  class="flex items-center justify-between mt-[40px] mb-[15px]"
+                >
+                  <span class="text-xl text-gray">Условия на месте</span>
+                  <button class="text-blue" type="button">сбросить</button>
+                </div>
+
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input
+                    class="checkbox-square__input"
+                    type="checkbox"
+                    checked
+                  />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Стоянка у места игры
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Электричество
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Wi-Fi
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Видеонаблюдение
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Туалет
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+                <label
+                  class="checkbox-square text-xl flex items-center justify-between mb-[15px]"
+                >
+                  <input class="checkbox-square__input" type="checkbox" />
+                  <span
+                    class="checkbox-square__text flex items-center justify-between"
+                  >
+                    Уборка мусора
+                  </span>
+                  <span class="checkbox-square__box"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion accordion py-[18px] border-b">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-[20px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26.596"
+                height="29.892"
+                viewBox="0 0 26.596 29.892"
+              >
+                <g
+                  id="Сгруппировать_3272"
+                  data-name="Сгруппировать 3272"
+                  transform="translate(-131.335 -250.931)"
+                >
+                  <path
+                    id="Объединение_8"
+                    data-name="Объединение 8"
+                    d="M-2701.044-291.221h-15.962a2.534,2.534,0,0,1-.748.112,2.533,2.533,0,0,1-1.005-.207,2.54,2.54,0,0,1-1.534-2.333,2.541,2.541,0,0,1,1.417-2.279,2.539,2.539,0,0,1-1.417-2.278,2.538,2.538,0,0,1,1.308-2.222,2.539,2.539,0,0,1-1.308-2.221,2.537,2.537,0,0,1,1.2-2.156l-2.9-2.905,1.777-1.777a1.567,1.567,0,0,1-.021-.26v-5.516a1.589,1.589,0,0,1,1.587-1.587h1.975a1.589,1.589,0,0,1,1.588,1.587v.647l6.384-6.385.008.01.009-.01,13.289,13.29-3.182,3.184a2.534,2.534,0,0,1,.829,1.878,2.537,2.537,0,0,1-1.308,2.221,2.54,2.54,0,0,1,1.308,2.222,2.538,2.538,0,0,1-1.416,2.278,2.54,2.54,0,0,1,1.416,2.279,2.539,2.539,0,0,1-1.534,2.333,2.528,2.528,0,0,1-1,.207A2.536,2.536,0,0,1-2701.044-291.221Zm-14.172-6.984a2.539,2.539,0,0,1-1.416,2.278,2.54,2.54,0,0,1,1.416,2.279,2.53,2.53,0,0,1-.471,1.475h13.323a2.529,2.529,0,0,1-.472-1.475,2.541,2.541,0,0,1,1.417-2.279,2.537,2.537,0,0,1-1.417-2.278,2.54,2.54,0,0,1,1.309-2.222,2.539,2.539,0,0,1-1.309-2.221,2.539,2.539,0,0,1,2.54-2.54c.046,0,.091,0,.137,0l-8.543-8.541-8.582,8.582a2.539,2.539,0,0,1,2.068,2.5,2.537,2.537,0,0,1-1.308,2.221A2.539,2.539,0,0,1-2715.216-298.205Zm14.919,5.827a1.271,1.271,0,0,0,1.27-1.27,1.271,1.271,0,0,0-1.27-1.271,1.262,1.262,0,0,0-.771.262,1.261,1.261,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2700.3-292.379Zm-17.458,0a1.271,1.271,0,0,0,1.27-1.27,1.272,1.272,0,0,0-1.27-1.271,1.266,1.266,0,0,0-.771.262,1.265,1.265,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.263,1.263,0,0,1-.77-.259A1.263,1.263,0,0,0-2717.754-292.379Zm16.506-1.27a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2701.248-293.648Zm-17.458,0a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2718.707-293.648Zm18.41-3.287a1.271,1.271,0,0,0,1.27-1.27,1.271,1.271,0,0,0-1.27-1.271,1.262,1.262,0,0,0-.771.262,1.261,1.261,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2700.3-296.935Zm-17.458,0a1.271,1.271,0,0,0,1.27-1.27,1.272,1.272,0,0,0-1.27-1.271,1.266,1.266,0,0,0-.771.262,1.265,1.265,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.263,1.263,0,0,1-.77-.259A1.263,1.263,0,0,0-2717.754-296.935Zm16.506-1.27a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2701.248-298.205Zm-17.458,0a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2718.707-298.205Zm18.41-3.173a1.271,1.271,0,0,0,1.27-1.27,1.271,1.271,0,0,0-1.27-1.271,1.262,1.262,0,0,0-.771.262,1.261,1.261,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2700.3-301.379Zm-17.458,0a1.271,1.271,0,0,0,1.27-1.27,1.272,1.272,0,0,0-1.27-1.271,1.266,1.266,0,0,0-.771.262,1.265,1.265,0,0,1,.771-.261,1.269,1.269,0,0,1,1.269,1.27,1.269,1.269,0,0,1-1.269,1.269,1.265,1.265,0,0,1-.77-.259A1.265,1.265,0,0,0-2717.754-301.379Zm16.506-1.27a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2701.248-302.648Zm-17.458,0a.953.953,0,0,0,.952.952.954.954,0,0,0,.952-.952.954.954,0,0,0-.952-.953A.953.953,0,0,0-2718.707-302.648Zm10.005-12.9,9.747,9.747,1.821-1.82L-2708.7-319.18l0,0-.008-.007-7.676,7.677v-4.269h-2.573v6.843l-1.315,1.314,1.82,1.82,9.748-9.747h0Z"
+                    transform="translate(2853.335 571.931)"
+                  />
+                  <path
+                    id="Контур_1376_-_Рамка"
+                    data-name="Контур 1376 - Рамка"
+                    d="M.317.317V.635H17.141V.317H.317M0,0H17.458V.952H0Z"
+                    transform="translate(135.581 279.758)"
+                    fill="none"
+                    opacity="0.5"
+                  />
+                  <path
+                    id="Вычитание_1498"
+                    data-name="Вычитание 1498"
+                    d="M-2714.7-312.112h-5.714A1.589,1.589,0,0,1-2722-313.7v-5.713a1.589,1.589,0,0,1,1.587-1.588h5.714a1.589,1.589,0,0,1,1.587,1.588v5.713A1.589,1.589,0,0,1-2714.7-312.112Zm-6.032-7.618v6.349h6.349v-6.349Z"
+                    transform="translate(2861.8 585.522)"
+                  />
+                  <path
+                    id="Контур_1373_-_Рамка"
+                    data-name="Контур 1373 - Рамка"
+                    d="M1.587.317a1.271,1.271,0,0,0-1.27,1.27V7.3a1.271,1.271,0,0,0,1.27,1.27H7.3A1.271,1.271,0,0,0,8.57,7.3V1.587A1.271,1.271,0,0,0,7.3.317H1.587m0-.317H7.3A1.587,1.587,0,0,1,8.888,1.587V7.3A1.587,1.587,0,0,1,7.3,8.888H1.587A1.587,1.587,0,0,1,0,7.3V1.587A1.587,1.587,0,0,1,1.587,0Z"
+                    transform="translate(140.024 264.522)"
+                    fill="none"
+                  />
+                  <path
+                    id="Контур_1374_-_Рамка"
+                    data-name="Контур 1374 - Рамка"
+                    d="M.317.317V6.031H6.031V.317H.317M0,0H6.348V6.348H0Z"
+                    transform="translate(141.294 265.791)"
+                    fill="none"
+                  />
+                  <path
+                    id="Контур_1368_-_Рамка"
+                    data-name="Контур 1368 - Рамка"
+                    d="M1.587.317a1.271,1.271,0,0,0-1.27,1.27V3.562a1.271,1.271,0,0,0,1.27,1.27H7.1a1.271,1.271,0,0,0,1.27-1.27V1.587A1.271,1.271,0,0,0,7.1.317H1.587m0-.317H7.1A1.587,1.587,0,0,1,8.69,1.587V3.562A1.587,1.587,0,0,1,7.1,5.149H1.587A1.587,1.587,0,0,1,0,3.562V1.587A1.587,1.587,0,0,1,1.587,0Z"
+                    transform="translate(133.091 263.772) rotate(-90)"
+                    fill="none"
+                  />
+                  <path
+                    id="Контур_1369_-_Рамка"
+                    data-name="Контур 1369 - Рамка"
+                    d="M.317.317v1.94H6.055V.317H.317M0,0H6.373V2.575H0Z"
+                    transform="translate(134.378 262.53) rotate(-90)"
+                    fill="none"
+                  />
+                </g>
+              </svg>
+
+              Объект
+            </div>
+            <button
+              class="accordion__control accordion-control-btn text-blue"
+              type="button"
+            >
+              показать
+            </button>
+          </div>
+
+          <div class="accordion__content accordion-content">
+            <div class="accordion__inner">Объект</div>
+          </div>
+        </div>
+        <div class="accordion accordion py-[18px] border-b">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-[20px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+              >
+                <rect width="28" height="28" />
+              </svg>
+
+              Игра
+            </div>
+            <button
+              class="accordion__control accordion-control-btn text-blue"
+              type="button"
+            >
+              показать
+            </button>
+          </div>
+
+          <div class="accordion__content accordion-content">
+            <div class="accordion__inner">Игра</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-[40px]">
+        <div class="text-[32px] font-light leading-none">Создать похожий</div>
+        <div class="mb-[20px]">
+          Выберите из списка уже созданных объектов похожий и примените те же
+          условия
+        </div>
+
+        <div class="flex items-center justify-between mb-[20px] text-xl">
+          <span class="text-gray">Выбрать из списка</span>
+          <span class="text-blue font-light">25л</span>
+        </div>
+
+        <div class="grid grid-cols-2 items-center text-xl">
+          <button
+            class="text-dark h-[60px] flex items-center justify-center"
+            type="button"
+          >
+            Очистить
+          </button>
+          <button
+            class="bg-blue h-[60px] flex items-center justify-center text-white"
+            type="button"
+          >
+            Применить
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-[25px]">
+        <div class="text-[32px] font-light leading-none">Размножить</div>
+        <div class="mb-[20px]">
+          Создайте сразу несколько похожих объектов для экономии времени если у
+          вас таких большинство. Затем выберите непохожие и внесите
+          индивидуальные изменения в фильтре
+        </div>
+
+        <div class="flex items-center justify-between mb-[20px] text-xl">
+          <span class="text-gray">Указать интервал</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-[20px] mb-[20px]">
+          <div class="grid items-start w-auto">
+            <span> Начало </span>
+            <span>От номера</span>
+
+            <input class="w-[40px] input-border-bottom" type="text" value="1" />
+          </div>
+          <div class="grid items-start w-auto">
+            <span> Конец </span>
+            <span>До номера</span>
+
+            <input class="w-[40px] input-border-bottom" type="text" value="1" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 items-center text-xl mb-[20px]">
+          <button
+            class="text-dark h-[60px] flex items-center justify-center"
+            type="button"
+          >
+            Очистить
+          </button>
+          <button
+            class="bg-blue h-[60px] flex items-center justify-center text-white"
+            type="button"
+          >
+            Применить
+          </button>
+        </div>
+
+        <div class="grid items-center">
+          <button
+            class="bg-blue text-xl h-[60px] flex items-center justify-center text-white opacity-30"
+            type="button"
+          >
+            Сохранить
+          </button>
+          <button
+            class="text-dark py-[20px] w-full flex items-center justify-center text-red"
+            type="button"
+          >
+            Удалить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      </main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

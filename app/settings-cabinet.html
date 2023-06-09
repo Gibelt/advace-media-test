@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      container: {
+        padding: '15px',
+        center: true,
+      },
+
+      extend: {
+        colors: {
+          white: '#fff',
+          black: '#000',
+          gray: '#707070',
+          blue: '#0A84FE',
+          red: '#ff0a0a',
+          green: '#39ca1c',
+          'green-light': '#C3EFBC',
+          yellow: '#FED42D',
+          'blue-light': '#e8f2ff',
+          'gray-light': '#DADADA',
+          'dark-03': 'rgba(0, 0, 0, 0.3)',
+          'dark-05': 'rgba(0, 0, 0, 0.5)',
+        },
+      },
+    },
+  };
+</script>
+
+<title>Эмэйз</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--online-booking">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Онлайн запись</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-name">Имя</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="online-name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-tel">
+            Контактный телефон
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="online-tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="site-wrapper">
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <a class="mobile-menu__phone" href="tel:+74994990917">
+        +7 (499) 499 09 17
+      </a>
+      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <div class="header__wrapper"></div>
+  </div>
+</header>
+
+
+      <main class="main"><section class="settings-cabinet">
+  <div class="container">
+    <div class="settings-cabinet-slider swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide box-border w-full min-h-[90vh] pb-[20px]">
+          <div class="flex flex-col justify-between">
+            <span class="text-xl font-light text-center mb-[80px]">Имя</span>
+
+            <p class="text-xl">Текст с заглавной……………..</p>
+          </div>
+          <div
+            class="flex justify-center items-center gap-[10px] absolute bottom-[20px] left-[50%] translate-x-[-50%] w-full"
+          >
+            <button
+              class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19.59"
+                height="24.806"
+                viewBox="0 0 19.59 24.806"
+              >
+                <g transform="translate(-114.666 -144.395)">
+                  <path
+                    id="path2992"
+                    d="M102.355,319.692a30.465,30.465,0,0,0-6.645-8.851c-.351-.3-.851-.714-.855-.748,0,0,.325-.293.514-.421,1.637-1.151,3.215-2.389,4.857-3.528.914,2.317,1.573,4.746,2.387,6.9a57.315,57.315,0,0,1,7.019-13.1,19.806,19.806,0,0,1,4.813-4.8,29.335,29.335,0,0,0-.289,8.124c.089.519.124,1.509.124,1.509s-.66.391-.685.416c-2.413,1.616-4.078,4.047-5.859,6.283a67.636,67.636,0,0,0-5.2,8.455c-.01.1-.138-.182-.178-.239Z"
+                    transform="translate(19.811 -150.75)"
+                    fill="#0a84fe"
+                  />
+                </g>
+              </svg>
+            </button>
+            <button
+              class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26.827"
+                height="23.512"
+                viewBox="0 0 26.827 23.512"
+              >
+                <g transform="translate(0 -26.576)">
+                  <g transform="translate(0 26.576)">
+                    <g transform="translate(0)">
+                      <path
+                        d="M176.725,159.668a2.736,2.736,0,1,0,2.736,2.736A2.736,2.736,0,0,0,176.725,159.668Zm0,4.17a1.433,1.433,0,1,1,0-2.867h0a1.433,1.433,0,0,1,0,2.867Z"
+                        transform="translate(-163.14 -151.369)"
+                        fill="#0a84fe"
+                      />
+                      <path
+                        d="M24.5,28.62,6.712,26.6a2.443,2.443,0,0,0-1.922.554,2.476,2.476,0,0,0-.945,1.694l-.326,2.671H2.509A2.618,2.618,0,0,0,0,34.223V47.547a2.476,2.476,0,0,0,2.41,2.54H20.394a2.674,2.674,0,0,0,2.736-2.541v-.521a3.258,3.258,0,0,0,1.238-.521,2.7,2.7,0,0,0,.945-1.759l1.5-13.226A2.639,2.639,0,0,0,24.5,28.62ZM21.827,47.547a1.372,1.372,0,0,1-1.433,1.238H2.509A1.173,1.173,0,0,1,1.3,47.647q0-.05,0-.1V45.136l5.049-3.714a1.564,1.564,0,0,1,2.02.1l3.551,3.127a3.062,3.062,0,0,0,1.922.717,2.964,2.964,0,0,0,1.564-.424l6.418-3.714v6.32Zm0-7.851-7.1,4.137A1.661,1.661,0,0,1,12.8,43.67L9.22,40.51A2.9,2.9,0,0,0,5.6,40.38L1.3,43.507V34.223a1.315,1.315,0,0,1,1.205-1.4H20.394a1.5,1.5,0,0,1,1.433,1.4V39.7Zm3.682-8.353v.013L23.977,44.582a1.108,1.108,0,0,1-.424.88c-.13.13-.424.2-.424.261v-11.5a2.8,2.8,0,0,0-2.736-2.7H4.822l.293-2.541a1.5,1.5,0,0,1,.489-.847,1.5,1.5,0,0,1,.977-.261l17.754,2.052A1.3,1.3,0,0,1,25.51,31.343Z"
+                        transform="translate(0 -26.576)"
+                        fill="#0a84fe"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <button
+              class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28.451"
+                height="26.164"
+                viewBox="0 0 28.451 26.164"
+              >
+                <g transform="translate(-28.361 -47.279)">
+                  <g transform="translate(28.865 47.78)">
+                    <path
+                      d="M43.732,47.78a12.6,12.6,0,0,0-12.215,9.563l-.844-1.489a.967.967,0,1,0-1.682.953l2.276,4.015h0l.009.016c.011.021.024.04.036.059l0,0,.008.011c.014.02.028.039.043.057l.007.009h0l0,0a.911.911,0,0,0,.069.075l.007.006c.015.014.03.028.046.04l.009.007q.032.025.065.049l.005,0,.031.02.017.01.023.013.02.01.036.018.02.009h0l.022.01c.02.008.04.016.06.022l.008,0h0l.028.008.054.014.014,0,.013,0c.027.005.054.009.08.012h.021a.878.878,0,0,0,.089,0q.038,0,.076,0h.027l.05-.007.015,0,.023,0,.011,0c.024-.005.049-.011.073-.019l.018-.005.019-.007.025-.009.03-.011.018-.008.024-.011.034-.017.023-.012c.017-.009.033-.02.05-.03l.027-.017.01-.007.03-.023.011-.008.021-.016h0L36.3,58.15a.967.967,0,0,0-1.234-1.489l-1.743,1.444a10.648,10.648,0,1,1,10.406,12.9.967.967,0,1,0,0,1.934,12.582,12.582,0,0,0,0-25.163Z"
+                      transform="translate(-28.865 -47.78)"
+                      fill="#0a84fe"
+                      stroke="#0a84fe"
+                      stroke-width="1"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="swiper-slide box-border w-full min-h-[90vh] pb-[20px]">
+          <div class="flex flex-col items-center">
+            <span class="text-xl font-light mb-[80px]">Логотип</span>
+            <div
+              class="h-[290px] w-full relative flex flex-col items-center justify-center"
+            >
+              <div
+                class="flex items-center justify-center w-[130px] h-[130px] border rounded-[15px] mb-[90px]"
+              >
+                <div class="w-[70px] h-[70px] relative">
+                  <button
+                    class="absolute top-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(-85.333 21) rotate(-90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#030303"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute right-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <path
+                        d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                        transform="translate(0 -85.333)"
+                        fill="#030303"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute bottom-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(99.333) rotate(90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#030303"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <g transform="translate(21 99.333) rotate(180)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#030303"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21.357"
+                      height="21.358"
+                      viewBox="0 0 21.357 21.358"
+                    >
+                      <g transform="translate(-5.51 2.6)">
+                        <g transform="translate(5.51 -2.6)">
+                          <g>
+                            <g>
+                              <path
+                                d="M21.161,20.2,15.647,14.77a8.722,8.722,0,0,0,2.331-5.927A8.916,8.916,0,0,0,8.992,0,8.915,8.915,0,0,0,.006,8.843a8.915,8.915,0,0,0,8.986,8.843,9.037,9.037,0,0,0,5.656-1.975l5.536,5.447a.7.7,0,0,0,.977,0A.673.673,0,0,0,21.161,20.2ZM8.992,16.325a7.543,7.543,0,0,1-7.6-7.482,7.543,7.543,0,0,1,7.6-7.482,7.543,7.543,0,0,1,7.6,7.482A7.543,7.543,0,0,1,8.992,16.325Z"
+                                transform="translate(-0.006)"
+                                fill="#303030"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center gap-[10px] absolute bottom-[20px] left-[50%] translate-x-[-50%] w-full"
+            >
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="53"
+                  viewBox="0 0 13 53"
+                >
+                  <text
+                    transform="translate(0 43)"
+                    fill="#0a84fe"
+                    font-size="40"
+                    font-family="SegoeUIBlack, Segoe UI"
+                  >
+                    <tspan x="0" y="0">i</tspan>
+                  </text>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.59"
+                  height="24.806"
+                  viewBox="0 0 19.59 24.806"
+                >
+                  <g transform="translate(-114.666 -144.395)">
+                    <path
+                      id="path2992"
+                      d="M102.355,319.692a30.465,30.465,0,0,0-6.645-8.851c-.351-.3-.851-.714-.855-.748,0,0,.325-.293.514-.421,1.637-1.151,3.215-2.389,4.857-3.528.914,2.317,1.573,4.746,2.387,6.9a57.315,57.315,0,0,1,7.019-13.1,19.806,19.806,0,0,1,4.813-4.8,29.335,29.335,0,0,0-.289,8.124c.089.519.124,1.509.124,1.509s-.66.391-.685.416c-2.413,1.616-4.078,4.047-5.859,6.283a67.636,67.636,0,0,0-5.2,8.455c-.01.1-.138-.182-.178-.239Z"
+                      transform="translate(19.811 -150.75)"
+                      fill="#0a84fe"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26.827"
+                  height="23.512"
+                  viewBox="0 0 26.827 23.512"
+                >
+                  <g transform="translate(0 -26.576)">
+                    <g transform="translate(0 26.576)">
+                      <g transform="translate(0)">
+                        <path
+                          d="M176.725,159.668a2.736,2.736,0,1,0,2.736,2.736A2.736,2.736,0,0,0,176.725,159.668Zm0,4.17a1.433,1.433,0,1,1,0-2.867h0a1.433,1.433,0,0,1,0,2.867Z"
+                          transform="translate(-163.14 -151.369)"
+                          fill="#0a84fe"
+                        />
+                        <path
+                          d="M24.5,28.62,6.712,26.6a2.443,2.443,0,0,0-1.922.554,2.476,2.476,0,0,0-.945,1.694l-.326,2.671H2.509A2.618,2.618,0,0,0,0,34.223V47.547a2.476,2.476,0,0,0,2.41,2.54H20.394a2.674,2.674,0,0,0,2.736-2.541v-.521a3.258,3.258,0,0,0,1.238-.521,2.7,2.7,0,0,0,.945-1.759l1.5-13.226A2.639,2.639,0,0,0,24.5,28.62ZM21.827,47.547a1.372,1.372,0,0,1-1.433,1.238H2.509A1.173,1.173,0,0,1,1.3,47.647q0-.05,0-.1V45.136l5.049-3.714a1.564,1.564,0,0,1,2.02.1l3.551,3.127a3.062,3.062,0,0,0,1.922.717,2.964,2.964,0,0,0,1.564-.424l6.418-3.714v6.32Zm0-7.851-7.1,4.137A1.661,1.661,0,0,1,12.8,43.67L9.22,40.51A2.9,2.9,0,0,0,5.6,40.38L1.3,43.507V34.223a1.315,1.315,0,0,1,1.205-1.4H20.394a1.5,1.5,0,0,1,1.433,1.4V39.7Zm3.682-8.353v.013L23.977,44.582a1.108,1.108,0,0,1-.424.88c-.13.13-.424.2-.424.261v-11.5a2.8,2.8,0,0,0-2.736-2.7H4.822l.293-2.541a1.5,1.5,0,0,1,.489-.847,1.5,1.5,0,0,1,.977-.261l17.754,2.052A1.3,1.3,0,0,1,25.51,31.343Z"
+                          transform="translate(0 -26.576)"
+                          fill="#0a84fe"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-red"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.5"
+                  height="25.231"
+                  viewBox="0 0 20.5 25.231"
+                >
+                  <g transform="translate(-48)">
+                    <g>
+                      <path
+                        d="M66.529,3.154H62.192V2.365A2.368,2.368,0,0,0,59.827,0H56.673a2.368,2.368,0,0,0-2.365,2.365v.788H49.971A1.973,1.973,0,0,0,48,5.125v2.76a.788.788,0,0,0,.788.788h.431l.681,14.3a2.363,2.363,0,0,0,2.363,2.253H64.237A2.362,2.362,0,0,0,66.6,22.978l.681-14.3h.431a.788.788,0,0,0,.788-.788V5.125A1.973,1.973,0,0,0,66.529,3.154ZM55.885,2.365a.789.789,0,0,1,.788-.788h3.154a.789.789,0,0,1,.788.788v.788H55.885Zm-6.308,2.76a.4.4,0,0,1,.394-.394H66.529a.4.4,0,0,1,.394.394V7.1H49.577ZM65.024,22.9a.788.788,0,0,1-.788.751H52.263a.787.787,0,0,1-.788-.751L50.8,8.673H65.7Z"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M240.788,219.827a.789.789,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,240.788,219.827Z"
+                        transform="translate(-182.539 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M320.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,320.788,219.827Z"
+                        transform="translate(-258.596 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M160.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,160.788,219.827Z"
+                        transform="translate(-106.48 -197.75)"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide box-border w-full min-h-[90vh] pb-[20px]">
+          <div class="flex flex-col items-center">
+            <span class="text-xl font-light mb-[80px]">Описание</span>
+            <textarea
+              class="input resize-none w-full h-[195px] text-xl"
+              placeholder="Описание: с заглавной,  …."
+            ></textarea>
+            <div
+              class="flex justify-center items-center gap-[10px] absolute bottom-[20px] left-[50%] translate-x-[-50%] w-full"
+            >
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.59"
+                  height="24.806"
+                  viewBox="0 0 19.59 24.806"
+                >
+                  <g transform="translate(-114.666 -144.395)">
+                    <path
+                      id="path2992"
+                      d="M102.355,319.692a30.465,30.465,0,0,0-6.645-8.851c-.351-.3-.851-.714-.855-.748,0,0,.325-.293.514-.421,1.637-1.151,3.215-2.389,4.857-3.528.914,2.317,1.573,4.746,2.387,6.9a57.315,57.315,0,0,1,7.019-13.1,19.806,19.806,0,0,1,4.813-4.8,29.335,29.335,0,0,0-.289,8.124c.089.519.124,1.509.124,1.509s-.66.391-.685.416c-2.413,1.616-4.078,4.047-5.859,6.283a67.636,67.636,0,0,0-5.2,8.455c-.01.1-.138-.182-.178-.239Z"
+                      transform="translate(19.811 -150.75)"
+                      fill="#0a84fe"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26.827"
+                  height="23.512"
+                  viewBox="0 0 26.827 23.512"
+                >
+                  <g transform="translate(0 -26.576)">
+                    <g transform="translate(0 26.576)">
+                      <g transform="translate(0)">
+                        <path
+                          d="M176.725,159.668a2.736,2.736,0,1,0,2.736,2.736A2.736,2.736,0,0,0,176.725,159.668Zm0,4.17a1.433,1.433,0,1,1,0-2.867h0a1.433,1.433,0,0,1,0,2.867Z"
+                          transform="translate(-163.14 -151.369)"
+                          fill="#0a84fe"
+                        />
+                        <path
+                          d="M24.5,28.62,6.712,26.6a2.443,2.443,0,0,0-1.922.554,2.476,2.476,0,0,0-.945,1.694l-.326,2.671H2.509A2.618,2.618,0,0,0,0,34.223V47.547a2.476,2.476,0,0,0,2.41,2.54H20.394a2.674,2.674,0,0,0,2.736-2.541v-.521a3.258,3.258,0,0,0,1.238-.521,2.7,2.7,0,0,0,.945-1.759l1.5-13.226A2.639,2.639,0,0,0,24.5,28.62ZM21.827,47.547a1.372,1.372,0,0,1-1.433,1.238H2.509A1.173,1.173,0,0,1,1.3,47.647q0-.05,0-.1V45.136l5.049-3.714a1.564,1.564,0,0,1,2.02.1l3.551,3.127a3.062,3.062,0,0,0,1.922.717,2.964,2.964,0,0,0,1.564-.424l6.418-3.714v6.32Zm0-7.851-7.1,4.137A1.661,1.661,0,0,1,12.8,43.67L9.22,40.51A2.9,2.9,0,0,0,5.6,40.38L1.3,43.507V34.223a1.315,1.315,0,0,1,1.205-1.4H20.394a1.5,1.5,0,0,1,1.433,1.4V39.7Zm3.682-8.353v.013L23.977,44.582a1.108,1.108,0,0,1-.424.88c-.13.13-.424.2-.424.261v-11.5a2.8,2.8,0,0,0-2.736-2.7H4.822l.293-2.541a1.5,1.5,0,0,1,.489-.847,1.5,1.5,0,0,1,.977-.261l17.754,2.052A1.3,1.3,0,0,1,25.51,31.343Z"
+                          transform="translate(0 -26.576)"
+                          fill="#0a84fe"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28.451"
+                  height="26.164"
+                  viewBox="0 0 28.451 26.164"
+                >
+                  <g transform="translate(-28.361 -47.279)">
+                    <g transform="translate(28.865 47.78)">
+                      <path
+                        d="M43.732,47.78a12.6,12.6,0,0,0-12.215,9.563l-.844-1.489a.967.967,0,1,0-1.682.953l2.276,4.015h0l.009.016c.011.021.024.04.036.059l0,0,.008.011c.014.02.028.039.043.057l.007.009h0l0,0a.911.911,0,0,0,.069.075l.007.006c.015.014.03.028.046.04l.009.007q.032.025.065.049l.005,0,.031.02.017.01.023.013.02.01.036.018.02.009h0l.022.01c.02.008.04.016.06.022l.008,0h0l.028.008.054.014.014,0,.013,0c.027.005.054.009.08.012h.021a.878.878,0,0,0,.089,0q.038,0,.076,0h.027l.05-.007.015,0,.023,0,.011,0c.024-.005.049-.011.073-.019l.018-.005.019-.007.025-.009.03-.011.018-.008.024-.011.034-.017.023-.012c.017-.009.033-.02.05-.03l.027-.017.01-.007.03-.023.011-.008.021-.016h0L36.3,58.15a.967.967,0,0,0-1.234-1.489l-1.743,1.444a10.648,10.648,0,1,1,10.406,12.9.967.967,0,1,0,0,1.934,12.582,12.582,0,0,0,0-25.163Z"
+                        transform="translate(-28.865 -47.78)"
+                        fill="#0a84fe"
+                        stroke="#0a84fe"
+                        stroke-width="1"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide box-border w-full min-h-[90vh] pb-[20px]">
+          <div class="flex flex-col items-center">
+            <span class="text-xl font-light mb-[80px]">Фото Открытки</span>
+            <div>
+              <h3 class="text-xl font-bold mb-[30px] text-center">
+                Москоу <br />
+                Кантри Клаб
+              </h3>
+
+              <div
+                class="flex items-center justify-center w-[140px] h-[130px] mb-[90px] relative"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://images.unsplash.com/photo-1500932334442-8761ee4810a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z29sZnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="img"
+                />
+                <div class="w-[70px] h-[70px] absolute">
+                  <button
+                    class="absolute top-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(-85.333 21) rotate(-90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute right-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <path
+                        d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                        transform="translate(0 -85.333)"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute bottom-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(99.333) rotate(90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <g transform="translate(21 99.333) rotate(180)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21.357"
+                      height="21.358"
+                      viewBox="0 0 21.357 21.358"
+                    >
+                      <g transform="translate(-5.51 2.6)">
+                        <g transform="translate(5.51 -2.6)">
+                          <g>
+                            <g>
+                              <path
+                                d="M21.161,20.2,15.647,14.77a8.722,8.722,0,0,0,2.331-5.927A8.916,8.916,0,0,0,8.992,0,8.915,8.915,0,0,0,.006,8.843a8.915,8.915,0,0,0,8.986,8.843,9.037,9.037,0,0,0,5.656-1.975l5.536,5.447a.7.7,0,0,0,.977,0A.673.673,0,0,0,21.161,20.2ZM8.992,16.325a7.543,7.543,0,0,1-7.6-7.482,7.543,7.543,0,0,1,7.6-7.482,7.543,7.543,0,0,1,7.6,7.482A7.543,7.543,0,0,1,8.992,16.325Z"
+                                transform="translate(-0.006)"
+                                fill="#fff"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center gap-[10px] absolute bottom-[20px] left-[50%] translate-x-[-50%] w-full"
+            >
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="53"
+                  viewBox="0 0 13 53"
+                >
+                  <text
+                    transform="translate(0 43)"
+                    fill="#0a84fe"
+                    font-size="40"
+                    font-family="SegoeUIBlack, Segoe UI"
+                  >
+                    <tspan x="0" y="0">i</tspan>
+                  </text>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.59"
+                  height="24.806"
+                  viewBox="0 0 19.59 24.806"
+                >
+                  <g transform="translate(-114.666 -144.395)">
+                    <path
+                      id="path2992"
+                      d="M102.355,319.692a30.465,30.465,0,0,0-6.645-8.851c-.351-.3-.851-.714-.855-.748,0,0,.325-.293.514-.421,1.637-1.151,3.215-2.389,4.857-3.528.914,2.317,1.573,4.746,2.387,6.9a57.315,57.315,0,0,1,7.019-13.1,19.806,19.806,0,0,1,4.813-4.8,29.335,29.335,0,0,0-.289,8.124c.089.519.124,1.509.124,1.509s-.66.391-.685.416c-2.413,1.616-4.078,4.047-5.859,6.283a67.636,67.636,0,0,0-5.2,8.455c-.01.1-.138-.182-.178-.239Z"
+                      transform="translate(19.811 -150.75)"
+                      fill="#0a84fe"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26.827"
+                  height="23.512"
+                  viewBox="0 0 26.827 23.512"
+                >
+                  <g transform="translate(0 -26.576)">
+                    <g transform="translate(0 26.576)">
+                      <g transform="translate(0)">
+                        <path
+                          d="M176.725,159.668a2.736,2.736,0,1,0,2.736,2.736A2.736,2.736,0,0,0,176.725,159.668Zm0,4.17a1.433,1.433,0,1,1,0-2.867h0a1.433,1.433,0,0,1,0,2.867Z"
+                          transform="translate(-163.14 -151.369)"
+                          fill="#0a84fe"
+                        />
+                        <path
+                          d="M24.5,28.62,6.712,26.6a2.443,2.443,0,0,0-1.922.554,2.476,2.476,0,0,0-.945,1.694l-.326,2.671H2.509A2.618,2.618,0,0,0,0,34.223V47.547a2.476,2.476,0,0,0,2.41,2.54H20.394a2.674,2.674,0,0,0,2.736-2.541v-.521a3.258,3.258,0,0,0,1.238-.521,2.7,2.7,0,0,0,.945-1.759l1.5-13.226A2.639,2.639,0,0,0,24.5,28.62ZM21.827,47.547a1.372,1.372,0,0,1-1.433,1.238H2.509A1.173,1.173,0,0,1,1.3,47.647q0-.05,0-.1V45.136l5.049-3.714a1.564,1.564,0,0,1,2.02.1l3.551,3.127a3.062,3.062,0,0,0,1.922.717,2.964,2.964,0,0,0,1.564-.424l6.418-3.714v6.32Zm0-7.851-7.1,4.137A1.661,1.661,0,0,1,12.8,43.67L9.22,40.51A2.9,2.9,0,0,0,5.6,40.38L1.3,43.507V34.223a1.315,1.315,0,0,1,1.205-1.4H20.394a1.5,1.5,0,0,1,1.433,1.4V39.7Zm3.682-8.353v.013L23.977,44.582a1.108,1.108,0,0,1-.424.88c-.13.13-.424.2-.424.261v-11.5a2.8,2.8,0,0,0-2.736-2.7H4.822l.293-2.541a1.5,1.5,0,0,1,.489-.847,1.5,1.5,0,0,1,.977-.261l17.754,2.052A1.3,1.3,0,0,1,25.51,31.343Z"
+                          transform="translate(0 -26.576)"
+                          fill="#0a84fe"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-red"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.5"
+                  height="25.231"
+                  viewBox="0 0 20.5 25.231"
+                >
+                  <g transform="translate(-48)">
+                    <g>
+                      <path
+                        d="M66.529,3.154H62.192V2.365A2.368,2.368,0,0,0,59.827,0H56.673a2.368,2.368,0,0,0-2.365,2.365v.788H49.971A1.973,1.973,0,0,0,48,5.125v2.76a.788.788,0,0,0,.788.788h.431l.681,14.3a2.363,2.363,0,0,0,2.363,2.253H64.237A2.362,2.362,0,0,0,66.6,22.978l.681-14.3h.431a.788.788,0,0,0,.788-.788V5.125A1.973,1.973,0,0,0,66.529,3.154ZM55.885,2.365a.789.789,0,0,1,.788-.788h3.154a.789.789,0,0,1,.788.788v.788H55.885Zm-6.308,2.76a.4.4,0,0,1,.394-.394H66.529a.4.4,0,0,1,.394.394V7.1H49.577ZM65.024,22.9a.788.788,0,0,1-.788.751H52.263a.787.787,0,0,1-.788-.751L50.8,8.673H65.7Z"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M240.788,219.827a.789.789,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,240.788,219.827Z"
+                        transform="translate(-182.539 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M320.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,320.788,219.827Z"
+                        transform="translate(-258.596 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M160.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,160.788,219.827Z"
+                        transform="translate(-106.48 -197.75)"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide box-border w-full min-h-[90vh] pb-[20px]">
+          <div class="flex flex-col items-center">
+            <span class="text-xl font-light mb-[80px]">Предложения. Игра</span>
+            <div
+              class="w-[140px] h-[190px] rounded-[15px] text-center btn-shadow overflow-hidden"
+            >
+              <div
+                class="flex items-center justify-center border border-blue w-[140px] h-[110px] relative rounded-t-[15px]"
+              >
+                <div class="w-[70px] h-[70px] absolute">
+                  <button
+                    class="absolute top-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(-85.333 21) rotate(-90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#000"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute right-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <path
+                        d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                        transform="translate(0 -85.333)"
+                        fill="#000"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute bottom-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(99.333) rotate(90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#000"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <g transform="translate(21 99.333) rotate(180)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#000"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21.357"
+                      height="21.358"
+                      viewBox="0 0 21.357 21.358"
+                    >
+                      <g transform="translate(-5.51 2.6)">
+                        <g transform="translate(5.51 -2.6)">
+                          <g>
+                            <g>
+                              <path
+                                d="M21.161,20.2,15.647,14.77a8.722,8.722,0,0,0,2.331-5.927A8.916,8.916,0,0,0,8.992,0,8.915,8.915,0,0,0,.006,8.843a8.915,8.915,0,0,0,8.986,8.843,9.037,9.037,0,0,0,5.656-1.975l5.536,5.447a.7.7,0,0,0,.977,0A.673.673,0,0,0,21.161,20.2ZM8.992,16.325a7.543,7.543,0,0,1-7.6-7.482,7.543,7.543,0,0,1,7.6-7.482,7.543,7.543,0,0,1,7.6,7.482A7.543,7.543,0,0,1,8.992,16.325Z"
+                                transform="translate(-0.006)"
+                                fill="#000"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="pt-[20px] flex flex-col items-center justify-center">
+                Игра
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center gap-[10px] absolute bottom-[20px] left-[50%] translate-x-[-50%] w-full"
+            >
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="53"
+                  viewBox="0 0 13 53"
+                >
+                  <text
+                    transform="translate(0 43)"
+                    fill="#0a84fe"
+                    font-size="40"
+                    font-family="SegoeUIBlack, Segoe UI"
+                  >
+                    <tspan x="0" y="0">i</tspan>
+                  </text>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.59"
+                  height="24.806"
+                  viewBox="0 0 19.59 24.806"
+                >
+                  <g transform="translate(-114.666 -144.395)">
+                    <path
+                      id="path2992"
+                      d="M102.355,319.692a30.465,30.465,0,0,0-6.645-8.851c-.351-.3-.851-.714-.855-.748,0,0,.325-.293.514-.421,1.637-1.151,3.215-2.389,4.857-3.528.914,2.317,1.573,4.746,2.387,6.9a57.315,57.315,0,0,1,7.019-13.1,19.806,19.806,0,0,1,4.813-4.8,29.335,29.335,0,0,0-.289,8.124c.089.519.124,1.509.124,1.509s-.66.391-.685.416c-2.413,1.616-4.078,4.047-5.859,6.283a67.636,67.636,0,0,0-5.2,8.455c-.01.1-.138-.182-.178-.239Z"
+                      transform="translate(19.811 -150.75)"
+                      fill="#0a84fe"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26.827"
+                  height="23.512"
+                  viewBox="0 0 26.827 23.512"
+                >
+                  <g transform="translate(0 -26.576)">
+                    <g transform="translate(0 26.576)">
+                      <g transform="translate(0)">
+                        <path
+                          d="M176.725,159.668a2.736,2.736,0,1,0,2.736,2.736A2.736,2.736,0,0,0,176.725,159.668Zm0,4.17a1.433,1.433,0,1,1,0-2.867h0a1.433,1.433,0,0,1,0,2.867Z"
+                          transform="translate(-163.14 -151.369)"
+                          fill="#0a84fe"
+                        />
+                        <path
+                          d="M24.5,28.62,6.712,26.6a2.443,2.443,0,0,0-1.922.554,2.476,2.476,0,0,0-.945,1.694l-.326,2.671H2.509A2.618,2.618,0,0,0,0,34.223V47.547a2.476,2.476,0,0,0,2.41,2.54H20.394a2.674,2.674,0,0,0,2.736-2.541v-.521a3.258,3.258,0,0,0,1.238-.521,2.7,2.7,0,0,0,.945-1.759l1.5-13.226A2.639,2.639,0,0,0,24.5,28.62ZM21.827,47.547a1.372,1.372,0,0,1-1.433,1.238H2.509A1.173,1.173,0,0,1,1.3,47.647q0-.05,0-.1V45.136l5.049-3.714a1.564,1.564,0,0,1,2.02.1l3.551,3.127a3.062,3.062,0,0,0,1.922.717,2.964,2.964,0,0,0,1.564-.424l6.418-3.714v6.32Zm0-7.851-7.1,4.137A1.661,1.661,0,0,1,12.8,43.67L9.22,40.51A2.9,2.9,0,0,0,5.6,40.38L1.3,43.507V34.223a1.315,1.315,0,0,1,1.205-1.4H20.394a1.5,1.5,0,0,1,1.433,1.4V39.7Zm3.682-8.353v.013L23.977,44.582a1.108,1.108,0,0,1-.424.88c-.13.13-.424.2-.424.261v-11.5a2.8,2.8,0,0,0-2.736-2.7H4.822l.293-2.541a1.5,1.5,0,0,1,.489-.847,1.5,1.5,0,0,1,.977-.261l17.754,2.052A1.3,1.3,0,0,1,25.51,31.343Z"
+                          transform="translate(0 -26.576)"
+                          fill="#0a84fe"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-red"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.5"
+                  height="25.231"
+                  viewBox="0 0 20.5 25.231"
+                >
+                  <g transform="translate(-48)">
+                    <g>
+                      <path
+                        d="M66.529,3.154H62.192V2.365A2.368,2.368,0,0,0,59.827,0H56.673a2.368,2.368,0,0,0-2.365,2.365v.788H49.971A1.973,1.973,0,0,0,48,5.125v2.76a.788.788,0,0,0,.788.788h.431l.681,14.3a2.363,2.363,0,0,0,2.363,2.253H64.237A2.362,2.362,0,0,0,66.6,22.978l.681-14.3h.431a.788.788,0,0,0,.788-.788V5.125A1.973,1.973,0,0,0,66.529,3.154ZM55.885,2.365a.789.789,0,0,1,.788-.788h3.154a.789.789,0,0,1,.788.788v.788H55.885Zm-6.308,2.76a.4.4,0,0,1,.394-.394H66.529a.4.4,0,0,1,.394.394V7.1H49.577ZM65.024,22.9a.788.788,0,0,1-.788.751H52.263a.787.787,0,0,1-.788-.751L50.8,8.673H65.7Z"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M240.788,219.827a.789.789,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,240.788,219.827Z"
+                        transform="translate(-182.539 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M320.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,320.788,219.827Z"
+                        transform="translate(-258.596 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M160.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,160.788,219.827Z"
+                        transform="translate(-106.48 -197.75)"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide box-border w-full min-h-[90vh] pb-[20px]">
+          <div class="flex flex-col items-center">
+            <span class="text-xl font-light mb-[80px]">Предложения. Отдых</span>
+            <div
+              class="w-[140px] h-[190px] rounded-[15px] text-center btn-shadow overflow-hidden"
+            >
+              <div
+                class="flex items-center justify-center border border-blue w-[140px] h-[110px] relative rounded-t-[15px]"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://images.unsplash.com/photo-1500932334442-8761ee4810a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z29sZnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="img"
+                />
+                <div class="w-[70px] h-[70px] absolute">
+                  <button
+                    class="absolute top-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(-85.333 21) rotate(-90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute right-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <path
+                        d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                        transform="translate(0 -85.333)"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute bottom-0 left-[50%] translate-x-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="21"
+                      viewBox="0 0 14 21"
+                    >
+                      <g transform="translate(99.333) rotate(90)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-0 top-[50%] translate-y-[-50%] w-[20px] h-[20px] flex items-center justify-center"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="14"
+                      viewBox="0 0 21 14"
+                    >
+                      <g transform="translate(21 99.333) rotate(180)">
+                        <g transform="translate(0 85.333)">
+                          <path
+                            d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+                            transform="translate(0 -85.333)"
+                            fill="#fff"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                  <button
+                    class="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21.357"
+                      height="21.358"
+                      viewBox="0 0 21.357 21.358"
+                    >
+                      <g transform="translate(-5.51 2.6)">
+                        <g transform="translate(5.51 -2.6)">
+                          <g>
+                            <g>
+                              <path
+                                d="M21.161,20.2,15.647,14.77a8.722,8.722,0,0,0,2.331-5.927A8.916,8.916,0,0,0,8.992,0,8.915,8.915,0,0,0,.006,8.843a8.915,8.915,0,0,0,8.986,8.843,9.037,9.037,0,0,0,5.656-1.975l5.536,5.447a.7.7,0,0,0,.977,0A.673.673,0,0,0,21.161,20.2ZM8.992,16.325a7.543,7.543,0,0,1-7.6-7.482,7.543,7.543,0,0,1,7.6-7.482,7.543,7.543,0,0,1,7.6,7.482A7.543,7.543,0,0,1,8.992,16.325Z"
+                                transform="translate(-0.006)"
+                                fill="#fff"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="pt-[20px] flex flex-col items-center justify-center">
+                Отдых
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center gap-[10px] absolute bottom-[20px] left-[50%] translate-x-[-50%] w-full"
+            >
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="53"
+                  viewBox="0 0 13 53"
+                >
+                  <text
+                    transform="translate(0 43)"
+                    fill="#0a84fe"
+                    font-size="40"
+                    font-family="SegoeUIBlack, Segoe UI"
+                  >
+                    <tspan x="0" y="0">i</tspan>
+                  </text>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.59"
+                  height="24.806"
+                  viewBox="0 0 19.59 24.806"
+                >
+                  <g transform="translate(-114.666 -144.395)">
+                    <path
+                      id="path2992"
+                      d="M102.355,319.692a30.465,30.465,0,0,0-6.645-8.851c-.351-.3-.851-.714-.855-.748,0,0,.325-.293.514-.421,1.637-1.151,3.215-2.389,4.857-3.528.914,2.317,1.573,4.746,2.387,6.9a57.315,57.315,0,0,1,7.019-13.1,19.806,19.806,0,0,1,4.813-4.8,29.335,29.335,0,0,0-.289,8.124c.089.519.124,1.509.124,1.509s-.66.391-.685.416c-2.413,1.616-4.078,4.047-5.859,6.283a67.636,67.636,0,0,0-5.2,8.455c-.01.1-.138-.182-.178-.239Z"
+                      transform="translate(19.811 -150.75)"
+                      fill="#0a84fe"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26.827"
+                  height="23.512"
+                  viewBox="0 0 26.827 23.512"
+                >
+                  <g transform="translate(0 -26.576)">
+                    <g transform="translate(0 26.576)">
+                      <g transform="translate(0)">
+                        <path
+                          d="M176.725,159.668a2.736,2.736,0,1,0,2.736,2.736A2.736,2.736,0,0,0,176.725,159.668Zm0,4.17a1.433,1.433,0,1,1,0-2.867h0a1.433,1.433,0,0,1,0,2.867Z"
+                          transform="translate(-163.14 -151.369)"
+                          fill="#0a84fe"
+                        />
+                        <path
+                          d="M24.5,28.62,6.712,26.6a2.443,2.443,0,0,0-1.922.554,2.476,2.476,0,0,0-.945,1.694l-.326,2.671H2.509A2.618,2.618,0,0,0,0,34.223V47.547a2.476,2.476,0,0,0,2.41,2.54H20.394a2.674,2.674,0,0,0,2.736-2.541v-.521a3.258,3.258,0,0,0,1.238-.521,2.7,2.7,0,0,0,.945-1.759l1.5-13.226A2.639,2.639,0,0,0,24.5,28.62ZM21.827,47.547a1.372,1.372,0,0,1-1.433,1.238H2.509A1.173,1.173,0,0,1,1.3,47.647q0-.05,0-.1V45.136l5.049-3.714a1.564,1.564,0,0,1,2.02.1l3.551,3.127a3.062,3.062,0,0,0,1.922.717,2.964,2.964,0,0,0,1.564-.424l6.418-3.714v6.32Zm0-7.851-7.1,4.137A1.661,1.661,0,0,1,12.8,43.67L9.22,40.51A2.9,2.9,0,0,0,5.6,40.38L1.3,43.507V34.223a1.315,1.315,0,0,1,1.205-1.4H20.394a1.5,1.5,0,0,1,1.433,1.4V39.7Zm3.682-8.353v.013L23.977,44.582a1.108,1.108,0,0,1-.424.88c-.13.13-.424.2-.424.261v-11.5a2.8,2.8,0,0,0-2.736-2.7H4.822l.293-2.541a1.5,1.5,0,0,1,.489-.847,1.5,1.5,0,0,1,.977-.261l17.754,2.052A1.3,1.3,0,0,1,25.51,31.343Z"
+                          transform="translate(0 -26.576)"
+                          fill="#0a84fe"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-red"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.5"
+                  height="25.231"
+                  viewBox="0 0 20.5 25.231"
+                >
+                  <g transform="translate(-48)">
+                    <g>
+                      <path
+                        d="M66.529,3.154H62.192V2.365A2.368,2.368,0,0,0,59.827,0H56.673a2.368,2.368,0,0,0-2.365,2.365v.788H49.971A1.973,1.973,0,0,0,48,5.125v2.76a.788.788,0,0,0,.788.788h.431l.681,14.3a2.363,2.363,0,0,0,2.363,2.253H64.237A2.362,2.362,0,0,0,66.6,22.978l.681-14.3h.431a.788.788,0,0,0,.788-.788V5.125A1.973,1.973,0,0,0,66.529,3.154ZM55.885,2.365a.789.789,0,0,1,.788-.788h3.154a.789.789,0,0,1,.788.788v.788H55.885Zm-6.308,2.76a.4.4,0,0,1,.394-.394H66.529a.4.4,0,0,1,.394.394V7.1H49.577ZM65.024,22.9a.788.788,0,0,1-.788.751H52.263a.787.787,0,0,1-.788-.751L50.8,8.673H65.7Z"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M240.788,219.827a.789.789,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,240.788,219.827Z"
+                        transform="translate(-182.539 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M320.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,320.788,219.827Z"
+                        transform="translate(-258.596 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M160.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,160.788,219.827Z"
+                        transform="translate(-106.48 -197.75)"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide box-border w-full min-h-[90vh] pb-[20px]">
+          <div class="flex flex-col items-center">
+            <span class="text-xl font-light mb-[80px]"
+              >Предложения. Услуги</span
+            >
+            <div
+              class="w-[140px] h-[190px] rounded-[15px] text-center btn-shadow overflow-hidden"
+            >
+              <div
+                class="flex items-center justify-center border border-blue w-[140px] h-[110px] relative rounded-t-[15px]"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://images.unsplash.com/photo-1500932334442-8761ee4810a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z29sZnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="img"
+                />
+              </div>
+              <div class="pt-[20px] flex flex-col items-center justify-center">
+                Услуги
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center gap-[10px] absolute bottom-[20px] left-[50%] translate-x-[-50%] w-full"
+            >
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="53"
+                  viewBox="0 0 13 53"
+                >
+                  <text
+                    transform="translate(0 43)"
+                    fill="#0a84fe"
+                    font-size="40"
+                    font-family="SegoeUIBlack, Segoe UI"
+                  >
+                    <tspan x="0" y="0">i</tspan>
+                  </text>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.59"
+                  height="24.806"
+                  viewBox="0 0 19.59 24.806"
+                >
+                  <g transform="translate(-114.666 -144.395)">
+                    <path
+                      id="path2992"
+                      d="M102.355,319.692a30.465,30.465,0,0,0-6.645-8.851c-.351-.3-.851-.714-.855-.748,0,0,.325-.293.514-.421,1.637-1.151,3.215-2.389,4.857-3.528.914,2.317,1.573,4.746,2.387,6.9a57.315,57.315,0,0,1,7.019-13.1,19.806,19.806,0,0,1,4.813-4.8,29.335,29.335,0,0,0-.289,8.124c.089.519.124,1.509.124,1.509s-.66.391-.685.416c-2.413,1.616-4.078,4.047-5.859,6.283a67.636,67.636,0,0,0-5.2,8.455c-.01.1-.138-.182-.178-.239Z"
+                      transform="translate(19.811 -150.75)"
+                      fill="#0a84fe"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26.827"
+                  height="23.512"
+                  viewBox="0 0 26.827 23.512"
+                >
+                  <g transform="translate(0 -26.576)">
+                    <g transform="translate(0 26.576)">
+                      <g transform="translate(0)">
+                        <path
+                          d="M176.725,159.668a2.736,2.736,0,1,0,2.736,2.736A2.736,2.736,0,0,0,176.725,159.668Zm0,4.17a1.433,1.433,0,1,1,0-2.867h0a1.433,1.433,0,0,1,0,2.867Z"
+                          transform="translate(-163.14 -151.369)"
+                          fill="#0a84fe"
+                        />
+                        <path
+                          d="M24.5,28.62,6.712,26.6a2.443,2.443,0,0,0-1.922.554,2.476,2.476,0,0,0-.945,1.694l-.326,2.671H2.509A2.618,2.618,0,0,0,0,34.223V47.547a2.476,2.476,0,0,0,2.41,2.54H20.394a2.674,2.674,0,0,0,2.736-2.541v-.521a3.258,3.258,0,0,0,1.238-.521,2.7,2.7,0,0,0,.945-1.759l1.5-13.226A2.639,2.639,0,0,0,24.5,28.62ZM21.827,47.547a1.372,1.372,0,0,1-1.433,1.238H2.509A1.173,1.173,0,0,1,1.3,47.647q0-.05,0-.1V45.136l5.049-3.714a1.564,1.564,0,0,1,2.02.1l3.551,3.127a3.062,3.062,0,0,0,1.922.717,2.964,2.964,0,0,0,1.564-.424l6.418-3.714v6.32Zm0-7.851-7.1,4.137A1.661,1.661,0,0,1,12.8,43.67L9.22,40.51A2.9,2.9,0,0,0,5.6,40.38L1.3,43.507V34.223a1.315,1.315,0,0,1,1.205-1.4H20.394a1.5,1.5,0,0,1,1.433,1.4V39.7Zm3.682-8.353v.013L23.977,44.582a1.108,1.108,0,0,1-.424.88c-.13.13-.424.2-.424.261v-11.5a2.8,2.8,0,0,0-2.736-2.7H4.822l.293-2.541a1.5,1.5,0,0,1,.489-.847,1.5,1.5,0,0,1,.977-.261l17.754,2.052A1.3,1.3,0,0,1,25.51,31.343Z"
+                          transform="translate(0 -26.576)"
+                          fill="#0a84fe"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+              <button
+                class="w-[50px] h-[50px] flex items-center justify-center rounded-full btn-shadow bg-red"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.5"
+                  height="25.231"
+                  viewBox="0 0 20.5 25.231"
+                >
+                  <g transform="translate(-48)">
+                    <g>
+                      <path
+                        d="M66.529,3.154H62.192V2.365A2.368,2.368,0,0,0,59.827,0H56.673a2.368,2.368,0,0,0-2.365,2.365v.788H49.971A1.973,1.973,0,0,0,48,5.125v2.76a.788.788,0,0,0,.788.788h.431l.681,14.3a2.363,2.363,0,0,0,2.363,2.253H64.237A2.362,2.362,0,0,0,66.6,22.978l.681-14.3h.431a.788.788,0,0,0,.788-.788V5.125A1.973,1.973,0,0,0,66.529,3.154ZM55.885,2.365a.789.789,0,0,1,.788-.788h3.154a.789.789,0,0,1,.788.788v.788H55.885Zm-6.308,2.76a.4.4,0,0,1,.394-.394H66.529a.4.4,0,0,1,.394.394V7.1H49.577ZM65.024,22.9a.788.788,0,0,1-.788.751H52.263a.787.787,0,0,1-.788-.751L50.8,8.673H65.7Z"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M240.788,219.827a.789.789,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,240.788,219.827Z"
+                        transform="translate(-182.539 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M320.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,320.788,219.827Z"
+                        transform="translate(-258.596 -197.75)"
+                        fill="#fff"
+                      />
+                      <path
+                        d="M160.788,219.827a.788.788,0,0,0,.788-.788v-10.25a.788.788,0,0,0-1.577,0v10.25A.788.788,0,0,0,160.788,219.827Z"
+                        transform="translate(-106.48 -197.75)"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="swiper-pagination !bottom-[100px]"></div>
+    </div>
+  </div>
+</section>
+</main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

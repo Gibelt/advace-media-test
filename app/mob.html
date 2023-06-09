@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      container: {
+        padding: '15px',
+        center: true,
+      },
+
+      extend: {
+        colors: {
+          white: '#fff',
+          black: '#000',
+          gray: '#707070',
+          blue: '#0A84FE',
+          red: '#ff0a0a',
+          green: '#39ca1c',
+          'green-light': '#C3EFBC',
+          yellow: '#FED42D',
+          'blue-light': '#e8f2ff',
+          'gray-light': '#DADADA',
+          'dark-03': 'rgba(0, 0, 0, 0.3)',
+          'dark-05': 'rgba(0, 0, 0, 0.5)',
+        },
+      },
+    },
+  };
+</script>
+
+<title>Эмэйз</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--online-booking">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Онлайн запись</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-name">Имя</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="online-name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-tel">
+            Контактный телефон
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="online-tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <!--* Scroll Top Button -->
+    <button class="scroll-top-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="21"
+        viewBox="0 0 14 21"
+      >
+        <g transform="translate(-85.333 21) rotate(-90)">
+          <g transform="translate(0 85.333)">
+            <path
+              d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+              transform="translate(0 -85.333)"
+              fill="currentColor"
+            />
+          </g>
+        </g>
+      </svg>
+    </button>
+
+    <div class="site-wrapper">
+      <div id="warning">Переверни смартфон!</div>
+
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <a class="mobile-menu__phone" href="tel:+74994990917">
+        +7 (499) 499 09 17
+      </a>
+      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <div class="header__wrapper"></div>
+  </div>
+</header>
+
+
+      <main class="main">
+        <section class="appeals py-[20px]">
+  <div class="container">
+    <h1 class="text-[32px] font-light mb-[20px]">Мобильная версия</h1>
+
+    <div class="text-xl">
+      <button
+        class="grid grid-cols-[40px_1fr] items-center gap-[10px] text-left mb-[40px]"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24.777"
+          height="29.053"
+          viewBox="0 0 24.777 29.053"
+        >
+          <g transform="translate(-37.681 0)">
+            <g transform="translate(37.681 0)">
+              <g transform="translate(0 0)">
+                <path
+                  d="M62.008,5.017A48.328,48.328,0,0,1,50.38.085a.611.611,0,0,0-.621,0A47,47,0,0,1,38.131,5.017a.611.611,0,0,0-.45.589v6.244a17.964,17.964,0,0,0,5.455,13.125c2.679,2.625,5.8,4.077,6.933,4.077S54.323,27.6,57,24.976a17.964,17.964,0,0,0,5.455-13.125V5.606A.611.611,0,0,0,62.008,5.017Zm-.773,6.834A16.766,16.766,0,0,1,56.147,24.1C53.513,26.684,50.7,27.83,50.07,27.83s-3.443-1.146-6.078-3.728A16.767,16.767,0,0,1,38.9,11.85V6.07A48.131,48.131,0,0,0,50.07,1.319,49.654,49.654,0,0,0,61.235,6.07Z"
+                  transform="translate(-37.681 0)"
+                />
+                <path
+                  d="M126.213,159.106a1.987,1.987,0,0,0-2.81,2.811l3.609,3.609a1.988,1.988,0,0,0,2.81,0l7.533-7.533a1.987,1.987,0,0,0-2.811-2.81l-6.128,6.128Zm9.2-3.06a.765.765,0,1,1,1.082,1.082l-7.533,7.533a.766.766,0,0,1-1.082,0l-3.609-3.608a.765.765,0,0,1,1.082-1.082l2.635,2.636a.611.611,0,0,0,.864,0Z"
+                  transform="translate(-117.99 -145.826)"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        Политика конфиденциальности
+      </button>
+      <button
+        class="grid grid-cols-[40px_1fr] items-center gap-[10px] text-left mb-[40px]"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="27.145"
+          height="27.145"
+          viewBox="0 0 27.145 27.145"
+        >
+          <g id="stats" transform="translate(0 0)">
+            <g
+              id="Сгруппировать_267"
+              data-name="Сгруппировать 267"
+              transform="translate(0 10.199)"
+            >
+              <g id="Сгруппировать_266" data-name="Сгруппировать 266">
+                <path
+                  id="Контур_259"
+                  data-name="Контур 259"
+                  d="M26.747,208.525H24.17v-15.75a.4.4,0,0,0-.4-.4h-4.25a.4.4,0,0,0-.4.4v15.75H16.1V197.449a.4.4,0,0,0-.4-.4h-4.25a.4.4,0,0,0-.4.4v11.076H8.021v-8.951a.4.4,0,0,0-.4-.4H3.373a.4.4,0,0,0-.4.4v8.951H.4a.4.4,0,0,0,0,.8H26.747a.4.4,0,1,0,0-.8Zm-19.522,0H3.772v-8.553H7.224v8.553Zm8.074,0H11.846V197.848H15.3Zm8.074,0H19.921V193.173h3.453v15.352Z"
+                  transform="translate(0 -192.376)"
+                />
+              </g>
+            </g>
+            <g
+              id="Сгруппировать_269"
+              data-name="Сгруппировать 269"
+              transform="translate(0.425 0)"
+            >
+              <g id="Сгруппировать_268" data-name="Сгруппировать 268">
+                <path
+                  id="Контур_260"
+                  data-name="Контур 260"
+                  d="M33.465.312a1.248,1.248,0,0,0-.981-.3l-3.4.425a1.248,1.248,0,0,0,.31,2.477l.277-.035a30.132,30.132,0,0,1-12.639,8.6,28.819,28.819,0,0,1-7.806,1.7,1.248,1.248,0,0,0,.039,2.5H9.3a30.535,30.535,0,0,0,8.509-1.825,33.481,33.481,0,0,0,7.47-3.755.4.4,0,0,0-.445-.661,32.678,32.678,0,0,1-7.292,3.665,29.66,29.66,0,0,1-8.265,1.779H9.265a.452.452,0,0,1-.013-.9,29.446,29.446,0,0,0,8.05-1.748A30.826,30.826,0,0,0,30.933,2.606a.4.4,0,0,0-.36-.645l-1.278.16a.452.452,0,1,1-.112-.9L32.583.8a.456.456,0,0,1,.507.448v3.4a.452.452,0,1,1-.9,0V3.617a.4.4,0,0,0-.707-.252,30.8,30.8,0,0,1-5.036,4.9.4.4,0,1,0,.487.631,31.576,31.576,0,0,0,4.461-4.2,1.248,1.248,0,0,0,2.5-.056v-3.4A1.249,1.249,0,0,0,33.465.312Z"
+                  transform="translate(-8.017 0)"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        Сбор статистики
+      </button>
+      <button
+        class="grid grid-cols-[40px_1fr] items-center gap-[10px] text-left mb-[40px]"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="27.194"
+          height="28.078"
+          viewBox="0 0 27.194 28.078"
+        >
+          <g
+            id="folder_1_"
+            data-name="folder (1)"
+            transform="translate(-8.058 0)"
+          >
+            <path
+              id="Контур_304"
+              data-name="Контур 304"
+              d="M34.1,12.55H32.959V11.414A1.158,1.158,0,0,0,31.8,10.257H31.1V6.436a.411.411,0,1,0-.823,0V12.55H15.027V2.571A.076.076,0,0,1,15.1,2.5H30.2a.076.076,0,0,1,.076.076V4.516a.411.411,0,1,0,.823,0V2.571a.9.9,0,0,0-.9-.9h-.872V.9a.9.9,0,0,0-.9-.9h-15.1a.9.9,0,0,0-.9.9v9.359H9.215a1.158,1.158,0,0,0-1.157,1.157V21.922a.411.411,0,0,0,.823,0V11.414a.334.334,0,0,1,.334-.334h3.219V12.55h-.926a1.158,1.158,0,0,0-1.157,1.157V26.52a.735.735,0,0,1-1.471,0V23.842a.411.411,0,0,0-.823,0V26.52a1.56,1.56,0,0,0,1.558,1.558H33.694a1.56,1.56,0,0,0,1.558-1.558V13.707A1.158,1.158,0,0,0,34.1,12.55Zm-3-1.471H31.8a.334.334,0,0,1,.334.334V12.55H31.1Zm-17.84-.411V.9a.076.076,0,0,1,.076-.076h15.1A.076.076,0,0,1,28.5.9v.775H15.1a.9.9,0,0,0-.9.9V12.55h-.948ZM34.429,26.52a.736.736,0,0,1-.735.735h-22.7a1.566,1.566,0,0,0,.185-.735V13.707a.334.334,0,0,1,.334-.334H34.1a.334.334,0,0,1,.334.334V26.52Z"
+            />
+            <path
+              id="Контур_305"
+              data-name="Контур 305"
+              d="M160.915,324.217H149.236a1.071,1.071,0,0,0-1.069,1.069v4.168a1.071,1.071,0,0,0,1.069,1.069h11.679a1.071,1.071,0,0,0,1.069-1.069v-4.168A1.071,1.071,0,0,0,160.915,324.217Zm.247,5.237a.247.247,0,0,1-.247.247H149.236a.247.247,0,0,1-.247-.247v-4.168a.247.247,0,0,1,.247-.247h11.679a.247.247,0,0,1,.247.247Z"
+              transform="translate(-132.426 -306.437)"
+            />
+            <path
+              id="Контур_306"
+              data-name="Контур 306"
+              d="M194.143,80.5H184.82a.411.411,0,1,0,0,.823h9.323a.411.411,0,1,0,0-.823Z"
+              transform="translate(-166.68 -76.085)"
+            />
+            <path
+              id="Контур_307"
+              data-name="Контур 307"
+              d="M194.143,133.77H184.82a.411.411,0,1,0,0,.823h9.323a.411.411,0,1,0,0-.823Z"
+              transform="translate(-166.68 -126.434)"
+            />
+            <path
+              id="Контур_308"
+              data-name="Контур 308"
+              d="M194.143,187.039H184.82a.411.411,0,1,0,0,.823h9.323a.411.411,0,1,0,0-.823Z"
+              transform="translate(-166.68 -176.782)"
+            />
+          </g>
+        </svg>
+
+        Кэширование данных
+      </button>
+      <button
+        class="grid grid-cols-[40px_1fr] items-center gap-[10px] text-left"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25.843"
+          height="23.218"
+          viewBox="0 0 25.843 23.218"
+        >
+          <g
+            id="speech-bubble_1_"
+            data-name="speech-bubble (1)"
+            transform="translate(0 0)"
+          >
+            <path
+              id="Контур_298"
+              data-name="Контур 298"
+              d="M246.5,100a.5.5,0,1,0,.5.5A.5.5,0,0,0,246.5,100Zm0,0"
+              transform="translate(-233.583 -94.953)"
+            />
+            <path
+              id="Контур_299"
+              data-name="Контур 299"
+              d="M80.5,261.009a.5.5,0,1,0-.5-.5A.5.5,0,0,0,80.5,261.009Zm0,0"
+              transform="translate(-75.962 -246.877)"
+            />
+            <path
+              id="Контур_300"
+              data-name="Контур 300"
+              d="M16.959,0C12.415,0,8.686,3.133,8.4,7.079,4.07,7.3,0,10.416,0,14.637a7.053,7.053,0,0,0,1.968,4.827,3.07,3.07,0,0,1-.811,2.892.5.5,0,0,0,.357.862,5.568,5.568,0,0,0,3.858-1.559,11.5,11.5,0,0,0,3.512.55c4.543,0,8.273-3.132,8.562-7.078a11.35,11.35,0,0,0,3.026-.538,5.568,5.568,0,0,0,3.858,1.559.5.5,0,0,0,.357-.862,3.07,3.07,0,0,1-.811-2.892,7.053,7.053,0,0,0,1.968-4.827C25.843,3.185,21.46,0,16.959,0ZM8.883,21.2a10.2,10.2,0,0,1-3.458-.6.5.5,0,0,0-.559.128A4.554,4.554,0,0,1,2.6,22.075a4.082,4.082,0,0,0,.308-3,.5.5,0,0,0-.123-.213,6.066,6.066,0,0,1-1.776-4.221c0-3.557,3.606-6.562,7.874-6.562,4.03,0,7.571,2.8,7.571,6.562,0,3.618-3.4,6.562-7.571,6.562Zm14.174-9.407a.506.506,0,0,0-.123.213,4.082,4.082,0,0,0,.308,3,4.553,4.553,0,0,1-2.265-1.344.505.505,0,0,0-.559-.128,9.943,9.943,0,0,1-2.974.583,7.225,7.225,0,0,0-2.727-5.035H21.3a.5.5,0,0,0,0-1.009H13.166a9.414,9.414,0,0,0-3.756-.995c.29-3.39,3.566-6.072,7.55-6.072,4.268,0,7.874,3,7.874,6.562a6.066,6.066,0,0,1-1.776,4.221Zm0,0"
+            />
+            <path
+              id="Контур_301"
+              data-name="Контур 301"
+              d="M126.864,260H120.5a.5.5,0,1,0,0,1.009h6.36a.5.5,0,1,0,0-1.009Zm0,0"
+              transform="translate(-113.943 -246.877)"
+            />
+            <path
+              id="Контур_302"
+              data-name="Контур 302"
+              d="M88.883,320H80.5a.5.5,0,1,0,0,1.009h8.379a.5.5,0,1,0,0-1.009Zm0,0"
+              transform="translate(-75.962 -303.849)"
+            />
+            <path
+              id="Контур_303"
+              data-name="Контур 303"
+              d="M292.864,100H286.5a.5.5,0,0,0,0,1.009h6.36a.5.5,0,1,0,0-1.009Zm0,0"
+              transform="translate(-271.564 -94.953)"
+            />
+          </g>
+        </svg>
+
+        О приложении
+      </button>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->
+
+<!-- <div class="accordion-chevron accordion">
+  <button
+    class="accordion-chevron__control accordion-control-btn"
+    type="button"
+  >
+    Создать обращение
+
+    <svg>
+      <use xlink:href="img/sprite.svg#chevron"></use>
+    </svg>
+  </button>
+
+  <div class="accordion-chevron__content accordion-content">
+    <div class="accordion-chevron__inner">
+      <p>
+        Короткая кожанная куртка с классическими лацканами, ветрозащитным
+        клапанов, боковыми карманами и регулируемым поясом на талии.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<!-- SWITCH -->
+<!-- 
+            <label class="switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label> -->

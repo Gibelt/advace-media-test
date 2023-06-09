@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      container: {
+        padding: '15px',
+        center: true,
+      },
+
+      extend: {
+        colors: {
+          white: '#fff',
+          black: '#000',
+          gray: '#707070',
+          blue: '#0A84FE',
+          red: '#ff0a0a',
+          green: '#39ca1c',
+          'green-light': '#C3EFBC',
+          yellow: '#FED42D',
+          'blue-light': '#e8f2ff',
+          'gray-light': '#DADADA',
+          'dark-03': 'rgba(0, 0, 0, 0.3)',
+          'dark-05': 'rgba(0, 0, 0, 0.5)',
+        },
+      },
+    },
+  };
+</script>
+
+<title>Эмэйз</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--online-booking">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Онлайн запись</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-name">Имя</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="online-name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-tel">
+            Контактный телефон
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="online-tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <!--* Scroll Top Button -->
+    <button class="scroll-top-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="21"
+        viewBox="0 0 14 21"
+      >
+        <g transform="translate(-85.333 21) rotate(-90)">
+          <g transform="translate(0 85.333)">
+            <path
+              d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+              transform="translate(0 -85.333)"
+              fill="currentColor"
+            />
+          </g>
+        </g>
+      </svg>
+    </button>
+
+    <div class="site-wrapper">
+      <div id="warning">Переверни смартфон!</div>
+
+      <main class="main">
+        <section class="banner">
+  <div class="container">
+    <img src="img/banner.jpg" alt="img" />
+  </div>
+</section>
+
+        <section class="notifications">
+  <div class="container">
+    <div class="top flex items-center justify-between h-[60px] mb-[10px]">
+      <div class="flex items-center gap-[30px]">
+        <button class="mr-[30px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="11.61"
+            height="19.762"
+            viewBox="0 0 11.61 19.762"
+          >
+            <path
+              id="Контур_73"
+              data-name="Контур 73"
+              d="M112.773,9.11,103.978.316a1.083,1.083,0,0,0-1.529,0L101.8.963a1.082,1.082,0,0,0,0,1.529l7.385,7.385-7.393,7.393a1.084,1.084,0,0,0,0,1.529l.648.647a1.083,1.083,0,0,0,1.529,0l8.8-8.8a1.091,1.091,0,0,0,0-1.534Z"
+              transform="translate(113.088 19.762) rotate(180)"
+              fill="#0a84fe"
+            />
+          </svg>
+        </button>
+        <button>
+          <svg
+            id="loupe"
+            xmlns="http://www.w3.org/2000/svg"
+            width="17.155"
+            height="17.155"
+            viewBox="0 0 17.155 17.155"
+          >
+            <g id="Сгруппировать_59" data-name="Сгруппировать 59">
+              <g id="Сгруппировать_58" data-name="Сгруппировать 58">
+                <path
+                  id="Контур_45"
+                  data-name="Контур 45"
+                  d="M7.555,0a7.555,7.555,0,1,0,7.555,7.555A7.563,7.563,0,0,0,7.555,0Zm0,13.715a6.16,6.16,0,1,1,6.16-6.16A6.167,6.167,0,0,1,7.555,13.715Z"
+                />
+              </g>
+            </g>
+            <g
+              id="Сгруппировать_61"
+              data-name="Сгруппировать 61"
+              transform="translate(11.762 11.762)"
+            >
+              <g id="Сгруппировать_60" data-name="Сгруппировать 60">
+                <path
+                  id="Контур_46"
+                  data-name="Контур 46"
+                  d="M356.234,355.248l-4-4a.7.7,0,0,0-.986.986l4,4a.7.7,0,0,0,.986-.986Z"
+                  transform="translate(-351.046 -351.046)"
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="flex items-center gap-[30px]">
+        <button class="header__btn btn-notification">
+          <span class="count"> 15 </span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="19.901"
+            height="22.643"
+            viewBox="0 0 19.901 22.643"
+          >
+            <g transform="translate(-10)">
+              <path
+                d="M47.8,11.625V9.508a6.867,6.867,0,0,0-4.865-6.56V1.99a1.99,1.99,0,0,0-3.98,0v.958a6.867,6.867,0,0,0-4.865,6.56v2.117a10.416,10.416,0,0,1-2.911,7.242.663.663,0,0,0,.479,1.123H37.7a3.317,3.317,0,0,0,6.5,0h6.037a.663.663,0,0,0,.479-1.123A10.416,10.416,0,0,1,47.8,11.625ZM40.286,1.99a.663.663,0,0,1,1.327,0v.7c-.218-.021-.44-.032-.663-.032s-.445.011-.663.032Zm.663,19.326a1.993,1.993,0,0,1-1.876-1.327h3.752a1.993,1.993,0,0,1-1.876,1.327Zm-7.857-2.653a11.729,11.729,0,0,0,2.329-7.038V9.508a5.528,5.528,0,0,1,11.056,0v2.117a11.729,11.729,0,0,0,2.329,7.038Z"
+                transform="translate(-20.999)"
+              />
+            </g>
+          </svg>
+        </button>
+        <button
+          class="header__btn btn-user flex items-center justify-center"
+          type="button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21.663"
+            height="21.663"
+            viewBox="0 0 21.663 21.663"
+          >
+            <g>
+              <path
+                d="M18.49,14a10.79,10.79,0,0,0-4.116-2.582,6.262,6.262,0,1,0-7.086,0A10.848,10.848,0,0,0,0,21.663H1.692a9.139,9.139,0,0,1,18.278,0h1.692A10.761,10.761,0,0,0,18.49,14Zm-7.659-3.172A4.569,4.569,0,1,1,15.4,6.262,4.575,4.575,0,0,1,10.831,10.831Z"
+                transform="translate(0)"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="n-tabs">
+      <div class="n-tabs-top flex items-center gap-[20px]">
+        <button class="n-tabs-btn active text-xl" type="button">
+          Уведомления
+        </button>
+        <button class="n-tabs-btn text-xl" type="button">Предложения</button>
+      </div>
+      <div class="n-tabs-content active">
+        <div class="flex gap-[10px] py-[20px]">
+          <div class="flex flex-col justify-between py-[15px]">
+            <span class="text-red">09:20</span>
+
+            <div class="border rounded-full w-[40px] h-[40px]"></div>
+          </div>
+          <div
+            class="bg-blue-light p-[15px] pt-[5px] rounded-md text-xl font-light"
+          >
+            <p>
+              Поздравляю! Теперь я часть большого сообщества БРОНИРУЙ и ИГРАЙ.
+              Вместе мы создаем будущее. Как насчет ответить мне в этом чате
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="n-tabs-content">
+        <div class="flex gap-[10px] py-[20px]">
+          <div class="flex flex-col justify-between py-[15px]">
+            <span class="">09:20</span>
+
+            <div class="border rounded-full w-[40px] h-[40px]"></div>
+          </div>
+          <div
+            class="bg-blue-light p-[15px] pt-[5px] rounded-md text-xl font-light"
+          >
+            <p>
+              Поздравляю! Теперь я часть большого сообщества БРОНИРУЙ и ИГРАЙ.
+              Вместе мы создаем будущее. Как насчет ответить мне в этом чате
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->
+
+<!-- <div class="product-accordions__accordion accordion">
+  <button
+    class="product-accordions__control accordion-control-btn"
+    type="button"
+  >
+    Описание продукта
+
+    <svg>
+      <use xlink:href="img/sprite.svg#chevron"></use>
+    </svg>
+  </button>
+
+  <div class="product-accordions__content accordion-content">
+    <div class="product-accordions__inner">
+      <p>
+        Короткая кожанная куртка с классическими лацканами, ветрозащитным
+        клапанов, боковыми карманами и регулируемым поясом на талии.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<!-- SWITCH -->
+<!-- 
+            <label class="switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label> -->

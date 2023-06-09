@@ -1,0 +1,92 @@
+<section class="club-cards">
+  <div class="container">
+    <div class="club-cards__create block-card">
+      <div
+        class="block-card__top"
+        style="background-image: url('img/club-cards/1.jpg')"
+      >
+        <span class="block-card__percent">10%</span>
+
+        <div class="block-card__info">
+          <div class="block-card__details">
+            <span>ИМЯ ВЛАДЕЛЬЦА</span>
+            <span>00/00</span>
+          </div>
+
+          <div>Classic</div>
+        </div>
+      </div>
+      <div class="block-card__bottom">
+        <img src="img/qr-code.png" alt="img" />
+        000000000000
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="container">
+    <div class="club-cards__item">
+      <div>Имя Владельца</div>
+      <div>ID кабинета</div>
+    </div>
+    <div class="club-cards__item">
+      <div>Статус карты</div>
+      <div class="color-blue">10 %</div>
+    </div>
+    <div class="club-cards__item">
+      <div>Срок действия</div>
+      <div class="color-blue">Classic</div>
+    </div>
+
+    <div class="club-accordion accordion">
+      <button
+        class="club-accordion__control accordion-control-btn"
+        type="button"
+      >
+        Допуск
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="6"
+          viewBox="0 0 8 6"
+        >
+          <path d="M0,53.333l4,6,4-6Z" transform="translate(0 -53.333)" />
+        </svg>
+      </button>
+
+      <div class="club-accordion__content accordion-content">
+        <div class="club-accordion__inner">Допуск</div>
+      </div>
+
+      <div class="club-accordion accordion">
+        <button
+          class="club-accordion__control accordion-control-btn"
+          type="button"
+        >
+          Комментарий
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8"
+            height="6"
+            viewBox="0 0 8 6"
+          >
+            <path d="M0,53.333l4,6,4-6Z" transform="translate(0 -53.333)" />
+          </svg>
+        </button>
+
+        <div class="club-accordion__content accordion-content">
+          <div class="club-accordion__inner">
+            <textarea
+              class="club-textarea"
+              placeholder="Комментарий"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="club-cards__btn btn" type="button">Удалить</button>
+  </div>
+</section>

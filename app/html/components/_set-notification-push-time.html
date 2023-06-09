@@ -1,0 +1,44 @@
+<section class="notification py-[20px]">
+  <div class="container">
+    <h1 class="text-[32px] font-light mb-[30px]">Время рассылки</h1>
+
+    <div class="flex items-center justify-between mb-[40px]">
+      <div class="flex flex-col">
+        <span class="text-xl">Ежедневно</span>
+      </div>
+      <label class="switch flex-shrink-0" for="checkbox-1">
+        <input type="checkbox" id="checkbox-1" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <div class="flex items-center justify-between mb-[40px]">
+      <div class="flex flex-col">
+        <span class="text-xl">Будние дни</span>
+      </div>
+      <label class="switch flex-shrink-0" for="checkbox-2">
+        <input type="checkbox" id="checkbox-2" checked />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <div class="flex items-center justify-between mb-[20px]">
+      <div class="flex flex-col">
+        <span class="text-xl">Выходные</span>
+      </div>
+      <label class="switch flex-shrink-0" for="checkbox-3">
+        <input type="checkbox" id="checkbox-3" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+
+    <div class="grid grid-cols-2 gap-[40px]">
+      <div class="flex flex-col">
+        <span class="mb-[10px] text-gray leading-none">Начало</span>
+        <input class="input-border-bottom text-xl py-1" type="text" value="09:00" />
+      </div>
+      <div class="flex flex-col">
+        <span class="mb-[10px] text-gray leading-none">Окончание</span>
+        <input class="input-border-bottom text-xl py-1" type="text" value="23:00" />
+      </div>
+    </div>
+  </div>
+</section>

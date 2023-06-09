@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+  </head>
+
+  <body>
+    @include('./components/_popups.html')
+
+    <!--* Scroll Top Button -->
+    <button class="scroll-top-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="21"
+        viewBox="0 0 14 21"
+      >
+        <g transform="translate(-85.333 21) rotate(-90)">
+          <g transform="translate(0 85.333)">
+            <path
+              d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+              transform="translate(0 -85.333)"
+              fill="currentColor"
+            />
+          </g>
+        </g>
+      </svg>
+    </button>
+
+    <div class="site-wrapper">
+      <div id="warning">Переверни смартфон!</div>
+
+      @include('./components/_banner-2.html')
+      @include('./components/_header.html')
+
+      <main class="main">
+        @include('./components/_reg-card-open.html')
+        @include('./components/_banner-2.html')
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>

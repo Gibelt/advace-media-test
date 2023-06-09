@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+
+<title>Эмэйз</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--login">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="login">
+        <div class="container">
+          <span class="login__title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24.98"
+              height="24.98"
+              viewBox="0 0 24.98 24.98"
+            >
+              <g transform="translate(0 2.51)">
+                <g transform="translate(0 -2.51)">
+                  <path
+                    d="M21.322,16.148a12.442,12.442,0,0,0-4.746-2.977,7.221,7.221,0,1,0-8.171,0A12.51,12.51,0,0,0,0,24.98H1.952a10.538,10.538,0,0,1,21.077,0H24.98A12.409,12.409,0,0,0,21.322,16.148ZM12.49,12.49a5.269,5.269,0,1,1,5.269-5.269A5.275,5.275,0,0,1,12.49,12.49Z"
+                    transform="translate(0 0)"
+                  />
+                </g>
+              </g>
+            </svg>
+
+            Вход
+          </span>
+        </div>
+
+        <form class="form-login">
+          <label class="form-login__group">
+            <input
+              class="form-login__input"
+              type="text"
+              placeholder="Введите номер телефона…"
+              required
+            />
+          </label>
+
+          <button class="form-login__btn btn" type="button">Выслать код</button>
+
+          <div class="form-login__bottom">
+            <a class="form-login__link" href="#">Нет аккаунта?</a>
+            <a class="form-login__reg btn btn--border" href="#">Регистрация</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--login-code">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="login">
+        <div class="container">
+          <span class="login__title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24.98"
+              height="24.98"
+              viewBox="0 0 24.98 24.98"
+            >
+              <g transform="translate(0 2.51)">
+                <g transform="translate(0 -2.51)">
+                  <path
+                    d="M21.322,16.148a12.442,12.442,0,0,0-4.746-2.977,7.221,7.221,0,1,0-8.171,0A12.51,12.51,0,0,0,0,24.98H1.952a10.538,10.538,0,0,1,21.077,0H24.98A12.409,12.409,0,0,0,21.322,16.148ZM12.49,12.49a5.269,5.269,0,1,1,5.269-5.269A5.275,5.275,0,0,1,12.49,12.49Z"
+                    transform="translate(0 0)"
+                  />
+                </g>
+              </g>
+            </svg>
+
+            Вход
+          </span>
+        </div>
+
+        <form class="form-login">
+          <label class="form-login__group">
+            <input
+              class="form-login__input"
+              type="text"
+              placeholder="Введите номер телефона…"
+              required
+            />
+          </label>
+          <label class="form-login__group">
+            <input
+              class="form-login__input"
+              type="text"
+              placeholder="Ввести код…"
+              required
+            />
+          </label>
+
+          <button class="form-login__btn btn" type="button">Выслать код</button>
+
+          <div class="form-login__bottom">
+            <a class="form-login__link" href="#">Нет аккаунта?</a>
+            <a class="form-login__reg btn btn--border" href="#">Регистрация</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--reg">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="login">
+        <div class="container">
+          <span class="login__title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24.98"
+              height="24.98"
+              viewBox="0 0 24.98 24.98"
+            >
+              <g transform="translate(0 2.51)">
+                <g transform="translate(0 -2.51)">
+                  <path
+                    d="M21.322,16.148a12.442,12.442,0,0,0-4.746-2.977,7.221,7.221,0,1,0-8.171,0A12.51,12.51,0,0,0,0,24.98H1.952a10.538,10.538,0,0,1,21.077,0H24.98A12.409,12.409,0,0,0,21.322,16.148ZM12.49,12.49a5.269,5.269,0,1,1,5.269-5.269A5.275,5.275,0,0,1,12.49,12.49Z"
+                    transform="translate(0 0)"
+                  />
+                </g>
+              </g>
+            </svg>
+
+            Регистрация
+          </span>
+        </div>
+
+        <form class="form-login">
+          <label class="form-login__group">
+            <input
+              class="form-login__input"
+              type="text"
+              placeholder="Введите имя, название…"
+              required
+            />
+          </label>
+          <label class="form-login__group">
+            <input
+              class="form-login__input"
+              type="tel"
+              placeholder="+7 (915) 234-4567"
+              required
+            />
+          </label>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" checked />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text"> Согласие на обработку данных </span>
+          </label>
+
+          <button class="form-login__btn btn" type="button">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--reg-code">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="login">
+        <div class="container">
+          <span class="login__title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24.98"
+              height="24.98"
+              viewBox="0 0 24.98 24.98"
+            >
+              <g transform="translate(0 2.51)">
+                <g transform="translate(0 -2.51)">
+                  <path
+                    d="M21.322,16.148a12.442,12.442,0,0,0-4.746-2.977,7.221,7.221,0,1,0-8.171,0A12.51,12.51,0,0,0,0,24.98H1.952a10.538,10.538,0,0,1,21.077,0H24.98A12.409,12.409,0,0,0,21.322,16.148ZM12.49,12.49a5.269,5.269,0,1,1,5.269-5.269A5.275,5.275,0,0,1,12.49,12.49Z"
+                    transform="translate(0 0)"
+                  />
+                </g>
+              </g>
+            </svg>
+
+            Регистрация
+          </span>
+        </div>
+
+        <form class="form-login">
+          <label class="form-login__group">
+            <input
+              class="form-login__input"
+              type="text"
+              placeholder="Введите имя, название…"
+              required
+            />
+          </label>
+          <label class="form-login__group">
+            <input
+              class="form-login__input"
+              type="text"
+              placeholder="Ввести код…"
+              required
+            />
+          </label>
+
+          <button class="form-login__btn btn" type="button">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--reg-good">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="reg-good">
+        <div class="reg-good__text">Вы действительно хотите выйти?</div>
+        <button class="reg-good__btn" type="button">Ок</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--logout">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="logout">
+        <div class="logout__text">Вы действительно хотите выйти?</div>
+        <div class="logout__btns">
+          <button class="logout__btn" type="button">Отмена</button>
+          <button class="logout__btn" type="button">Выйти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--greeting-object">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="greeting">
+        <div class="greeting__inner">
+          <p>Добро пожаловать на ………………………………..!</p>
+          <p>Хорошего ….. и отдыха. Соблюдайте</p>
+
+          <a href="#">Условия и Правила</a>
+        </div>
+        <div class="banner">
+          <img src="img/banner.jpg" alt="img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--login-with-code">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="code-login">
+        <span class="code-login__title"> Добрый день! </span>
+
+        <input class="code-login__input" type="password" value="12345" />
+
+        <div class="code-login__btns">
+          <button class="code-login__btn">1</button>
+          <button class="code-login__btn">2</button>
+          <button class="code-login__btn">3</button>
+          <button class="code-login__btn">4</button>
+          <button class="code-login__btn">5</button>
+          <button class="code-login__btn">6</button>
+          <button class="code-login__btn">7</button>
+          <button class="code-login__btn">8</button>
+          <button class="code-login__btn">9</button>
+          <button class="code-login__btn btn-no">
+            не <br />
+            могу <br />
+            войти
+          </button>
+          <button class="code-login__btn">0</button>
+          <button class="code-login__btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="43"
+              height="43"
+              viewBox="0 0 43 43"
+            >
+              <g transform="translate(-234 -496)" opacity="0.3">
+                <circle
+                  cx="21.5"
+                  cy="21.5"
+                  r="21.5"
+                  transform="translate(234 496)"
+                  fill="none"
+                />
+                <g transform="translate(236.238 498.928)">
+                  <g transform="translate(0 0)">
+                    <g transform="translate(0)">
+                      <path
+                        d="M128.474,274.215a.62.62,0,1,0-1.229.167,15.152,15.152,0,0,1-4.669,13.074.62.62,0,0,0,.848.906A16.394,16.394,0,0,0,128.474,274.215Z"
+                        transform="translate(-113.481 -253.791)"
+                      />
+                      <path
+                        d="M38.049,257.527a.66.66,0,0,0-.024-.085,13.109,13.109,0,0,1-.229-1.948.62.62,0,0,0-1.24.051,14.427,14.427,0,0,0,.269,2.229.566.566,0,0,0,.024.084,6.143,6.143,0,0,1-2.07,5.814.62.62,0,1,0,.8.947A7.384,7.384,0,0,0,38.049,257.527Z"
+                        transform="translate(-32.047 -236.378)"
+                      />
+                      <path
+                        d="M76.721,358.455a.621.621,0,0,0-.8.354,10.7,10.7,0,0,1-3.187,4.4.62.62,0,0,0,.787.96,11.954,11.954,0,0,0,3.557-4.906A.621.621,0,0,0,76.721,358.455Z"
+                        transform="translate(-67.232 -332.366)"
+                      />
+                      <path
+                        d="M47.949,8.661a.619.619,0,0,0,.867-.135A17.362,17.362,0,0,1,70.473,3.174.62.62,0,1,0,71.02,2.06,18.6,18.6,0,0,0,47.814,7.795.62.62,0,0,0,47.949,8.661Z"
+                        transform="translate(-44.227 -0.157)"
+                      />
+                      <path
+                        d="M1.6,147.192c0-.015-.013-.026-.017-.041a17.175,17.175,0,0,1,1.566-11.292.62.62,0,1,0-1.1-.565A18.4,18.4,0,0,0,.375,147.438c0,.023.018.042.025.063.05.245.1.488.163.728a.621.621,0,0,0,.6.471.651.651,0,0,0,.149-.017.622.622,0,0,0,.454-.751C1.708,147.688,1.652,147.442,1.6,147.192Z"
+                        transform="translate(0 -125.155)"
+                      />
+                      <path
+                        d="M75.7,62.29A14.026,14.026,0,0,0,64.581,73.706a.621.621,0,0,0,1.223.213,12.87,12.87,0,0,1,25.3-.343.544.544,0,0,0,.014.057c.112.563.209,1.12.288,1.657a.62.62,0,0,0,.613.53.565.565,0,0,0,.091-.007.62.62,0,0,0,.524-.7c-.084-.576-.189-1.174-.31-1.778,0-.02-.009-.04-.015-.06A14.124,14.124,0,0,0,75.7,62.29Z"
+                        transform="translate(-59.877 -57.513)"
+                      />
+                      <path
+                        d="M196.794,189.671a5.126,5.126,0,0,0-10.043-.033.62.62,0,1,0,1.215.254,3.884,3.884,0,0,1,7.6-.048c0,.025.006.05.011.074a24.235,24.235,0,0,1,.48,4.722.621.621,0,0,0,.62.619h0a.62.62,0,0,0,.619-.622,25.488,25.488,0,0,0-.489-4.887A.7.7,0,0,0,196.794,189.671Z"
+                        transform="translate(-173.161 -172.077)"
+                      />
+                      <path
+                        d="M189.447,248.038a.621.621,0,0,0-1.217.245,19.487,19.487,0,0,1-4.5,16.841.621.621,0,0,0,.932.82A20.721,20.721,0,0,0,189.447,248.038Z"
+                        transform="translate(-170.226 -229.554)"
+                      />
+                      <path
+                        d="M398.031,56.794c0-.019-.016-.033-.022-.051a18.516,18.516,0,0,0-7.534-11.494.62.62,0,1,0-.713,1.016A17.285,17.285,0,0,1,396.8,57.041c0,.017.013.03.017.046a17.474,17.474,0,0,1,.335,3.736.621.621,0,0,0,.609.632h.013a.621.621,0,0,0,.62-.609A18.786,18.786,0,0,0,398.031,56.794Z"
+                        transform="translate(-361.18 -41.865)"
+                      />
+                      <path
+                        d="M142.7,131.482a9.617,9.617,0,1,0-18.855,3.8.635.635,0,0,0,.031.1,10.545,10.545,0,0,1,.131,3.126.621.621,0,1,0,1.234.133,11.836,11.836,0,0,0-.169-3.611.618.618,0,0,0-.031-.1,8.376,8.376,0,0,1,16.435-3.243c0,.013,0,.027.006.04a28.469,28.469,0,0,1,.192,10.3.621.621,0,0,0,.512.713.706.706,0,0,0,.1.008.621.621,0,0,0,.612-.52,29.731,29.731,0,0,0-.192-10.7C142.708,131.51,142.706,131.5,142.7,131.482Z"
+                        transform="translate(-114.667 -114.776)"
+                      />
+                      <path
+                        d="M424.6,273.841a.621.621,0,0,0-.58.658,32.892,32.892,0,0,1-1.046,10.555.62.62,0,1,0,1.2.319,34.115,34.115,0,0,0,1.085-10.952A.615.615,0,0,0,424.6,273.841Z"
+                        transform="translate(-392.202 -253.941)"
+                      />
+                      <path
+                        d="M338.872,406.291a.617.617,0,0,0-.759.439,28.681,28.681,0,0,1-1.918,5.132.62.62,0,0,0,1.116.543,29.886,29.886,0,0,0,2-5.355A.619.619,0,0,0,338.872,406.291Z"
+                        transform="translate(-311.694 -376.742)"
+                      />
+                      <path
+                        d="M260.177,341.16a.622.622,0,0,0-.687.546,24.221,24.221,0,0,1-4.067,10.886.62.62,0,0,0,1.024.7,25.456,25.456,0,0,0,4.276-11.446A.621.621,0,0,0,260.177,341.16Z"
+                        transform="translate(-236.752 -316.363)"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--login-blocked">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="login-blocked">
+        <svg
+          class="login-blocked__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="59.32"
+          height="59.316"
+          viewBox="0 0 59.32 59.316"
+        >
+          <g transform="translate(0 -0.36)">
+            <path
+              d="M57.8,48.37,11.31,1.881a5.188,5.188,0,0,0-7.339,0L1.521,4.327a5.189,5.189,0,0,0,0,7.34L48.01,58.156a5.189,5.189,0,0,0,7.34,0L57.8,55.71a5.185,5.185,0,0,0,0-7.34Zm0,0"
+              transform="translate(0 0)"
+              fill="#ff0a0a"
+            />
+            <path
+              d="M48.01,1.882,1.521,48.371a5.189,5.189,0,0,0,0,7.34l2.446,2.446a5.189,5.189,0,0,0,7.34,0L57.8,11.671a5.187,5.187,0,0,0,0-7.339L55.353,1.886a5.189,5.189,0,0,0-7.343,0Zm0,0"
+              transform="translate(0 -0.002)"
+              fill="#ff0a0a"
+            />
+          </g>
+        </svg>
+
+        <span>Вход временно заблокирован</span>
+
+        <p>
+          Вы 3 раза подряд неверно ввели код доступа. <br />
+          Попробуйте еще раз <br />
+          через 5 минут.
+        </p>
+        <button class="login-blocked__btn btn" type="button">Ок</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--login-forget">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="login-forget">
+        <div class="login-forget__inner">
+          <b>Забыли код доступа? </b>
+
+          <p>
+            Нажмите кнопку выйти, чтобы сбросить код доступа <br />
+            и создать новый
+          </p>
+        </div>
+        <div class="login-forget__btns">
+          <button class="login-forget__btn btn btn--border" type="button">
+            Отмена
+          </button>
+          <button class="login-forget__btn btn btn--border" type="button">
+            Выйти
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--subscriptions-time">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="logout">
+        <div class="logout__text">
+          Срок действия подписки истекает 10.04.2023. <br />
+          Возобновить?
+        </div>
+        <div class="logout__btns">
+          <button class="logout__btn" type="button">Нет</button>
+          <button class="logout__btn" type="button">Да</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--subscriptions-new">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <div class="logout">
+        <div class="logout__text">
+          Новый период и условия установлены. Перейти к оплате?
+        </div>
+        <div class="logout__btns">
+          <button class="logout__btn" type="button">Нет</button>
+          <button class="logout__btn" type="button">Да</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--sort">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <p class="popup-above">Клубные карты</p>
+      <button class="popup-sort">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="23.607"
+          viewBox="0 0 25 23.607"
+        >
+          <g transform="translate(-140 -308)">
+            <path
+              d="M11.8,0A11.8,11.8,0,1,1,0,11.8,11.8,11.8,0,0,1,11.8,0Z"
+              transform="translate(140.893 308)"
+              fill="none"
+            />
+            <g transform="translate(140.5 328.252) rotate(-90)">
+              <path
+                d="M16.424,5.265,11.26.1a.344.344,0,1,0-.487.487l4.576,4.576h-15a.344.344,0,1,0,0,.689h15l-4.576,4.576a.344.344,0,1,0,.487.487l5.164-5.164A.344.344,0,0,0,16.424,5.265Z"
+                transform="translate(0 0)"
+                fill="none"
+                stroke="#000"
+                stroke-width="1"
+              />
+            </g>
+            <g transform="translate(164.5 311.727) rotate(90)">
+              <path
+                d="M16.424,5.265,11.26.1a.344.344,0,1,0-.487.487l4.576,4.576h-15a.344.344,0,1,0,0,.689h15l-4.576,4.576a.344.344,0,1,0,.487.487l5.164-5.164A.344.344,0,0,0,16.424,5.265Z"
+                transform="translate(0 0)"
+                fill="none"
+                stroke="#000"
+                stroke-width="1"
+              />
+            </g>
+          </g>
+        </svg>
+
+        Сортировка
+      </button>
+
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" checked />
+        <span class="radio__text"> По умолчанию </span>
+        <span class="radio__box"></span>
+      </label>
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" />
+        <span class="radio__text">По дате присвоения</span>
+        <span class="radio__box"></span>
+      </label>
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" />
+        <span class="radio__text">По дате окончания</span>
+        <span class="radio__box"></span>
+      </label>
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" />
+        <span class="radio__text">Последовательно</span>
+        <span class="radio__box"></span>
+      </label>
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" />
+        <span class="radio__text">Сначала новые</span>
+        <span class="radio__box"></span>
+      </label>
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" />
+        <span class="radio__text">Заблокированные </span>
+        <span class="radio__box"></span>
+      </label>
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" />
+        <span class="radio__text">Удаленные </span>
+        <span class="radio__box"></span>
+      </label>
+      <label class="radio">
+        <input class="radio__input" type="checkbox" name="Сортировка" />
+        <span class="radio__text">Утратившие действия</span>
+        <span class="radio__box"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+
+    <!--* Scroll Top Button -->
+    <button class="scroll-top-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="21"
+        viewBox="0 0 14 21"
+      >
+        <g transform="translate(-85.333 21) rotate(-90)">
+          <g transform="translate(0 85.333)">
+            <path
+              d="M20.872,92.023l-6.562-6.562a.437.437,0,0,0-.619.619L19.506,91.9H.438a.438.438,0,1,0,0,.875H19.506l-5.816,5.816a.437.437,0,1,0,.619.619l6.562-6.563A.437.437,0,0,0,20.872,92.023Z"
+              transform="translate(0 -85.333)"
+              fill="currentColor"
+            />
+          </g>
+        </g>
+      </svg>
+    </button>
+
+    <div class="site-wrapper">
+      <div id="warning">Переверни смартфон!</div>
+
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__inner">
+      <button class="show-bubbles" type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="6"
+          viewBox="0 0 28 6"
+        >
+          <g transform="translate(-143 -418)">
+            <g transform="translate(3 3)">
+              <g
+                transform="translate(168 415) rotate(90)"
+                fill="#ff0a0a"
+                stroke="#ff0a0a"
+                stroke-width="1"
+              >
+                <circle cx="3" cy="3" r="3" stroke="none" />
+                <circle cx="3" cy="3" r="2.5" fill="none" />
+              </g>
+              <g
+                transform="translate(157 415) rotate(90)"
+                fill="#ff0a0a"
+                stroke="#ff0a0a"
+                stroke-width="1"
+              >
+                <circle cx="3" cy="3" r="3" stroke="none" />
+                <circle cx="3" cy="3" r="2.5" fill="none" />
+              </g>
+              <g
+                transform="translate(146 415) rotate(90)"
+                fill="#ff0a0a"
+                stroke="#ff0a0a"
+                stroke-width="1"
+              >
+                <circle cx="3" cy="3" r="3" stroke="none" />
+                <circle cx="3" cy="3" r="2.5" fill="none" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+      <div class="item item--empty"></div>
+      <div class="item item--settings">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28.214"
+          height="28.214"
+          viewBox="0 0 28.214 28.214"
+        >
+          <g transform="translate(-156.999 -203.999)">
+            <g transform="translate(156.999 203.999)">
+              <g transform="translate(0 0)">
+                <path
+                  d="M15.424,28.214H12.79a1.761,1.761,0,0,1-1.747-1.552l-.281-2.205a11.109,11.109,0,0,1-1.615-.669L7.391,25.153A1.754,1.754,0,0,1,5.057,25L3.206,23.153a1.749,1.749,0,0,1-.143-2.326l1.365-1.757a10.853,10.853,0,0,1-.669-1.615l-2.21-.281A1.765,1.765,0,0,1,0,15.424V12.79a1.761,1.761,0,0,1,1.552-1.747l2.205-.281a11.109,11.109,0,0,1,.669-1.615L3.062,7.391a1.753,1.753,0,0,1,.149-2.335L5.063,3.2A1.75,1.75,0,0,1,7.39,3.061L9.146,4.427a11.069,11.069,0,0,1,1.616-.669l.281-2.21A1.761,1.761,0,0,1,12.79,0h2.633A1.761,1.761,0,0,1,17.17,1.552l.281,2.205a11.07,11.07,0,0,1,1.616.669l1.756-1.365a1.752,1.752,0,0,1,2.334.149l1.852,1.852a1.749,1.749,0,0,1,.143,2.326L23.788,9.146a10.854,10.854,0,0,1,.669,1.615l2.21.281a1.763,1.763,0,0,1,1.547,1.748v2.633a1.761,1.761,0,0,1-1.552,1.747l-2.205.281a11.109,11.109,0,0,1-.669,1.615l1.365,1.756A1.751,1.751,0,0,1,25,23.156l-1.852,1.852a1.748,1.748,0,0,1-2.326.143l-1.757-1.365a10.853,10.853,0,0,1-1.615.669l-.281,2.21a1.763,1.763,0,0,1-1.748,1.548ZM9.087,22.5a.6.6,0,0,1,.287.074,9.867,9.867,0,0,0,2.085.865.587.587,0,0,1,.421.49l.329,2.586a.594.594,0,0,0,.581.522h2.633a.592.592,0,0,0,.58-.516l.33-2.591a.587.587,0,0,1,.421-.49,9.867,9.867,0,0,0,2.085-.865.587.587,0,0,1,.647.049l2.057,1.6a.578.578,0,0,0,.77-.04l1.863-1.863a.581.581,0,0,0,.046-.776l-1.6-2.057a.587.587,0,0,1-.049-.647,9.867,9.867,0,0,0,.865-2.085.587.587,0,0,1,.49-.421l2.586-.329a.6.6,0,0,0,.522-.582V12.79a.592.592,0,0,0-.516-.58l-2.591-.33a.587.587,0,0,1-.49-.421,9.867,9.867,0,0,0-.865-2.085.585.585,0,0,1,.049-.647l1.6-2.057a.576.576,0,0,0-.039-.769L22.322,4.038a.579.579,0,0,0-.776-.046l-2.057,1.6a.589.589,0,0,1-.648.049,9.826,9.826,0,0,0-2.085-.865.587.587,0,0,1-.421-.49L16.005,1.7a.6.6,0,0,0-.582-.523H12.79a.592.592,0,0,0-.58.516l-.33,2.591a.59.59,0,0,1-.421.491,9.823,9.823,0,0,0-2.085.864.589.589,0,0,1-.648-.048l-2.057-1.6A.576.576,0,0,0,5.9,4.03L4.037,5.894a.581.581,0,0,0-.046.776l1.6,2.057a.587.587,0,0,1,.049.647,9.806,9.806,0,0,0-.865,2.085.587.587,0,0,1-.49.421L1.7,12.209a.594.594,0,0,0-.522.581v2.633a.592.592,0,0,0,.516.58l2.591.33a.587.587,0,0,1,.49.421,9.867,9.867,0,0,0,.865,2.085.585.585,0,0,1-.049.647l-1.6,2.057a.576.576,0,0,0,.039.769l1.863,1.863a.581.581,0,0,0,.776.046l2.057-1.6a.605.605,0,0,1,.362-.122Z"
+                  transform="translate(0 0)"
+                />
+              </g>
+              <g transform="translate(8.229 8.229)">
+                <path
+                  d="M12.878,18.756a5.878,5.878,0,1,1,5.878-5.878A5.885,5.885,0,0,1,12.878,18.756Zm0-10.58a4.7,4.7,0,1,0,4.7,4.7A4.707,4.707,0,0,0,12.878,8.176Z"
+                  transform="translate(-7 -7)"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="item item--star">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="27.5"
+          height="26.233"
+          viewBox="0 0 27.5 26.233"
+        >
+          <g transform="translate(-238 -200.996)">
+            <g transform="translate(-8 -266.001)">
+              <g transform="translate(-18 42)">
+                <g transform="translate(264 413.203)">
+                  <g transform="translate(0 11.794)">
+                    <path
+                      d="M27.461,21.755a.806.806,0,0,0-.65-.548l-8.525-1.239-3.813-7.725a.806.806,0,0,0-1.445,0L9.215,19.968.69,21.207a.806.806,0,0,0-.446,1.374l6.169,6.013L4.956,37.085a.806.806,0,0,0,1.169.849l7.625-4.009,7.625,4.009a.806.806,0,0,0,1.169-.849l-1.456-8.491,6.169-6.013A.806.806,0,0,0,27.461,21.755Zm-7.8,5.981a.805.805,0,0,0-.232.713l1.252,7.3L14.125,32.3a.806.806,0,0,0-.75,0L6.82,35.748l1.252-7.3a.806.806,0,0,0-.232-.713l-5.3-5.169L9.866,21.5a.806.806,0,0,0,.607-.441L13.75,14.42l3.278,6.641a.806.806,0,0,0,.607.441l7.329,1.065Z"
+                      transform="translate(0 -11.794)"
+                      fill="#0a84fe"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="item item--daily">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18.51"
+          height="23.873"
+          viewBox="0 0 18.51 23.873"
+        >
+          <g id="layer1" transform="translate(-24.594 -1396.395)">
+            <g id="g4885" transform="translate(24.594 1396.395)">
+              <path
+                id="path11535"
+                d="M1354.617,3445.8a11.149,11.149,0,0,0-2.133-1.1l-.76,1.045,4.319,3.139.76-1.046A10.031,10.031,0,0,0,1354.617,3445.8Zm-3.381.614-.76,1.046,4.319,3.139.76-1.045Zm-1.313,1.807-10.252,14.109,2.348.763,9.9-13.427Zm2.415,1.782-9.844,13.4,1.332,2.092,10.416-14.136Zm-12.931,12.931-1.114,5.634,4.923-2.715-1.4-2.085Z"
+                transform="translate(-1338.293 -3444.695)"
+              />
+            </g>
+          </g>
+        </svg>
+
+        дневник
+      </div>
+      <div class="item item--fame">зал славы</div>
+      <div class="item item--news">Новости</div>
+      <div class="item item--empty2"></div>
+      <div class="item item--report">Отчеты</div>
+      <div class="item item--booking">
+        <img src="img/booking.png" alt="" />
+      </div>
+      <div class="item item--seven">
+        7
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="19.5"
+          height="20.5"
+          viewBox="0 0 19.5 20.5"
+        >
+          <path
+            d="M-2370.5-1630a2.5,2.5,0,0,1,2.32-2.494,16.87,16.87,0,0,0-4.8-9.527A16.89,16.89,0,0,0-2385-1647v-1a17.88,17.88,0,0,1,7.006,1.415,17.9,17.9,0,0,1,5.721,3.857,17.948,17.948,0,0,1,3.858,5.721,17.823,17.823,0,0,1,1.263,4.654A2.5,2.5,0,0,1-2365.5-1630a2.5,2.5,0,0,1-2.5,2.5A2.5,2.5,0,0,1-2370.5-1630Z"
+            transform="translate(2385 1648)"
+          />
+        </svg>
+      </div>
+      <div class="item item--lamp">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24.715"
+          height="29.646"
+          viewBox="0 0 24.715 29.646"
+        >
+          <g transform="translate(-148.001 -462.177)">
+            <g transform="translate(112.035 462.177)">
+              <g transform="translate(35.966)">
+                <g transform="translate(0)">
+                  <path
+                    d="M112.953,93.2a7.636,7.636,0,0,0-5.046,13.356c1.207,1.207,1.1,3.785,1.07,3.812a.454.454,0,0,0,.137.357.506.506,0,0,0,.329.137h6.993a.454.454,0,0,0,.329-.137.521.521,0,0,0,.137-.357c0-.027-.137-2.605,1.07-3.812l.082-.082a7.613,7.613,0,0,0-5.1-13.274Zm4.388,12.643c-.027.027-.082.082-.082.11a6.4,6.4,0,0,0-1.289,3.949h-6.061a6.373,6.373,0,0,0-1.371-4.059,6.678,6.678,0,1,1,8.8,0Z"
+                    transform="translate(-100.573 -86.81)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M209.8,121.6a.466.466,0,1,0,0,.932,4.992,4.992,0,0,1,4.991,4.991.466.466,0,1,0,.932,0A5.9,5.9,0,0,0,209.8,121.6Z"
+                    transform="translate(-197.443 -113.263)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M162.169,358.4h-6.088a1.152,1.152,0,0,0,0,2.3h6.061a1.183,1.183,0,0,0,1.179-1.152A1.159,1.159,0,0,0,162.169,358.4Zm0,1.344h-6.088a.216.216,0,0,1-.219-.219.2.2,0,0,1,.219-.219h6.061a.216.216,0,0,1,.219.219A.2.2,0,0,1,162.169,359.744Z"
+                    transform="translate(-146.773 -333.827)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M173.559,398.8h-4.278a1.152,1.152,0,0,0,0,2.3h4.278a1.159,1.159,0,0,0,1.152-1.152A1.141,1.141,0,0,0,173.559,398.8Zm0,1.344h-4.278a.216.216,0,0,1-.219-.219.2.2,0,0,1,.219-.219h4.278a.219.219,0,1,1,0,.439Z"
+                    transform="translate(-159.068 -371.457)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M209.8,4.114a.462.462,0,0,0,.466-.466V.466a.466.466,0,0,0-.932,0V3.648A.481.481,0,0,0,209.8,4.114Z"
+                    transform="translate(-197.443 0)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M295.615,33.2a.442.442,0,0,0-.631.11l-1.755,2.633a.452.452,0,0,0,.11.658.443.443,0,0,0,.247.082.438.438,0,0,0,.384-.219l1.755-2.633A.425.425,0,0,0,295.615,33.2Z"
+                    transform="translate(-275.501 -30.843)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M105.225,34.522a.442.442,0,0,0,.247-.082.48.48,0,0,0,.137-.658l-1.7-2.66a.475.475,0,0,0-.8.521l1.7,2.66A.455.455,0,0,0,105.225,34.522Z"
+                    transform="translate(-98.44 -28.79)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M39.432,104.851l-2.77-1.508a.483.483,0,0,0-.631.192.438.438,0,0,0,.192.631l2.77,1.508a.646.646,0,0,0,.219.055.452.452,0,0,0,.411-.247A.483.483,0,0,0,39.432,104.851Z"
+                    transform="translate(-35.966 -96.212)"
+                    fill="#f50505"
+                  />
+                  <path
+                    d="M345.892,103.535a.483.483,0,0,0-.631-.192l-2.8,1.508a.483.483,0,0,0-.192.631.452.452,0,0,0,.411.247.517.517,0,0,0,.219-.055l2.8-1.508A.483.483,0,0,0,345.892,103.535Z"
+                    transform="translate(-321.226 -96.212)"
+                    fill="#f50505"
+                  />
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <nav class="header__wrapper">
+      <div class="search-field">
+        <input type="text" placeholder="Поиск" />
+      </div>
+      <button class="header__btn btn-search">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21.357"
+          height="21.358"
+          viewBox="0 0 21.357 21.358"
+        >
+          <g>
+            <g>
+              <path
+                d="M21.161,20.2,15.647,14.77a8.722,8.722,0,0,0,2.331-5.927A8.916,8.916,0,0,0,8.992,0,8.915,8.915,0,0,0,.006,8.843a8.915,8.915,0,0,0,8.986,8.843,9.037,9.037,0,0,0,5.656-1.975l5.536,5.447a.7.7,0,0,0,.977,0A.673.673,0,0,0,21.161,20.2ZM8.992,16.325a7.543,7.543,0,0,1-7.6-7.482,7.543,7.543,0,0,1,7.6-7.482,7.543,7.543,0,0,1,7.6,7.482A7.543,7.543,0,0,1,8.992,16.325Z"
+                transform="translate(-0.006)"
+                fill="#303030"
+              />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="header__btn btn-golf">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25.213"
+          height="30.251"
+          viewBox="0 0 25.213 30.251"
+        >
+          <g transform="translate(-0.001 -0.001)">
+            <path
+              d="M194.682,461.3a.443.443,0,1,0,.356.435A.444.444,0,0,0,194.682,461.3Zm0,0"
+              transform="translate(-182.68 -434.04)"
+            />
+            <path
+              d="M214.386,439.7a.443.443,0,1,0-.443.443A.443.443,0,0,0,214.386,439.7Zm0,0"
+              transform="translate(-200.884 -413.307)"
+            />
+            <path
+              d="M221.834,466.573a.443.443,0,1,0-.443-.443A.444.444,0,0,0,221.834,466.573Zm0,0"
+              transform="translate(-208.309 -438.171)"
+            />
+            <path
+              d="M241.166,444.539a.443.443,0,1,0-.444-.443A.444.444,0,0,0,241.166,444.539Zm0,0"
+              transform="translate(-226.498 -417.439)"
+            />
+            <path
+              d="M233.719,417.661a.443.443,0,1,0-.443.443A.443.443,0,0,0,233.719,417.661Zm0,0"
+              transform="translate(-219.074 -392.566)"
+            />
+            <path
+              d="M22.616,22.513l-.648.156a.443.443,0,0,0,.208.862l.648-.156a1.219,1.219,0,0,1,1.429.763,1.185,1.185,0,0,1-.809,1.557l-2.328.616a1.773,1.773,0,0,1-1.983-.823l-.928-1.6a5.174,5.174,0,0,0,1.85.117.443.443,0,0,0-.1-.88,4.28,4.28,0,0,1-1.491-.087l-.868-.206L13.12,15.116l1.055-1.82a1.329,1.329,0,0,0,.62-.03h0a1.334,1.334,0,0,0,.775-.609L21.751,2a1.33,1.33,0,1,0-2.3-1.334L13.27,11.323a1.325,1.325,0,0,0,.138,1.529l-.8,1.381-.8-1.381a1.332,1.332,0,0,0,.138-1.529L5.764.663A1.33,1.33,0,1,0,3.463,2L9.644,12.657a1.327,1.327,0,0,0,1.4.639l1.055,1.82L7.621,22.832l-.868.206c-1.228.291-1.908.018-4.155-.525A2.1,2.1,0,0,0,.13,23.83a2.074,2.074,0,0,0,1.414,2.721c2.543.673,2.559.7,3,.7a2.663,2.663,0,0,0,2.3-1.323L12.608,16l5.759,9.932a2.663,2.663,0,0,0,2.3,1.323c.445,0,.461-.031,3-.7a2.074,2.074,0,0,0,1.414-2.72,2.105,2.105,0,0,0-2.469-1.318Zm-2.4-21.4a.443.443,0,1,1,.767.445l-5.063,8.732-.773-.435ZM14.037,11.767l.667-1.151.773.435L14.8,12.212a.443.443,0,1,1-.767-.445ZM9.293,10.285,4.23,1.553A.443.443,0,1,1,5,1.108l5.069,8.741Zm1.724,2.089a.443.443,0,0,1-.606-.161l-.673-1.161.773-.435.667,1.151a.444.444,0,0,1-.161.606ZM6.081,25.487A1.773,1.773,0,0,1,4.1,26.31l-2.328-.616a1.185,1.185,0,0,1-.809-1.557,1.219,1.219,0,0,1,1.429-.763c2.275.549,3.089.876,4.618.513Zm0,0"
+              transform="translate(0 0)"
+            />
+            <path
+              d="M149.335,371.421a.443.443,0,0,0,.307-.546,4.261,4.261,0,1,0,0,2.307.443.443,0,1,0-.854-.239,3.376,3.376,0,1,1,0-1.829.443.443,0,0,0,.547.307Zm0,0"
+              transform="translate(-132.929 -346.037)"
+            />
+          </g>
+        </svg>
+      </button>
+      <button class="header__btn btn-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="18"
+          viewBox="0 0 22 18"
+        >
+          <g transform="translate(-149 -151)">
+            <path
+              d="M21.083,2H.917A.961.961,0,0,1,0,1,.961.961,0,0,1,.917,0H21.083A.961.961,0,0,1,22,1,.961.961,0,0,1,21.083,2Zm0,0"
+              transform="translate(149 167)"
+              fill="#303030"
+            />
+            <path
+              d="M21.083,2H.917A.961.961,0,0,1,0,1,.961.961,0,0,1,.917,0H21.083A.961.961,0,0,1,22,1,.961.961,0,0,1,21.083,2Zm0,0"
+              transform="translate(149 159)"
+              fill="#303030"
+            />
+            <path
+              d="M21.083,2H.917A.961.961,0,0,1,0,1,.961.961,0,0,1,.917,0H21.083A.961.961,0,0,1,22,1,.961.961,0,0,1,21.083,2Zm0,0"
+              transform="translate(149 151)"
+              fill="#303030"
+            />
+          </g>
+        </svg>
+      </button>
+      <button class="header__btn btn-notification">
+        <span class="count"> 15 </span>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="19.901"
+          height="22.643"
+          viewBox="0 0 19.901 22.643"
+        >
+          <g transform="translate(-10)">
+            <path
+              d="M47.8,11.625V9.508a6.867,6.867,0,0,0-4.865-6.56V1.99a1.99,1.99,0,0,0-3.98,0v.958a6.867,6.867,0,0,0-4.865,6.56v2.117a10.416,10.416,0,0,1-2.911,7.242.663.663,0,0,0,.479,1.123H37.7a3.317,3.317,0,0,0,6.5,0h6.037a.663.663,0,0,0,.479-1.123A10.416,10.416,0,0,1,47.8,11.625ZM40.286,1.99a.663.663,0,0,1,1.327,0v.7c-.218-.021-.44-.032-.663-.032s-.445.011-.663.032Zm.663,19.326a1.993,1.993,0,0,1-1.876-1.327h3.752a1.993,1.993,0,0,1-1.876,1.327Zm-7.857-2.653a11.729,11.729,0,0,0,2.329-7.038V9.508a5.528,5.528,0,0,1,11.056,0v2.117a11.729,11.729,0,0,0,2.329,7.038Z"
+              transform="translate(-20.999)"
+            />
+          </g>
+        </svg>
+      </button>
+      <button class="header__btn btn-user">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21.663"
+          height="21.663"
+          viewBox="0 0 21.663 21.663"
+        >
+          <g>
+            <path
+              d="M18.49,14a10.79,10.79,0,0,0-4.116-2.582,6.262,6.262,0,1,0-7.086,0A10.848,10.848,0,0,0,0,21.663H1.692a9.139,9.139,0,0,1,18.278,0h1.692A10.761,10.761,0,0,0,18.49,14Zm-7.659-3.172A4.569,4.569,0,1,1,15.4,6.262,4.575,4.575,0,0,1,10.831,10.831Z"
+              transform="translate(0)"
+            />
+          </g>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+      <main class="main">
+        <section class="personal">
+  <div class="container">
+    <div class="personal__person person">
+      <div class="person__img">
+        <img src="img/person-img.png" alt="img" />
+      </div>
+      <span class="person__name">Иван Петров</span>
+      <span class="person__id">ID: 7579086</span>
+    </div>
+
+    <ul class="personal__list">
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22.466"
+            height="25.561"
+            viewBox="0 0 22.466 25.561"
+          >
+            <g transform="translate(-31)">
+              <g transform="translate(35.493)">
+                <g>
+                  <path
+                    d="M127.74,0a6.74,6.74,0,1,0,6.74,6.74A6.747,6.747,0,0,0,127.74,0Zm0,11.982a5.242,5.242,0,1,1,5.242-5.242A5.248,5.248,0,0,1,127.74,11.982Z"
+                    transform="translate(-121)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(31 14.977)">
+                <g>
+                  <path
+                    d="M50.618,302.905A9.608,9.608,0,0,0,43.731,300h-3a9.608,9.608,0,0,0-6.888,2.905A9.822,9.822,0,0,0,31,309.835a.749.749,0,0,0,.749.749H52.717a.749.749,0,0,0,.749-.749A9.822,9.822,0,0,0,50.618,302.905Zm-18.088,6.181a8.288,8.288,0,0,1,8.2-7.588h3a8.288,8.288,0,0,1,8.2,7.588Z"
+                    transform="translate(-31 -300)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <span>Личная иформация</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26.128"
+            height="30.074"
+            viewBox="0 0 26.128 30.074"
+          >
+            <g transform="translate(-37.681 0)">
+              <g transform="translate(37.681 0)">
+                <g transform="translate(0)">
+                  <path
+                    d="M63.334,5.193A51.48,51.48,0,0,1,51.073.088a.655.655,0,0,0-.655,0A50.07,50.07,0,0,1,38.155,5.193a.634.634,0,0,0-.474.61v6.464a18.439,18.439,0,0,0,5.753,13.586c2.825,2.718,6.116,4.22,7.311,4.22s4.486-1.5,7.311-4.22a18.439,18.439,0,0,0,5.752-13.586V5.8A.634.634,0,0,0,63.334,5.193Zm-.815,7.074a17.209,17.209,0,0,1-5.366,12.683c-2.778,2.672-5.749,3.859-6.409,3.859s-3.631-1.187-6.409-3.859A17.21,17.21,0,0,1,38.97,12.267V6.283A51.269,51.269,0,0,0,50.745,1.365,52.891,52.891,0,0,0,62.52,6.283Z"
+                    transform="translate(-37.681 0)"
+                  />
+                  <path
+                    d="M126.371,159.408a2.052,2.052,0,0,0-2.941,0,2.153,2.153,0,0,0,0,3l3.777,3.85a2.052,2.052,0,0,0,2.941,0l7.884-8.038a2.152,2.152,0,0,0,0-3,2.052,2.052,0,0,0-2.941,0l-6.413,6.539Zm9.624-3.266a.79.79,0,0,1,1.132,0,.829.829,0,0,1,0,1.154l-7.884,8.038a.79.79,0,0,1-1.132,0l-3.777-3.85a.829.829,0,0,1,0-1.154.79.79,0,0,1,1.132,0l2.758,2.812a.631.631,0,0,0,.9,0Z"
+                    transform="translate(-117.666 -145.702)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <span>Вход и Безопасность</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22.968"
+            height="27.562"
+            viewBox="0 0 22.968 27.562"
+          >
+            <g transform="translate(-2)">
+              <g transform="translate(11.187 0)">
+                <path
+                  d="M14.019,4.8a.574.574,0,0,1-.574-.574V2.3a1.148,1.148,0,0,0-2.3,0V4.226a.574.574,0,1,1-1.148,0V2.3a2.3,2.3,0,0,1,4.594,0V4.226A.574.574,0,0,1,14.019,4.8Z"
+                  transform="translate(-10 0)"
+                />
+              </g>
+              <g transform="translate(9.465 22.968)">
+                <path
+                  d="M12.519,24.594A4.024,4.024,0,0,1,8.5,20.574a.574.574,0,0,1,1.148,0,2.871,2.871,0,1,0,5.742,0,.574.574,0,0,1,1.148,0A4.024,4.024,0,0,1,12.519,24.594Z"
+                  transform="translate(-8.5 -20)"
+                />
+              </g>
+              <g transform="translate(2 3.445)">
+                <path
+                  d="M23.246,23.672H3.723A1.723,1.723,0,0,1,2.6,20.64a7.984,7.984,0,0,0,2.842-6.112V11.039a8.039,8.039,0,1,1,16.078,0v3.489a7.975,7.975,0,0,0,2.833,6.1,1.723,1.723,0,0,1-1.111,3.04ZM13.484,4.148a6.9,6.9,0,0,0-6.891,6.891v3.489a9.124,9.124,0,0,1-3.24,6.981.574.574,0,0,0,.369,1.014H23.246a.574.574,0,0,0,.373-1.011,9.131,9.131,0,0,1-3.244-6.985V11.039a6.9,6.9,0,0,0-6.891-6.891Z"
+                  transform="translate(-2 -3)"
+                />
+              </g>
+            </g>
+          </svg>
+
+          <span>Уведомления. Копии</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28.474"
+            height="28.474"
+            viewBox="0 0 28.474 28.474"
+          >
+            <g transform="translate(-0.458 0.001)">
+              <path
+                d="M86.618,76.9a9.259,9.259,0,1,0,9.259,9.259A9.27,9.27,0,0,0,86.618,76.9Zm-4.66,16.035V89.692A1.982,1.982,0,0,1,83.7,87.73a3.855,3.855,0,0,0,5.841,0,1.982,1.982,0,0,1,1.74,1.962v3.246a8.223,8.223,0,0,1-9.321,0Zm10.356-.844v-2.4A3.02,3.02,0,0,0,89.3,86.679a.518.518,0,0,0-.417.211,2.807,2.807,0,0,1-4.525,0,.517.517,0,0,0-.417-.211,3.02,3.02,0,0,0-3.016,3.012v2.4a8.226,8.226,0,1,1,11.392,0Zm0,0"
+                transform="translate(-71.924 -71.926)"
+              />
+              <path
+                d="M27.263,15.688a13,13,0,0,0-.09-3.467l1.433-1.374a.518.518,0,0,0,.116-.581L27.09,6.536a.517.517,0,0,0-.512-.309l-1.984.146a11.686,11.686,0,0,0-2.514-2.394L22.139,2a.518.518,0,0,0-.331-.5L18.012.033a.518.518,0,0,0-.578.145l-1.285,1.49a13.014,13.014,0,0,0-3.468.09L11.306.325a.518.518,0,0,0-.581-.116L7,1.841a.518.518,0,0,0-.309.512l.146,1.984A11.69,11.69,0,0,0,4.438,6.85L2.456,6.792a.515.515,0,0,0-.5.331l-1.465,3.8a.518.518,0,0,0,.145.578l1.49,1.285a12.99,12.99,0,0,0,.09,3.467L.784,17.625a.517.517,0,0,0-.116.581L2.3,21.935a.518.518,0,0,0,.513.309L4.8,22.1a11.69,11.69,0,0,0,2.513,2.394l-.058,1.982a.518.518,0,0,0,.331.5l3.8,1.465a.517.517,0,0,0,.578-.145l1.285-1.49a13,13,0,0,0,3.467-.09l1.374,1.433a.518.518,0,0,0,.581.116l3.73-1.632a.518.518,0,0,0,.309-.512l-.146-1.984a11.693,11.693,0,0,0,2.394-2.514l1.982.058a.518.518,0,0,0,.5-.331l1.465-3.8a.518.518,0,0,0-.145-.578ZM26.6,20.633l-1.9-.056a.516.516,0,0,0-.446.231,10.67,10.67,0,0,1-2.541,2.668.518.518,0,0,0-.209.454l.14,1.9-3.063,1.34L17.266,25.8a.517.517,0,0,0-.467-.151,11.984,11.984,0,0,1-3.7.1.517.517,0,0,0-.459.175L11.411,27.34,8.3,26.139l.056-1.9a.518.518,0,0,0-.23-.446,10.671,10.671,0,0,1-2.668-2.541A.518.518,0,0,0,5,21.045l-1.9.14-1.34-3.063,1.371-1.315a.517.517,0,0,0,.151-.467,11.976,11.976,0,0,1-.1-3.7.518.518,0,0,0-.175-.459L1.59,10.952l1.2-3.114,1.9.056a.518.518,0,0,0,.446-.231A10.675,10.675,0,0,1,7.677,5a.517.517,0,0,0,.208-.454l-.14-1.9L10.808,1.3l1.315,1.371a.519.519,0,0,0,.467.151,11.967,11.967,0,0,1,3.7-.1.518.518,0,0,0,.459-.175l1.227-1.422,3.114,1.2-.056,1.9a.518.518,0,0,0,.23.446,10.67,10.67,0,0,1,2.668,2.541.518.518,0,0,0,.454.209l1.9-.14,1.34,3.063-1.371,1.315a.518.518,0,0,0-.151.467,11.976,11.976,0,0,1,.1,3.7.517.517,0,0,0,.175.459L27.8,17.519Zm0,0"
+                transform="translate(0 0)"
+              />
+              <path
+                d="M172.89,125.059a3.289,3.289,0,1,0,3.289,3.289A3.289,3.289,0,0,0,172.89,125.059Zm0,5.542a2.253,2.253,0,1,1,2.253-2.253A2.253,2.253,0,0,1,172.89,130.6Zm0,0"
+                transform="translate(-158.196 -116.966)"
+              />
+            </g>
+          </svg>
+
+          <span>Управление кабинетом</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="29.117"
+            height="23.077"
+            viewBox="0 0 29.117 23.077"
+          >
+            <g transform="translate(0 -53.1)">
+              <path
+                d="M28.6,55.586a2.173,2.173,0,0,0-1.488-.767l-20.5-1.712A2.187,2.187,0,0,0,4.247,55.1l-.413,3.87H2.187A2.189,2.189,0,0,0,0,61.155V73.99a2.189,2.189,0,0,0,2.187,2.187H22.762a2.189,2.189,0,0,0,2.187-2.187V71.908l.73.061q.092.008.184.008a2.19,2.19,0,0,0,2.178-2l1.068-12.791a2.173,2.173,0,0,0-.51-1.594ZM2.187,60.105H22.762a1.051,1.051,0,0,1,1.05,1.05v1.17H1.137v-1.17a1.051,1.051,0,0,1,1.049-1.05ZM1.137,63.462H23.812v2.359H1.137ZM22.762,75.039H2.187A1.051,1.051,0,0,1,1.137,73.99V66.958H23.812V73.99a1.051,1.051,0,0,1-1.05,1.049Zm5.213-17.953L26.907,69.877a1.051,1.051,0,0,1-1.133.959l-.825-.069V61.155a2.189,2.189,0,0,0-2.187-2.187H4.978l.4-3.756V55.2a1.05,1.05,0,0,1,1.133-.959l20.5,1.712a1.05,1.05,0,0,1,.959,1.133Z"
+                transform="translate(0 0)"
+              />
+              <path
+                d="M276.673,326.532H271.2a.569.569,0,0,0-.569.569v3.571a.569.569,0,0,0,.569.569h5.473a.569.569,0,0,0,.569-.569V327.1A.569.569,0,0,0,276.673,326.532ZM276.1,330.1h-4.336v-2.433H276.1Z"
+                transform="translate(-255.241 -257.883)"
+              />
+            </g>
+          </svg>
+
+          <span>Банковские карты</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27.58"
+            height="29.737"
+            viewBox="0 0 27.58 29.737"
+          >
+            <path
+              d="M10.4,7.387a5.39,5.39,0,1,1,6.467,5.282v2.977h4.668a3.232,3.232,0,0,1,3.232,3.232v1.184a5.39,5.39,0,1,1-2.155,0V18.878A1.077,1.077,0,0,0,21.532,17.8H10.041a1.077,1.077,0,0,0-1.077,1.077v1.184a5.39,5.39,0,1,1-2.155,0V18.878a3.232,3.232,0,0,1,3.232-3.232h4.668V12.669A5.392,5.392,0,0,1,10.4,7.387Z"
+              transform="translate(-2 -1.498)"
+              fill="none"
+              stroke="#000"
+              stroke-width="1"
+            />
+          </svg>
+
+          <span>Финансы. Организации</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link red" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27.145"
+            height="27.145"
+            viewBox="0 0 27.145 27.145"
+          >
+            <g transform="translate(0 0)">
+              <g transform="translate(0 10.199)">
+                <g>
+                  <path
+                    d="M26.747,208.525H24.17v-15.75a.4.4,0,0,0-.4-.4h-4.25a.4.4,0,0,0-.4.4v15.75H16.1V197.449a.4.4,0,0,0-.4-.4h-4.25a.4.4,0,0,0-.4.4v11.076H8.021v-8.951a.4.4,0,0,0-.4-.4H3.373a.4.4,0,0,0-.4.4v8.951H.4a.4.4,0,0,0,0,.8H26.747a.4.4,0,1,0,0-.8Zm-19.522,0H3.772v-8.553H7.224v8.553Zm8.074,0H11.846V197.848H15.3Zm8.074,0H19.921V193.173h3.453v15.352Z"
+                    transform="translate(0 -192.376)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(0.425 0)">
+                <g>
+                  <path
+                    d="M33.465.312a1.248,1.248,0,0,0-.981-.3l-3.4.425a1.248,1.248,0,0,0,.31,2.477l.277-.035a30.132,30.132,0,0,1-12.639,8.6,28.819,28.819,0,0,1-7.806,1.7,1.248,1.248,0,0,0,.039,2.5H9.3a30.535,30.535,0,0,0,8.509-1.825,33.481,33.481,0,0,0,7.47-3.755.4.4,0,0,0-.445-.661,32.678,32.678,0,0,1-7.292,3.665,29.66,29.66,0,0,1-8.265,1.779H9.265a.452.452,0,0,1-.013-.9,29.446,29.446,0,0,0,8.05-1.748A30.826,30.826,0,0,0,30.933,2.606a.4.4,0,0,0-.36-.645l-1.278.16a.452.452,0,1,1-.112-.9L32.583.8a.456.456,0,0,1,.507.448v3.4a.452.452,0,1,1-.9,0V3.617a.4.4,0,0,0-.707-.252,30.8,30.8,0,0,1-5.036,4.9.4.4,0,1,0,.487.631,31.576,31.576,0,0,0,4.461-4.2,1.248,1.248,0,0,0,2.5-.056v-3.4A1.249,1.249,0,0,0,33.465.312Z"
+                    transform="translate(-8.017 0)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <span>Аналитика. Финансы</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25.827"
+            height="25.827"
+            viewBox="0 0 25.827 25.827"
+          >
+            <g transform="translate(-2 -2)">
+              <path
+                d="M25.675,3.722H18.535l-.378-.378a4.587,4.587,0,0,0-6.488,0l-.378.378H4.152v7.139L2,13.013V27.827H27.827V13.013l-2.152-2.152Zm1.291,22.636L20.9,20.294l6.063-6.063ZM14.914,2.861a3.7,3.7,0,0,1,2.381.861H12.533A3.7,3.7,0,0,1,14.914,2.861Zm9.9,1.722V15.166l-4.52,4.52-.667-.667a6.666,6.666,0,0,0-9.427,0l-.667.667-4.52-4.52V4.583ZM8.924,20.294,2.861,26.358V14.231ZM4.152,14.3,3.039,13.192l1.113-1.113ZM3.47,26.966l7.339-7.339a5.805,5.805,0,0,1,8.21,0l7.339,7.339ZM26.788,13.192,25.675,14.3V12.079Z"
+                transform="translate(0 0)"
+              />
+            </g>
+          </svg>
+
+          <span>Подписки</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27.41"
+            height="19.172"
+            viewBox="0 0 27.41 19.172"
+          >
+            <g transform="translate(0 -76.943)">
+              <g transform="translate(0 76.943)">
+                <g transform="translate(0 0)">
+                  <path
+                    d="M27.41,89.233v-8.3a.433.433,0,1,0-.866,0V88.8H.866V78.945A1.138,1.138,0,0,1,2,77.809H25.408a1.138,1.138,0,0,1,1.136,1.136v.588a.433.433,0,1,0,.866,0v-.588a2,2,0,0,0-2-2H2a2,2,0,0,0-2,2V94.113a2,2,0,0,0,2,2H25.408a2,2,0,0,0,2-2V92.969h0V89.234Zm-.866,4.88a1.138,1.138,0,0,1-1.136,1.136H2A1.138,1.138,0,0,1,.866,94.113V93.4H26.545Zm0-1.578H.866V89.667H26.545Z"
+                    transform="translate(0 -76.943)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(14.012 81.878)">
+                <g transform="translate(0 0)">
+                  <path
+                    d="M267.285,169.121h-5.119a.433.433,0,0,0,0,.866h5.119a.433.433,0,1,0,0-.866Z"
+                    transform="translate(-261.734 -169.121)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(14.012 83.675)">
+                <g transform="translate(0 0)">
+                  <path
+                    d="M271.6,202.687h-9.437a.433.433,0,0,0,0,.866H271.6a.433.433,0,0,0,0-.866Z"
+                    transform="translate(-261.732 -202.687)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(3.51 80.213)">
+                <g transform="translate(0 0)">
+                  <path
+                    d="M68.673,138.02a3.1,3.1,0,1,0,3.1,3.1A3.1,3.1,0,0,0,68.673,138.02Zm-.714,4.913a1.937,1.937,0,0,1,0-3.616Zm1.376,0v-3.616a1.912,1.912,0,0,1,1.241,1.808A1.939,1.939,0,0,1,69.335,142.933Z"
+                    transform="translate(-65.568 -138.02)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(2.337 79.106)">
+                <g transform="translate(0 0)">
+                  <path
+                    d="M51.952,118.1a.839.839,0,0,0-.072-.05c-.051-.032-.106-.064-.166-.1a4.512,4.512,0,0,0-1.687-.565,2.974,2.974,0,0,0-.518-.034H47.891a4.156,4.156,0,0,0-4.239,4.239,4.029,4.029,0,0,0,1.033,2.712l.028.03.028.028a4.264,4.264,0,0,0,3.176,1.414h1.565a4.513,4.513,0,0,0,3.03-1.2,4.047,4.047,0,0,0,1.343-2.982v-.012A4.186,4.186,0,0,0,51.952,118.1Zm-2.47,6.812H47.917a3.388,3.388,0,0,1-2.546-1.142l-.045-.045a3.17,3.17,0,0,1-.81-2.132,3.291,3.291,0,0,1,3.373-3.373H49.51a2.109,2.109,0,0,1,.391.025,3.615,3.615,0,0,1,1.386.46c.047.026.094.054.14.082l.007.007a3.344,3.344,0,0,1,1.558,2.8A3.483,3.483,0,0,1,49.482,124.908Z"
+                    transform="translate(-43.652 -117.351)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <span>Клубные карты</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23.188"
+            height="23.188"
+            viewBox="0 0 23.188 23.188"
+          >
+            <path
+              id="certificate_icon_213461"
+              d="M14.685,22.415h-.773a.773.773,0,0,0,1.237.618ZM17.777,20.1l.464-.618a.773.773,0,0,0-.928,0Zm3.092,2.319-.464.618a.773.773,0,0,0,1.237-.618ZM17.777,17a3.865,3.865,0,0,1-3.865-3.865H12.367a5.41,5.41,0,0,0,5.41,5.41Zm3.865-3.865A3.865,3.865,0,0,1,17.777,17V18.55a5.41,5.41,0,0,0,5.41-5.41ZM17.777,9.275a3.865,3.865,0,0,1,3.865,3.865h1.546a5.41,5.41,0,0,0-5.41-5.41Zm0-1.546a5.41,5.41,0,0,0-5.41,5.41h1.546a3.865,3.865,0,0,1,3.865-3.865Zm-3.865,8.5v6.183h1.546V16.231Zm1.237,6.8,3.092-2.319-.928-1.237L14.222,21.8Zm2.164-2.319L20.4,23.033l.928-1.237-3.092-2.319Zm4.328,1.7V16.231H20.1v6.183ZM23.187,7.729V2.319H21.642v5.41ZM20.869,0H2.319V1.546h18.55ZM0,2.319v18.55H1.546V2.319ZM2.319,23.187H12.367V21.642H2.319ZM0,20.869a2.319,2.319,0,0,0,2.319,2.319V21.642a.773.773,0,0,1-.773-.773ZM2.319,0A2.319,2.319,0,0,0,0,2.319H1.546a.773.773,0,0,1,.773-.773ZM23.187,2.319A2.319,2.319,0,0,0,20.869,0V1.546a.773.773,0,0,1,.773.773ZM4.637,7.729h7.729V6.183H4.637Zm0,4.637H9.275V10.821H4.637Z"
+            />
+          </svg>
+
+          <span>Сертификаты</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link red" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24.964"
+            height="25.423"
+            viewBox="0 0 24.964 25.423"
+          >
+            <g transform="translate(-3.366)">
+              <g transform="translate(3.366)">
+                <g transform="translate(0)">
+                  <path
+                    d="M15.906,0c-.007.007-.02.007-.041.007A12.472,12.472,0,0,0,6.084,20.251L4.265,24.474a.678.678,0,0,0,.354.892.692.692,0,0,0,.388.048l6.668-1.172a12.017,12.017,0,0,0,4.155.722A12.482,12.482,0,0,0,15.906,0Zm-.068,23.609a10.934,10.934,0,0,1-3.848-.7.653.653,0,0,0-.361-.034l-5.613.981L7.5,20.4a.685.685,0,0,0-.109-.715A10.89,10.89,0,0,1,5.5,16.538a11.121,11.121,0,1,1,21.477-4.114v.041A11.151,11.151,0,0,1,15.838,23.609Z"
+                    transform="translate(-3.366)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(10.947 9.992)">
+                <g>
+                  <path
+                    d="M119.025,146.7h-3.678a.681.681,0,0,0,0,1.362h3.678a.681.681,0,1,0,0-1.362Z"
+                    transform="translate(-114.666 -146.7)"
+                  />
+                </g>
+              </g>
+              <g transform="translate(10.947 13.398)">
+                <g>
+                  <path
+                    d="M123.793,196.7h-8.446a.681.681,0,0,0,0,1.362h8.446a.681.681,0,1,0,0-1.362Z"
+                    transform="translate(-114.666 -196.7)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <span>Чат с техподдержкой</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24.964"
+            height="25.423"
+            viewBox="0 0 24.964 25.423"
+          >
+            <g transform="translate(-19 -238.789)">
+              <g transform="translate(18.535 239.947)">
+                <path
+                  d="M236.5,363.586a.918.918,0,1,1-.918-.918A.918.918,0,0,1,236.5,363.586Zm0,0"
+                  transform="translate(-222.638 -346.067)"
+                />
+                <path
+                  d="M169.233,95.2a.689.689,0,0,1-.688-.688v-.927a2.069,2.069,0,0,1,1.379-1.948,2.848,2.848,0,0,0,1.834-2.4,2.524,2.524,0,0,0-5.048,0,.688.688,0,0,1-1.377,0,3.9,3.9,0,1,1,7.8,0,4.223,4.223,0,0,1-2.753,3.7.689.689,0,0,0-.46.65v.926A.689.689,0,0,1,169.233,95.2Zm0,0"
+                  transform="translate(-156.285 -80.663)"
+                />
+              </g>
+              <g transform="translate(19 238.789)">
+                <g transform="translate(0)">
+                  <path
+                    d="M15.906,0c-.007.007-.02.007-.041.007A12.472,12.472,0,0,0,6.084,20.251L4.265,24.474a.678.678,0,0,0,.354.892.692.692,0,0,0,.388.048l6.668-1.172a12.017,12.017,0,0,0,4.155.722A12.482,12.482,0,0,0,15.906,0Zm-.068,23.609a10.934,10.934,0,0,1-3.848-.7.653.653,0,0,0-.361-.034l-5.613.981L7.5,20.4a.685.685,0,0,0-.109-.715A10.89,10.89,0,0,1,5.5,16.538a11.121,11.121,0,1,1,21.477-4.114v.041A11.151,11.151,0,0,1,15.838,23.609Z"
+                    transform="translate(-3.366)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <span>Обращения</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27.269"
+            height="27.372"
+            viewBox="0 0 27.269 27.372"
+          >
+            <path
+              d="M6.438,18.2A29.039,29.039,0,0,0,16.1,25.762a15.033,15.033,0,0,0,5.405,1.6c.13.006.255.011.386.011a4.476,4.476,0,0,0,3.471-1.492.124.124,0,0,0,.023-.028,14.615,14.615,0,0,1,1.095-1.134c.267-.255.539-.522.8-.794a2.739,2.739,0,0,0-.011-4.078l-3.409-3.409a2.759,2.759,0,0,0-2-.919,2.852,2.852,0,0,0-2.019.913L17.81,18.462c-.187-.108-.38-.2-.562-.295a7.013,7.013,0,0,1-.624-.34,21.49,21.49,0,0,1-5.133-4.674,12.375,12.375,0,0,1-1.736-2.768C10.289,9.9,10.788,9.4,11.27,8.9c.17-.176.346-.352.522-.527a2.908,2.908,0,0,0,.942-2.042,2.885,2.885,0,0,0-.942-2.042L10.1,2.6c-.2-.2-.386-.391-.579-.59-.374-.386-.766-.783-1.151-1.14a2.828,2.828,0,0,0-2-.873A2.911,2.911,0,0,0,4.356.879L2.235,3a4.358,4.358,0,0,0-1.3,2.791,10.5,10.5,0,0,0,.788,4.537A26.4,26.4,0,0,0,6.438,18.2ZM2.32,5.91a3,3,0,0,1,.9-1.928l2.11-2.11A1.527,1.527,0,0,1,6.375,1.39,1.449,1.449,0,0,1,7.4,1.883c.38.352.737.72,1.123,1.112.193.2.391.4.59.6l1.69,1.69a1.54,1.54,0,0,1,.533,1.061A1.54,1.54,0,0,1,10.8,7.407c-.176.176-.352.357-.527.533-.527.533-1.021,1.038-1.565,1.52l-.028.028a1.109,1.109,0,0,0-.284,1.259c.006.017.011.028.017.045A13.349,13.349,0,0,0,10.4,14.032a22.681,22.681,0,0,0,5.468,4.98,8.119,8.119,0,0,0,.749.408,7.014,7.014,0,0,1,.624.34c.023.011.04.023.062.034a1.186,1.186,0,0,0,.55.142,1.2,1.2,0,0,0,.845-.386l2.121-2.121a1.5,1.5,0,0,1,1.038-.5,1.424,1.424,0,0,1,1,.5l3.42,3.414a1.368,1.368,0,0,1-.017,2.138c-.238.255-.488.5-.754.754a16.334,16.334,0,0,0-1.185,1.231A3.114,3.114,0,0,1,21.893,26c-.1,0-.2-.006-.295-.011a13.658,13.658,0,0,1-4.889-1.463,27.587,27.587,0,0,1-9.194-7.2A25.267,25.267,0,0,1,3.034,9.863,9.148,9.148,0,0,1,2.32,5.91Z"
+              transform="translate(-0.912 0)"
+            />
+          </svg>
+
+          <span>Позвонить нам</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25.683"
+            height="23.53"
+            viewBox="0 0 25.683 23.53"
+          >
+            <g transform="translate(-6.235 -11.62)">
+              <g transform="translate(6.235 11.62)">
+                <g>
+                  <path
+                    d="M121.61,189.442l-4.974-6.291a2.3,2.3,0,0,0-3.581.009,2.97,2.97,0,0,0-.64,1.259,2.3,2.3,0,0,0-3.328.263,3.022,3.022,0,0,0-.642,1.258,2.292,2.292,0,0,0-3.327.265,3.007,3.007,0,0,0-.635,1.229l-2.344-2.7a2.3,2.3,0,0,0-3.581.009,3.229,3.229,0,0,0,0,4.112l9.006,10.365-5.342.965a3.294,3.294,0,0,0-2.532,3.36,2.152,2.152,0,0,0,1.984,2.284h12.473a6.784,6.784,0,0,0,5.145-2.453l2.081-2.395a8.979,8.979,0,0,0,2.129-5.913A9.092,9.092,0,0,0,121.61,189.442Zm-1.172,10.466-2.081,2.395a5.551,5.551,0,0,1-4.209,2.007H101.675a.717.717,0,0,1-.661-.761,1.821,1.821,0,0,1,1.4-1.856l6.634-1.2a.7.7,0,0,0,.527-.516.845.845,0,0,0-.161-.773l-9.925-11.423a1.542,1.542,0,0,1,.008-1.969,1.1,1.1,0,0,1,1.7,0l6.618,7.617a.6.6,0,0,0,.935,0,.846.846,0,0,0,0-1.076l-2.7-3.111a1.542,1.542,0,0,1,.008-1.969,1.1,1.1,0,0,1,1.7,0l2.7,3.11a.6.6,0,0,0,.935,0,.828.828,0,0,0,.193-.539.816.816,0,0,0-.188-.531l-1.38-1.588a1.542,1.542,0,0,1,.008-1.969,1.1,1.1,0,0,1,1.7,0l1.38,1.588h0v0h0s0,0,0,0a.6.6,0,0,0,.922-.015.845.845,0,0,0,0-1.076l-.057-.065a1.537,1.537,0,0,1,.007-1.969,1.094,1.094,0,0,1,1.681-.026l4.953,6.265a7.443,7.443,0,0,1,1.546,4.6A7.348,7.348,0,0,1,120.438,199.908Z"
+                    transform="translate(-97.819 -182.302)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <span>Позвонить нам</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="28"
+            viewBox="0 0 21 28"
+          >
+            <g transform="translate(-3)">
+              <path
+                d="M21.375,26.5H5.625A2.628,2.628,0,0,1,3,23.875V11.625A2.628,2.628,0,0,1,5.625,9h15.75A2.628,2.628,0,0,1,24,11.625v12.25A2.628,2.628,0,0,1,21.375,26.5ZM5.625,10.75a.876.876,0,0,0-.875.875v12.25a.876.876,0,0,0,.875.875h15.75a.876.876,0,0,0,.875-.875V11.625a.876.876,0,0,0-.875-.875Z"
+                transform="translate(0 1.5)"
+              />
+              <path
+                d="M19.125,12.25a.875.875,0,0,1-.875-.875V7A5.25,5.25,0,1,0,7.75,7v4.375a.875.875,0,0,1-1.75,0V7A7,7,0,1,1,20,7v4.375A.875.875,0,0,1,19.125,12.25Z"
+                transform="translate(0.5)"
+              />
+              <path
+                d="M12.333,17.667a2.333,2.333,0,1,1,2.333-2.333A2.336,2.336,0,0,1,12.333,17.667Zm0-2.917a.583.583,0,1,0,.583.583A.584.584,0,0,0,12.333,14.75Z"
+                transform="translate(1.167 2.167)"
+              />
+              <path
+                d="M12.125,20.708a.875.875,0,0,1-.875-.875V16.625a.875.875,0,0,1,1.75,0v3.208A.875.875,0,0,1,12.125,20.708Z"
+                transform="translate(1.375 2.625)"
+              />
+            </g>
+          </svg>
+
+          <span>Заблокировать кабинет</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30.48"
+            height="27.582"
+            viewBox="0 0 30.48 27.582"
+          >
+            <g transform="translate(-1.25 -2.25)">
+              <path
+                d="M2,24.735V7.347A4.347,4.347,0,0,1,6.347,3h2.9a4.347,4.347,0,0,1,4.347,4.347V24.735a4.347,4.347,0,0,1-4.347,4.347h-2.9A4.347,4.347,0,0,1,2,24.735Z"
+                transform="translate(0 0)"
+                fill="none"
+                stroke="#000"
+                stroke-width="1.5"
+              />
+              <path
+                d="M16,3h2.9a5.8,5.8,0,0,1,5.8,5.8v14.49a5.8,5.8,0,0,1-5.8,5.8H16"
+                transform="translate(6.286 0)"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M10,13.347H21.592m0,0L17.245,9m4.347,4.347-4.347,4.347"
+                transform="translate(3.592 2.694)"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </g>
+          </svg>
+
+          <span>Перевод кабинета</span>
+        </a>
+      </li>
+      <li class="personal-item">
+        <a class="personal-item__link" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20.5"
+            height="25.231"
+            viewBox="0 0 20.5 25.231"
+          >
+            <path
+              d="M66.529,3.154H62.192V2.365A2.368,2.368,0,0,0,59.827,0H56.673a2.368,2.368,0,0,0-2.365,2.365v.788H49.971A1.973,1.973,0,0,0,48,5.125v2.76a.788.788,0,0,0,.788.788h.431l.681,14.3a2.363,2.363,0,0,0,2.363,2.253H64.237A2.362,2.362,0,0,0,66.6,22.978l.681-14.3h.431a.788.788,0,0,0,.788-.788V5.125A1.973,1.973,0,0,0,66.529,3.154ZM55.885,2.365a.789.789,0,0,1,.788-.788h3.154a.789.789,0,0,1,.788.788v.788H55.885Zm-6.308,2.76a.4.4,0,0,1,.394-.394H66.529a.4.4,0,0,1,.394.394V7.1H49.577ZM65.024,22.9a.788.788,0,0,1-.788.751H52.263a.787.787,0,0,1-.788-.751L50.8,8.673H65.7Z"
+              transform="translate(-48)"
+              fill="#020202"
+            />
+          </svg>
+
+          <span>Удалить кабинет</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+        <section class="banner">
+  <div class="container">
+    <img src="img/banner.jpg" alt="img" />
+  </div>
+</section>
+
+        <section class="add-cabinet">
+  <div class="container">
+    <h2 class="add-cabinet__title">Добавить кабинет</h2>
+    <p class="add-cabinet__text">
+      Создавайте и управляйте. Делитесь своим опытом и зарабатывайте.
+    </p>
+
+    <ul class="add-cabinet__list">
+      <li class="add-cabinet__item">
+        <a class="add-cabinet__link" href="#">Рыбалка. Отдых. Услуги</a>
+      </li>
+      <li class="add-cabinet__item">
+        <a class="add-cabinet__link" href="#">Обучение. Тренеры</a>
+      </li>
+      <li class="add-cabinet__item">
+        <a class="add-cabinet__link" href="#">Туры. Гиды</a>
+      </li>
+      <li class="add-cabinet__item">
+        <a class="add-cabinet__link" href="#">Соревнования. Турниры</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+        <section class="banner">
+  <div class="container">
+    <img src="img/banner.jpg" alt="img" />
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__socials socials">
+        <span class="socials__name"> Подпишитесь на нас </span>
+        <ul class="socials__list">
+          <li class="social__item">
+            <a
+              class="socials__link"
+              href="#"
+              target="_blank"
+              aria-label="telegram"
+            >
+              <svg>
+                <use xlink:href="img/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="socials__link" href="#" target="_blank" aria-label="vk">
+              <svg>
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              class="socials__link"
+              href="#"
+              target="_blank"
+              aria-label="youtube"
+            >
+              <svg>
+                <use xlink:href="img/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer__accordions">
+      <div class="footer-accordion accordion">
+        <div class="footer-accordion__control accordion-control" type="button">
+          <a class="footer-accordion__control-link" href="#"> Проект Х </a>
+          <button
+            class="footer-accordion__control-btn accordion-control-btn"
+            type="button"
+          >
+            <svg>
+              <use xlink:href="img/sprite.svg#chevron"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="footer-accordion__content accordion-content">
+          <ul class="footer-accordion__list">
+            <li class="footer-accordion__item">
+              <a class="footer-accordion__link" href="#">Скачать MEDIA KIT</a>
+            </li>
+            <li class="footer-accordion__item">
+              <a class="footer-accordion__link" href="#">Разместить рекламу</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-accordion accordion">
+        <div class="footer-accordion__control accordion-control" type="button">
+          <a class="footer-accordion__control-link" href="#">Реклама </a>
+          <button
+            class="footer-accordion__control-btn accordion-control-btn"
+            type="button"
+          >
+            <svg>
+              <use xlink:href="img/sprite.svg#chevron"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="footer-accordion__content accordion-content">
+          <ul class="footer-accordion__list">
+            <li class="footer-accordion__item">
+              <a class="footer-accordion__link" href="#">Скачать MEDIA KIT</a>
+            </li>
+            <li class="footer-accordion__item">
+              <a class="footer-accordion__link" href="#">Разместить рекламу</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-accordion accordion">
+        <div class="footer-accordion__control accordion-control" type="button">
+          <a class="footer-accordion__control-link" href="#">Чат. Обращения </a>
+          <button
+            class="footer-accordion__control-btn accordion-control-btn"
+            type="button"
+          >
+            <svg>
+              <use xlink:href="img/sprite.svg#chevron"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="footer-accordion__content accordion-content">
+          <ul class="footer-accordion__list">
+            <li class="footer-accordion__item">
+              <a class="footer-accordion__link" href="#">Скачать MEDIA KIT</a>
+            </li>
+            <li class="footer-accordion__item">
+              <a class="footer-accordion__link" href="#">Разместить рекламу</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__safe">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16.992"
+        height="22.656"
+        viewBox="0 0 16.992 22.656"
+      >
+        <path
+          id="lock"
+          d="M14.868,8.5H14.16V5.664a5.664,5.664,0,1,0-11.328,0V8.5H2.124A2.127,2.127,0,0,0,0,10.62v9.912a2.127,2.127,0,0,0,2.124,2.124H14.868a2.127,2.127,0,0,0,2.124-2.124V10.62A2.127,2.127,0,0,0,14.868,8.5ZM4.72,5.664a3.776,3.776,0,1,1,7.552,0V8.5H4.72Zm0,0"
+          fill="#e8f2ff"
+        />
+      </svg>
+
+      Безопасные покупки
+    </div>
+    <div class="footer__payments">
+      <img src="img/payments/1.png" alt="" />
+      <img src="img/payments/2.png" alt="" />
+      <img src="img/payments/3.png" alt="" />
+    </div>
+    <p class="footer__copy">
+      ©2021 Бронируй и Играй.com <br />
+      - P.I.V.A It573838756 <br />
+      Информационное агентство, <br />
+      © Все права защищены
+    </p>
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a class="footer__link" href="#">Privacy </a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Cookies </a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link white" href="#"> Правила и Условия </a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">of Use </a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">RSS Новости </a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Rss Продукты  </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->
+
+<!-- <div class="product-accordions__accordion accordion">
+  <button
+    class="product-accordions__control accordion-control-btn"
+    type="button"
+  >
+    Описание продукта
+
+    <svg>
+      <use xlink:href="img/sprite.svg#chevron"></use>
+    </svg>
+  </button>
+
+  <div class="product-accordions__content accordion-content">
+    <div class="product-accordions__inner">
+      <p>
+        Короткая кожанная куртка с классическими лацканами, ветрозащитным
+        клапанов, боковыми карманами и регулируемым поясом на талии.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<!-- SWITCH -->
+<!-- 
+            <label class="switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label> -->

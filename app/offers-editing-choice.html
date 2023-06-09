@@ -1,0 +1,4216 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Nice Select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      container: {
+        padding: '15px',
+        center: true,
+      },
+
+      extend: {
+        colors: {
+          white: '#fff',
+          black: '#000',
+          gray: '#707070',
+          blue: '#0A84FE',
+          red: '#ff0a0a',
+          green: '#39ca1c',
+          'green-light': '#C3EFBC',
+          yellow: '#FED42D',
+          'blue-light': '#e8f2ff',
+          'gray-light': '#DADADA',
+          'dark-03': 'rgba(0, 0, 0, 0.3)',
+          'dark-05': 'rgba(0, 0, 0, 0.5)',
+        },
+      },
+    },
+  };
+</script>
+
+<title>Эмэйз</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--online-booking">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Онлайн запись</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-name">Имя</label>
+
+          <input
+            class="form-submit__input"
+            name="name"
+            id="online-name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="online-tel">
+            Контактный телефон
+          </label>
+
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="online-tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="site-wrapper">
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <a class="mobile-menu__phone" href="tel:+74994990917">
+        +7 (499) 499 09 17
+      </a>
+      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <div class="header__wrapper"></div>
+  </div>
+</header>
+
+
+      <main class="main">
+        <section class="py-[20px]">
+  <div class="container">
+    <div class="text-[32px] font-light mb-[20px] text-center">Выбор</div>
+
+    <div class="relative">
+      <div class="accordion-border accordion mb-[10px]">
+        <button
+          class="accordion-border__control accordion-control-btn h-[60px] px-[15px] py-[18px]"
+          type="button"
+        >
+          Поле большое
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8"
+            height="6"
+            viewBox="0 0 8 6"
+          >
+            <path d="M0,53.333l4,6,4-6Z" transform="translate(0 -53.333)" />
+          </svg>
+        </button>
+
+        <div class="accordion-border__content accordion-content">
+          <div class="accordion-border__inner">
+            <p>Поле большое</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div
+          class="fixed grid grid-cols-2 gap-[10px] items-center bottom-[50px] left-[50%] translate-x-[-50%]"
+        >
+          <button
+            class="w-[50px] h-[50px] rounded-full bg-white btn-shadow flex items-center justify-center"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23.087"
+              height="23.087"
+              viewBox="0 0 23.087 23.087"
+            >
+              <path
+                id="_-Primary-Color"
+                data-name="🔹-Primary-Color"
+                d="M3,5.565H5.565V3A2.573,2.573,0,0,0,3,5.565ZM3,15.826H5.565V13.261H3ZM8.131,26.087H10.7V23.522H8.131ZM3,10.7H5.565V8.131H3ZM15.826,3H13.261V5.565h2.565Zm7.7,0V5.565h2.565A2.573,2.573,0,0,0,23.522,3ZM5.565,26.087V23.522H3A2.573,2.573,0,0,0,5.565,26.087ZM3,20.957H5.565V18.392H3ZM10.7,3H8.131V5.565H10.7Zm2.565,23.087h2.565V23.522H13.261ZM23.522,15.826h2.565V13.261H23.522Zm0,10.261a2.573,2.573,0,0,0,2.565-2.565H23.522Zm0-15.392h2.565V8.131H23.522Zm0,10.261h2.565V18.392H23.522Zm-5.131,5.131h2.565V23.522H18.392Zm0-20.522h2.565V3H18.392ZM8.131,20.957H20.957V8.131H8.131ZM10.7,10.7h7.7v7.7H10.7Z"
+                transform="translate(-3 -3)"
+                fill="#0a84fe"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-[50px] h-[50px] rounded-full bg-white btn-shadow flex items-center justify-center"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="8.939"
+              height="40.957"
+              viewBox="0 0 8.939 40.957"
+            >
+              <g
+                id="Сгруппировать_3543"
+                data-name="Сгруппировать 3543"
+                transform="translate(14111 14533)"
+              >
+                <path
+                  id="Контур_13298"
+                  data-name="Контур 13298"
+                  d="M8.9-3.325a3.822,3.822,0,0,1-1.2,2.578A3.986,3.986,0,0,1,4.973.146a3.761,3.761,0,0,1-2.1-.593,3.868,3.868,0,0,1-1.41-1.681A5.988,5.988,0,0,1,.959-4.614V-6a6.043,6.043,0,0,1,.5-2.52,3.83,3.83,0,0,1,1.432-1.7,3.9,3.9,0,0,1,2.15-.6,3.809,3.809,0,0,1,2.706.927A3.881,3.881,0,0,1,8.9-7.324H7.991a2.714,2.714,0,0,0-2.952-2.717A2.8,2.8,0,0,0,2.728-8.958a4.7,4.7,0,0,0-.861,3v1.3a4.733,4.733,0,0,0,.839,2.944,2.7,2.7,0,0,0,2.267,1.1A3,3,0,0,0,7.1-1.293a3.247,3.247,0,0,0,.886-2.032Z"
+                  transform="translate(-14110.959 -14492.189)"
+                  fill="#0a84fe"
+                />
+                <path
+                  id="Контур_13296"
+                  data-name="Контур 13296"
+                  d="M7.1-2.988H2.263L1.165,0H.22L4.255-10.664h.857L9.148,0H8.21ZM2.542-3.757H6.819L4.68-9.565Z"
+                  transform="translate(-14111.22 -14522.336)"
+                  fill="#0a84fe"
+                />
+                <path
+                  id="Контур_13297"
+                  data-name="Контур 13297"
+                  d="M1.348,0V-10.664H4.5a4.1,4.1,0,0,1,2.6.707,2.506,2.506,0,0,1,.886,2.084,2.36,2.36,0,0,1-.45,1.439A2.46,2.46,0,0,1,6.3-5.559a2.561,2.561,0,0,1,1.5.916A2.553,2.553,0,0,1,8.364-3,2.774,2.774,0,0,1,7.452-.795,3.737,3.737,0,0,1,4.915,0Zm.9-5.127V-.762h2.7a2.7,2.7,0,0,0,1.835-.59,2.055,2.055,0,0,0,.677-1.637,1.984,1.984,0,0,0-.648-1.564,2.6,2.6,0,0,0-1.791-.575Zm0-.754H4.709a2.768,2.768,0,0,0,1.747-.531A1.81,1.81,0,0,0,7.075-7.9a1.778,1.778,0,0,0-.641-1.512A3.185,3.185,0,0,0,4.5-9.9H2.249Z"
+                  transform="translate(-14111.348 -14507.336)"
+                  fill="#0a84fe"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-3 gap-[10px]">
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.63"
+                viewBox="0 0 30.305 28.63"
+              >
+                <g
+                  id="Сгруппировать_2542"
+                  data-name="Сгруппировать 2542"
+                  transform="translate(-182.86 -322.892)"
+                >
+                  <g
+                    id="Сгруппировать_552"
+                    data-name="Сгруппировать 552"
+                    transform="translate(191.861 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_552"
+                      data-name="Прямоугольник 552"
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_552_-_Рамка"
+                      data-name="Прямоугольник 552 - Рамка"
+                      d="M.924,1V5.3H2.771V1H.924M0,0H3.694V6.3H0Z"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_553"
+                    data-name="Сгруппировать 553"
+                    transform="translate(182.86 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_553"
+                      data-name="Прямоугольник 553"
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_553_-_Рамка"
+                      data-name="Прямоугольник 553 - Рамка"
+                      d="M.924,1V7.549H2.771V1H.924M0,0H3.694V8.549H0Z"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_532"
+                    data-name="Сгруппировать 532"
+                    transform="translate(199.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_532"
+                      data-name="Прямоугольник 532"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_532_-_Рамка"
+                      data-name="Прямоугольник 532 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_533"
+                    data-name="Сгруппировать 533"
+                    transform="translate(202.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_533"
+                      data-name="Прямоугольник 533"
+                      width="2"
+                      height="12.93"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_533_-_Рамка"
+                      data-name="Прямоугольник 533 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.006a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_535"
+                    data-name="Сгруппировать 535"
+                    transform="translate(208.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_535"
+                      data-name="Прямоугольник 535"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_535_-_Рамка"
+                      data-name="Прямоугольник 535 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_537"
+                    data-name="Сгруппировать 537"
+                    transform="translate(199.165 328.433)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_537"
+                      data-name="Прямоугольник 537"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_537_-_Рамка"
+                      data-name="Прямоугольник 537 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(205.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_539"
+                      data-name="Прямоугольник 539"
+                      width="2"
+                      height="11.083"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_539_-_Рамка"
+                      data-name="Прямоугольник 539 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924v9.236a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_540"
+                    data-name="Сгруппировать 540"
+                    transform="translate(208.165 332.127)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_540"
+                      data-name="Прямоугольник 540"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_540_-_Рамка"
+                      data-name="Прямоугольник 540 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_541"
+                    data-name="Сгруппировать 541"
+                    transform="translate(211.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_541"
+                      data-name="Прямоугольник 541"
+                      width="2"
+                      height="13.853"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_541_-_Рамка"
+                      data-name="Прямоугольник 541 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.93a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_542"
+                    data-name="Сгруппировать 542"
+                    transform="translate(199.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_542"
+                      data-name="Прямоугольник 542"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_542_-_Рамка"
+                      data-name="Прямоугольник 542 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_543"
+                    data-name="Сгруппировать 543"
+                    transform="translate(202.165 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_543"
+                      data-name="Прямоугольник 543"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_543_-_Рамка"
+                      data-name="Прямоугольник 543 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_545"
+                    data-name="Сгруппировать 545"
+                    transform="translate(208.165 340.439)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_545"
+                      data-name="Прямоугольник 545"
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_545_-_Рамка"
+                      data-name="Прямоугольник 545 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V2.771a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_546"
+                    data-name="Сгруппировать 546"
+                    transform="translate(211.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_546"
+                      data-name="Прямоугольник 546"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_546_-_Рамка"
+                      data-name="Прямоугольник 546 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_547"
+                    data-name="Сгруппировать 547"
+                    transform="translate(199.165 343.21)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_547"
+                      data-name="Прямоугольник 547"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_547_-_Рамка"
+                      data-name="Прямоугольник 547 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_548"
+                    data-name="Сгруппировать 548"
+                    transform="translate(202.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_548"
+                      data-name="Прямоугольник 548"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_548_-_Рамка"
+                      data-name="Прямоугольник 548 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_549"
+                    data-name="Сгруппировать 549"
+                    transform="translate(205.165 334.898)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_549"
+                      data-name="Прямоугольник 549"
+                      width="2"
+                      height="16.624"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_549_-_Рамка"
+                      data-name="Прямоугольник 549 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V15.7a.964.964,0,0,1-1,.924A.964.964,0,0,1,0,15.7V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_550"
+                    data-name="Сгруппировать 550"
+                    transform="translate(208.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_550"
+                      data-name="Прямоугольник 550"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_550_-_Рамка"
+                      data-name="Прямоугольник 550 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_551"
+                    data-name="Сгруппировать 551"
+                    transform="translate(211.165 346.904)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_551"
+                      data-name="Прямоугольник 551"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_551_-_Рамка"
+                      data-name="Прямоугольник 551 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <small>1</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.63"
+                viewBox="0 0 30.305 28.63"
+              >
+                <g
+                  id="Сгруппировать_2542"
+                  data-name="Сгруппировать 2542"
+                  transform="translate(-182.86 -322.892)"
+                >
+                  <g
+                    id="Сгруппировать_552"
+                    data-name="Сгруппировать 552"
+                    transform="translate(191.861 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_552"
+                      data-name="Прямоугольник 552"
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_552_-_Рамка"
+                      data-name="Прямоугольник 552 - Рамка"
+                      d="M.924,1V5.3H2.771V1H.924M0,0H3.694V6.3H0Z"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_553"
+                    data-name="Сгруппировать 553"
+                    transform="translate(182.86 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_553"
+                      data-name="Прямоугольник 553"
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_553_-_Рамка"
+                      data-name="Прямоугольник 553 - Рамка"
+                      d="M.924,1V7.549H2.771V1H.924M0,0H3.694V8.549H0Z"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_532"
+                    data-name="Сгруппировать 532"
+                    transform="translate(199.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_532"
+                      data-name="Прямоугольник 532"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_532_-_Рамка"
+                      data-name="Прямоугольник 532 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_533"
+                    data-name="Сгруппировать 533"
+                    transform="translate(202.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_533"
+                      data-name="Прямоугольник 533"
+                      width="2"
+                      height="12.93"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_533_-_Рамка"
+                      data-name="Прямоугольник 533 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.006a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_535"
+                    data-name="Сгруппировать 535"
+                    transform="translate(208.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_535"
+                      data-name="Прямоугольник 535"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_535_-_Рамка"
+                      data-name="Прямоугольник 535 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_537"
+                    data-name="Сгруппировать 537"
+                    transform="translate(199.165 328.433)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_537"
+                      data-name="Прямоугольник 537"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_537_-_Рамка"
+                      data-name="Прямоугольник 537 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(205.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_539"
+                      data-name="Прямоугольник 539"
+                      width="2"
+                      height="11.083"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_539_-_Рамка"
+                      data-name="Прямоугольник 539 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924v9.236a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_540"
+                    data-name="Сгруппировать 540"
+                    transform="translate(208.165 332.127)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_540"
+                      data-name="Прямоугольник 540"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_540_-_Рамка"
+                      data-name="Прямоугольник 540 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_541"
+                    data-name="Сгруппировать 541"
+                    transform="translate(211.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_541"
+                      data-name="Прямоугольник 541"
+                      width="2"
+                      height="13.853"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_541_-_Рамка"
+                      data-name="Прямоугольник 541 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.93a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_542"
+                    data-name="Сгруппировать 542"
+                    transform="translate(199.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_542"
+                      data-name="Прямоугольник 542"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_542_-_Рамка"
+                      data-name="Прямоугольник 542 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_543"
+                    data-name="Сгруппировать 543"
+                    transform="translate(202.165 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_543"
+                      data-name="Прямоугольник 543"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_543_-_Рамка"
+                      data-name="Прямоугольник 543 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_545"
+                    data-name="Сгруппировать 545"
+                    transform="translate(208.165 340.439)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_545"
+                      data-name="Прямоугольник 545"
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_545_-_Рамка"
+                      data-name="Прямоугольник 545 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V2.771a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_546"
+                    data-name="Сгруппировать 546"
+                    transform="translate(211.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_546"
+                      data-name="Прямоугольник 546"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_546_-_Рамка"
+                      data-name="Прямоугольник 546 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_547"
+                    data-name="Сгруппировать 547"
+                    transform="translate(199.165 343.21)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_547"
+                      data-name="Прямоугольник 547"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_547_-_Рамка"
+                      data-name="Прямоугольник 547 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_548"
+                    data-name="Сгруппировать 548"
+                    transform="translate(202.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_548"
+                      data-name="Прямоугольник 548"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_548_-_Рамка"
+                      data-name="Прямоугольник 548 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_549"
+                    data-name="Сгруппировать 549"
+                    transform="translate(205.165 334.898)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_549"
+                      data-name="Прямоугольник 549"
+                      width="2"
+                      height="16.624"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_549_-_Рамка"
+                      data-name="Прямоугольник 549 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V15.7a.964.964,0,0,1-1,.924A.964.964,0,0,1,0,15.7V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_550"
+                    data-name="Сгруппировать 550"
+                    transform="translate(208.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_550"
+                      data-name="Прямоугольник 550"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_550_-_Рамка"
+                      data-name="Прямоугольник 550 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_551"
+                    data-name="Сгруппировать 551"
+                    transform="translate(211.165 346.904)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_551"
+                      data-name="Прямоугольник 551"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_551_-_Рамка"
+                      data-name="Прямоугольник 551 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <small>2</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34.013"
+                height="26.71"
+                viewBox="0 0 34.013 26.71"
+              >
+                <g
+                  id="Сгруппировать_540"
+                  data-name="Сгруппировать 540"
+                  transform="translate(-8437 -786)"
+                  opacity="0.5"
+                >
+                  <g
+                    id="Прямоугольник_478"
+                    data-name="Прямоугольник 478"
+                    transform="translate(8448.381 801.465)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.38"
+                      height="2.334"
+                      rx="1.167"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.38"
+                      height="1.334"
+                      rx="0.667"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_479"
+                    data-name="Прямоугольник 479"
+                    transform="matrix(0.545, 0.839, -0.839, 0.545, 8455.524, 802.084)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_480"
+                    data-name="Прямоугольник 480"
+                    transform="matrix(0.545, -0.839, 0.839, 0.545, 8446.339, 811.489)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_481"
+                    data-name="Прямоугольник 481"
+                    transform="translate(8444.879 806.134)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="18.091"
+                      height="2.043"
+                      rx="1.021"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="17.091"
+                      height="1.043"
+                      rx="0.521"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_538"
+                    data-name="Сгруппировать 538"
+                    transform="translate(8464.874 794.779)"
+                  >
+                    <g
+                      id="Вычитание_1495"
+                      data-name="Вычитание 1495"
+                      transform="translate(0 0)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 1.121394991874695 17.40909767150879 C 0.7787550091743469 17.40909767150879 0.5000050067901611 17.13033866882324 0.5000050067901611 16.78769874572754 L 0.5000050067901611 4.083941459655762 L 1.742805004119873 4.745033740997314 L 1.742805004119873 16.78769874572754 C 1.742805004119873 17.13033866882324 1.46404504776001 17.40909767150879 1.121394991874695 17.40909767150879 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1.121394991874695 16.90909767150879 C 1.187204957008362 16.90909767150879 1.242805004119873 16.85350799560547 1.242805004119873 16.78769874572754 L 1.242805004119873 5.045404434204102 L 1.000005006790161 4.916249752044678 L 1.000005006790161 16.78769874572754 C 1.000005006790161 16.85350799560547 1.05559504032135 16.90909767150879 1.121394991874695 16.90909767150879 M 1.121394991874695 17.90909767150879 C 0.5030549764633179 17.90909767150879 5.00545502291061e-06 17.40603828430176 5.00545502291061e-06 16.78769874572754 L 5.00545502291061e-06 3.251638174057007 L 2.242805004119873 4.444668292999268 L 2.242805004119873 16.78769874572754 C 2.242805004119873 17.40603828430176 1.739745020866394 17.90909767150879 1.121394991874695 17.90909767150879 Z M 1.865005016326904 0.2520581781864166 L 1.391674995422363 0.0004381808394100517 C 1.568014979362488 0.04402818158268929 1.731835007667542 0.1311181783676147 1.866135001182556 0.250428169965744 L 1.865005016326904 0.2520581781864166 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(8440.845 794.78)"
+                  >
+                    <g
+                      id="Вычитание_1495-2"
+                      data-name="Вычитание 1495"
+                      transform="translate(2.243 17.908) rotate(180)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 0.5 13.82555294036865 L 0.5 1.121408700942993 C 0.5 0.7787686586380005 0.7787600159645081 0.5000087022781372 1.121399998664856 0.5000087022781372 C 1.464040040969849 0.5000087022781372 1.742799997329712 0.7787686586380005 1.742799997329712 1.121408700942993 L 1.742799997329712 13.16475296020508 L 0.5 13.82555294036865 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1 12.9934196472168 L 1.242799997329712 12.86432266235352 L 1.242799997329712 1.121408700942993 C 1.242799997329712 1.055598616600037 1.187209963798523 1.000008702278137 1.121399998664856 1.000008702278137 C 1.055590033531189 1.000008702278137 1 1.055598616600037 1 1.121408700942993 L 1 12.9934196472168 M 1.399829983711243 17.9074592590332 L 1.399109959602356 17.90560913085938 L 1.871369957923889 17.65456962585449 C 1.7360999584198 17.77636909484863 1.572649955749512 17.86325836181641 1.399829983711243 17.9074592590332 Z M -1.335144217406992e-09 14.65768909454346 L -1.335144217406992e-09 1.121408700942993 C -1.335144217406992e-09 0.5030686855316162 0.503059983253479 8.675841854710598e-06 1.121399998664856 8.675841854710598e-06 C 1.739740014076233 8.675841854710598e-06 2.242799997329712 0.5030686855316162 2.242799997329712 1.121408700942993 L 2.242799997329712 13.46518898010254 L -1.335144217406992e-09 14.65768909454346 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Прямоугольник_484"
+                    data-name="Прямоугольник 484"
+                    transform="translate(8453.532 786) rotate(30)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_485"
+                    data-name="Прямоугольник 485"
+                    transform="translate(8456.083 788.775) rotate(150)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              <small>3</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34.013"
+                height="26.71"
+                viewBox="0 0 34.013 26.71"
+              >
+                <g
+                  id="Сгруппировать_540"
+                  data-name="Сгруппировать 540"
+                  transform="translate(-8437 -786)"
+                  opacity="0.5"
+                >
+                  <g
+                    id="Прямоугольник_478"
+                    data-name="Прямоугольник 478"
+                    transform="translate(8448.381 801.465)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.38"
+                      height="2.334"
+                      rx="1.167"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.38"
+                      height="1.334"
+                      rx="0.667"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_479"
+                    data-name="Прямоугольник 479"
+                    transform="matrix(0.545, 0.839, -0.839, 0.545, 8455.524, 802.084)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_480"
+                    data-name="Прямоугольник 480"
+                    transform="matrix(0.545, -0.839, 0.839, 0.545, 8446.339, 811.489)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_481"
+                    data-name="Прямоугольник 481"
+                    transform="translate(8444.879 806.134)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="18.091"
+                      height="2.043"
+                      rx="1.021"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="17.091"
+                      height="1.043"
+                      rx="0.521"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_538"
+                    data-name="Сгруппировать 538"
+                    transform="translate(8464.874 794.779)"
+                  >
+                    <g
+                      id="Вычитание_1495"
+                      data-name="Вычитание 1495"
+                      transform="translate(0 0)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 1.121394991874695 17.40909767150879 C 0.7787550091743469 17.40909767150879 0.5000050067901611 17.13033866882324 0.5000050067901611 16.78769874572754 L 0.5000050067901611 4.083941459655762 L 1.742805004119873 4.745033740997314 L 1.742805004119873 16.78769874572754 C 1.742805004119873 17.13033866882324 1.46404504776001 17.40909767150879 1.121394991874695 17.40909767150879 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1.121394991874695 16.90909767150879 C 1.187204957008362 16.90909767150879 1.242805004119873 16.85350799560547 1.242805004119873 16.78769874572754 L 1.242805004119873 5.045404434204102 L 1.000005006790161 4.916249752044678 L 1.000005006790161 16.78769874572754 C 1.000005006790161 16.85350799560547 1.05559504032135 16.90909767150879 1.121394991874695 16.90909767150879 M 1.121394991874695 17.90909767150879 C 0.5030549764633179 17.90909767150879 5.00545502291061e-06 17.40603828430176 5.00545502291061e-06 16.78769874572754 L 5.00545502291061e-06 3.251638174057007 L 2.242805004119873 4.444668292999268 L 2.242805004119873 16.78769874572754 C 2.242805004119873 17.40603828430176 1.739745020866394 17.90909767150879 1.121394991874695 17.90909767150879 Z M 1.865005016326904 0.2520581781864166 L 1.391674995422363 0.0004381808394100517 C 1.568014979362488 0.04402818158268929 1.731835007667542 0.1311181783676147 1.866135001182556 0.250428169965744 L 1.865005016326904 0.2520581781864166 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(8440.845 794.78)"
+                  >
+                    <g
+                      id="Вычитание_1495-2"
+                      data-name="Вычитание 1495"
+                      transform="translate(2.243 17.908) rotate(180)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 0.5 13.82555294036865 L 0.5 1.121408700942993 C 0.5 0.7787686586380005 0.7787600159645081 0.5000087022781372 1.121399998664856 0.5000087022781372 C 1.464040040969849 0.5000087022781372 1.742799997329712 0.7787686586380005 1.742799997329712 1.121408700942993 L 1.742799997329712 13.16475296020508 L 0.5 13.82555294036865 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1 12.9934196472168 L 1.242799997329712 12.86432266235352 L 1.242799997329712 1.121408700942993 C 1.242799997329712 1.055598616600037 1.187209963798523 1.000008702278137 1.121399998664856 1.000008702278137 C 1.055590033531189 1.000008702278137 1 1.055598616600037 1 1.121408700942993 L 1 12.9934196472168 M 1.399829983711243 17.9074592590332 L 1.399109959602356 17.90560913085938 L 1.871369957923889 17.65456962585449 C 1.7360999584198 17.77636909484863 1.572649955749512 17.86325836181641 1.399829983711243 17.9074592590332 Z M -1.335144217406992e-09 14.65768909454346 L -1.335144217406992e-09 1.121408700942993 C -1.335144217406992e-09 0.5030686855316162 0.503059983253479 8.675841854710598e-06 1.121399998664856 8.675841854710598e-06 C 1.739740014076233 8.675841854710598e-06 2.242799997329712 0.5030686855316162 2.242799997329712 1.121408700942993 L 2.242799997329712 13.46518898010254 L -1.335144217406992e-09 14.65768909454346 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Прямоугольник_484"
+                    data-name="Прямоугольник 484"
+                    transform="translate(8453.532 786) rotate(30)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_485"
+                    data-name="Прямоугольник 485"
+                    transform="translate(8456.083 788.775) rotate(150)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              <small>3</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34.013"
+                height="26.71"
+                viewBox="0 0 34.013 26.71"
+              >
+                <g
+                  id="Сгруппировать_540"
+                  data-name="Сгруппировать 540"
+                  transform="translate(-8437 -786)"
+                  opacity="0.5"
+                >
+                  <g
+                    id="Прямоугольник_478"
+                    data-name="Прямоугольник 478"
+                    transform="translate(8448.381 801.465)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.38"
+                      height="2.334"
+                      rx="1.167"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.38"
+                      height="1.334"
+                      rx="0.667"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_479"
+                    data-name="Прямоугольник 479"
+                    transform="matrix(0.545, 0.839, -0.839, 0.545, 8455.524, 802.084)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_480"
+                    data-name="Прямоугольник 480"
+                    transform="matrix(0.545, -0.839, 0.839, 0.545, 8446.339, 811.489)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_481"
+                    data-name="Прямоугольник 481"
+                    transform="translate(8444.879 806.134)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="18.091"
+                      height="2.043"
+                      rx="1.021"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="17.091"
+                      height="1.043"
+                      rx="0.521"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_538"
+                    data-name="Сгруппировать 538"
+                    transform="translate(8464.874 794.779)"
+                  >
+                    <g
+                      id="Вычитание_1495"
+                      data-name="Вычитание 1495"
+                      transform="translate(0 0)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 1.121394991874695 17.40909767150879 C 0.7787550091743469 17.40909767150879 0.5000050067901611 17.13033866882324 0.5000050067901611 16.78769874572754 L 0.5000050067901611 4.083941459655762 L 1.742805004119873 4.745033740997314 L 1.742805004119873 16.78769874572754 C 1.742805004119873 17.13033866882324 1.46404504776001 17.40909767150879 1.121394991874695 17.40909767150879 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1.121394991874695 16.90909767150879 C 1.187204957008362 16.90909767150879 1.242805004119873 16.85350799560547 1.242805004119873 16.78769874572754 L 1.242805004119873 5.045404434204102 L 1.000005006790161 4.916249752044678 L 1.000005006790161 16.78769874572754 C 1.000005006790161 16.85350799560547 1.05559504032135 16.90909767150879 1.121394991874695 16.90909767150879 M 1.121394991874695 17.90909767150879 C 0.5030549764633179 17.90909767150879 5.00545502291061e-06 17.40603828430176 5.00545502291061e-06 16.78769874572754 L 5.00545502291061e-06 3.251638174057007 L 2.242805004119873 4.444668292999268 L 2.242805004119873 16.78769874572754 C 2.242805004119873 17.40603828430176 1.739745020866394 17.90909767150879 1.121394991874695 17.90909767150879 Z M 1.865005016326904 0.2520581781864166 L 1.391674995422363 0.0004381808394100517 C 1.568014979362488 0.04402818158268929 1.731835007667542 0.1311181783676147 1.866135001182556 0.250428169965744 L 1.865005016326904 0.2520581781864166 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(8440.845 794.78)"
+                  >
+                    <g
+                      id="Вычитание_1495-2"
+                      data-name="Вычитание 1495"
+                      transform="translate(2.243 17.908) rotate(180)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 0.5 13.82555294036865 L 0.5 1.121408700942993 C 0.5 0.7787686586380005 0.7787600159645081 0.5000087022781372 1.121399998664856 0.5000087022781372 C 1.464040040969849 0.5000087022781372 1.742799997329712 0.7787686586380005 1.742799997329712 1.121408700942993 L 1.742799997329712 13.16475296020508 L 0.5 13.82555294036865 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1 12.9934196472168 L 1.242799997329712 12.86432266235352 L 1.242799997329712 1.121408700942993 C 1.242799997329712 1.055598616600037 1.187209963798523 1.000008702278137 1.121399998664856 1.000008702278137 C 1.055590033531189 1.000008702278137 1 1.055598616600037 1 1.121408700942993 L 1 12.9934196472168 M 1.399829983711243 17.9074592590332 L 1.399109959602356 17.90560913085938 L 1.871369957923889 17.65456962585449 C 1.7360999584198 17.77636909484863 1.572649955749512 17.86325836181641 1.399829983711243 17.9074592590332 Z M -1.335144217406992e-09 14.65768909454346 L -1.335144217406992e-09 1.121408700942993 C -1.335144217406992e-09 0.5030686855316162 0.503059983253479 8.675841854710598e-06 1.121399998664856 8.675841854710598e-06 C 1.739740014076233 8.675841854710598e-06 2.242799997329712 0.5030686855316162 2.242799997329712 1.121408700942993 L 2.242799997329712 13.46518898010254 L -1.335144217406992e-09 14.65768909454346 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Прямоугольник_484"
+                    data-name="Прямоугольник 484"
+                    transform="translate(8453.532 786) rotate(30)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_485"
+                    data-name="Прямоугольник 485"
+                    transform="translate(8456.083 788.775) rotate(150)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              <small>3</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34.013"
+                height="26.71"
+                viewBox="0 0 34.013 26.71"
+              >
+                <g
+                  id="Сгруппировать_540"
+                  data-name="Сгруппировать 540"
+                  transform="translate(-8437 -786)"
+                  opacity="0.5"
+                >
+                  <g
+                    id="Прямоугольник_478"
+                    data-name="Прямоугольник 478"
+                    transform="translate(8448.381 801.465)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.38"
+                      height="2.334"
+                      rx="1.167"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.38"
+                      height="1.334"
+                      rx="0.667"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_479"
+                    data-name="Прямоугольник 479"
+                    transform="matrix(0.545, 0.839, -0.839, 0.545, 8455.524, 802.084)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_480"
+                    data-name="Прямоугольник 480"
+                    transform="matrix(0.545, -0.839, 0.839, 0.545, 8446.339, 811.489)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_481"
+                    data-name="Прямоугольник 481"
+                    transform="translate(8444.879 806.134)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="18.091"
+                      height="2.043"
+                      rx="1.021"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="17.091"
+                      height="1.043"
+                      rx="0.521"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_538"
+                    data-name="Сгруппировать 538"
+                    transform="translate(8464.874 794.779)"
+                  >
+                    <g
+                      id="Вычитание_1495"
+                      data-name="Вычитание 1495"
+                      transform="translate(0 0)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 1.121394991874695 17.40909767150879 C 0.7787550091743469 17.40909767150879 0.5000050067901611 17.13033866882324 0.5000050067901611 16.78769874572754 L 0.5000050067901611 4.083941459655762 L 1.742805004119873 4.745033740997314 L 1.742805004119873 16.78769874572754 C 1.742805004119873 17.13033866882324 1.46404504776001 17.40909767150879 1.121394991874695 17.40909767150879 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1.121394991874695 16.90909767150879 C 1.187204957008362 16.90909767150879 1.242805004119873 16.85350799560547 1.242805004119873 16.78769874572754 L 1.242805004119873 5.045404434204102 L 1.000005006790161 4.916249752044678 L 1.000005006790161 16.78769874572754 C 1.000005006790161 16.85350799560547 1.05559504032135 16.90909767150879 1.121394991874695 16.90909767150879 M 1.121394991874695 17.90909767150879 C 0.5030549764633179 17.90909767150879 5.00545502291061e-06 17.40603828430176 5.00545502291061e-06 16.78769874572754 L 5.00545502291061e-06 3.251638174057007 L 2.242805004119873 4.444668292999268 L 2.242805004119873 16.78769874572754 C 2.242805004119873 17.40603828430176 1.739745020866394 17.90909767150879 1.121394991874695 17.90909767150879 Z M 1.865005016326904 0.2520581781864166 L 1.391674995422363 0.0004381808394100517 C 1.568014979362488 0.04402818158268929 1.731835007667542 0.1311181783676147 1.866135001182556 0.250428169965744 L 1.865005016326904 0.2520581781864166 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(8440.845 794.78)"
+                  >
+                    <g
+                      id="Вычитание_1495-2"
+                      data-name="Вычитание 1495"
+                      transform="translate(2.243 17.908) rotate(180)"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M 0.5 13.82555294036865 L 0.5 1.121408700942993 C 0.5 0.7787686586380005 0.7787600159645081 0.5000087022781372 1.121399998664856 0.5000087022781372 C 1.464040040969849 0.5000087022781372 1.742799997329712 0.7787686586380005 1.742799997329712 1.121408700942993 L 1.742799997329712 13.16475296020508 L 0.5 13.82555294036865 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1 12.9934196472168 L 1.242799997329712 12.86432266235352 L 1.242799997329712 1.121408700942993 C 1.242799997329712 1.055598616600037 1.187209963798523 1.000008702278137 1.121399998664856 1.000008702278137 C 1.055590033531189 1.000008702278137 1 1.055598616600037 1 1.121408700942993 L 1 12.9934196472168 M 1.399829983711243 17.9074592590332 L 1.399109959602356 17.90560913085938 L 1.871369957923889 17.65456962585449 C 1.7360999584198 17.77636909484863 1.572649955749512 17.86325836181641 1.399829983711243 17.9074592590332 Z M -1.335144217406992e-09 14.65768909454346 L -1.335144217406992e-09 1.121408700942993 C -1.335144217406992e-09 0.5030686855316162 0.503059983253479 8.675841854710598e-06 1.121399998664856 8.675841854710598e-06 C 1.739740014076233 8.675841854710598e-06 2.242799997329712 0.5030686855316162 2.242799997329712 1.121408700942993 L 2.242799997329712 13.46518898010254 L -1.335144217406992e-09 14.65768909454346 Z"
+                        stroke="none"
+                        fill="#fff"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Прямоугольник_484"
+                    data-name="Прямоугольник 484"
+                    transform="translate(8453.532 786) rotate(30)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_485"
+                    data-name="Прямоугольник 485"
+                    transform="translate(8456.083 788.775) rotate(150)"
+                    fill="#fff"
+                    stroke="#fff"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              <small>3</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-white w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px] border-blue"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34.013"
+                height="26.71"
+                viewBox="0 0 34.013 26.71"
+              >
+                <g
+                  id="Сгруппировать_540"
+                  data-name="Сгруппировать 540"
+                  transform="translate(-8437 -786)"
+                  opacity="0.5"
+                >
+                  <g
+                    id="Прямоугольник_478"
+                    data-name="Прямоугольник 478"
+                    transform="translate(8448.381 801.465)"
+                    fill="#707070"
+                    stroke="#707070"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.38"
+                      height="2.334"
+                      rx="1.167"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.38"
+                      height="1.334"
+                      rx="0.667"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_479"
+                    data-name="Прямоугольник 479"
+                    transform="matrix(0.545, 0.839, -0.839, 0.545, 8455.524, 802.084)"
+                    fill="#707070"
+                    stroke="#707070"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_480"
+                    data-name="Прямоугольник 480"
+                    transform="matrix(0.545, -0.839, 0.839, 0.545, 8446.339, 811.489)"
+                    fill="#707070"
+                    stroke="#707070"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="11.214"
+                      height="2.243"
+                      rx="1.121"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="10.214"
+                      height="1.243"
+                      rx="0.621"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_481"
+                    data-name="Прямоугольник 481"
+                    transform="translate(8444.879 806.134)"
+                    fill="#707070"
+                    stroke="#707070"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="18.091"
+                      height="2.043"
+                      rx="1.021"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="17.091"
+                      height="1.043"
+                      rx="0.521"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_538"
+                    data-name="Сгруппировать 538"
+                    transform="translate(8464.874 794.779)"
+                  >
+                    <g
+                      id="Вычитание_1495"
+                      data-name="Вычитание 1495"
+                      transform="translate(0 0)"
+                      fill="#707070"
+                    >
+                      <path
+                        d="M 1.121394991874695 17.40909767150879 C 0.7787550091743469 17.40909767150879 0.5000050067901611 17.13033866882324 0.5000050067901611 16.78769874572754 L 0.5000050067901611 4.083941459655762 L 1.742805004119873 4.745033740997314 L 1.742805004119873 16.78769874572754 C 1.742805004119873 17.13033866882324 1.46404504776001 17.40909767150879 1.121394991874695 17.40909767150879 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1.121394991874695 16.90909767150879 C 1.187204957008362 16.90909767150879 1.242805004119873 16.85350799560547 1.242805004119873 16.78769874572754 L 1.242805004119873 5.045404434204102 L 1.000005006790161 4.916249752044678 L 1.000005006790161 16.78769874572754 C 1.000005006790161 16.85350799560547 1.05559504032135 16.90909767150879 1.121394991874695 16.90909767150879 M 1.121394991874695 17.90909767150879 C 0.5030549764633179 17.90909767150879 5.00545502291061e-06 17.40603828430176 5.00545502291061e-06 16.78769874572754 L 5.00545502291061e-06 3.251638174057007 L 2.242805004119873 4.444668292999268 L 2.242805004119873 16.78769874572754 C 2.242805004119873 17.40603828430176 1.739745020866394 17.90909767150879 1.121394991874695 17.90909767150879 Z M 1.865005016326904 0.2520581781864166 L 1.391674995422363 0.0004381808394100517 C 1.568014979362488 0.04402818158268929 1.731835007667542 0.1311181783676147 1.866135001182556 0.250428169965744 L 1.865005016326904 0.2520581781864166 Z"
+                        stroke="none"
+                        fill="#707070"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(8440.845 794.78)"
+                  >
+                    <g
+                      id="Вычитание_1495-2"
+                      data-name="Вычитание 1495"
+                      transform="translate(2.243 17.908) rotate(180)"
+                      fill="#707070"
+                    >
+                      <path
+                        d="M 0.5 13.82555294036865 L 0.5 1.121408700942993 C 0.5 0.7787686586380005 0.7787600159645081 0.5000087022781372 1.121399998664856 0.5000087022781372 C 1.464040040969849 0.5000087022781372 1.742799997329712 0.7787686586380005 1.742799997329712 1.121408700942993 L 1.742799997329712 13.16475296020508 L 0.5 13.82555294036865 Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M 1 12.9934196472168 L 1.242799997329712 12.86432266235352 L 1.242799997329712 1.121408700942993 C 1.242799997329712 1.055598616600037 1.187209963798523 1.000008702278137 1.121399998664856 1.000008702278137 C 1.055590033531189 1.000008702278137 1 1.055598616600037 1 1.121408700942993 L 1 12.9934196472168 M 1.399829983711243 17.9074592590332 L 1.399109959602356 17.90560913085938 L 1.871369957923889 17.65456962585449 C 1.7360999584198 17.77636909484863 1.572649955749512 17.86325836181641 1.399829983711243 17.9074592590332 Z M -1.335144217406992e-09 14.65768909454346 L -1.335144217406992e-09 1.121408700942993 C -1.335144217406992e-09 0.5030686855316162 0.503059983253479 8.675841854710598e-06 1.121399998664856 8.675841854710598e-06 C 1.739740014076233 8.675841854710598e-06 2.242799997329712 0.5030686855316162 2.242799997329712 1.121408700942993 L 2.242799997329712 13.46518898010254 L -1.335144217406992e-09 14.65768909454346 Z"
+                        stroke="none"
+                        fill="#707070"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    id="Прямоугольник_484"
+                    data-name="Прямоугольник 484"
+                    transform="translate(8453.532 786) rotate(30)"
+                    fill="#707070"
+                    stroke="#707070"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    id="Прямоугольник_485"
+                    data-name="Прямоугольник 485"
+                    transform="translate(8456.083 788.775) rotate(150)"
+                    fill="#707070"
+                    stroke="#707070"
+                    stroke-width="1"
+                  >
+                    <rect
+                      width="20.185"
+                      height="3.204"
+                      rx="1.602"
+                      stroke="none"
+                    />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="19.185"
+                      height="2.204"
+                      rx="1.102"
+                      fill="none"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              <small>3</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.63"
+                viewBox="0 0 30.305 28.63"
+              >
+                <g
+                  id="Сгруппировать_2542"
+                  data-name="Сгруппировать 2542"
+                  transform="translate(-182.86 -322.892)"
+                >
+                  <g
+                    id="Сгруппировать_552"
+                    data-name="Сгруппировать 552"
+                    transform="translate(191.861 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_552"
+                      data-name="Прямоугольник 552"
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_552_-_Рамка"
+                      data-name="Прямоугольник 552 - Рамка"
+                      d="M.924,1V5.3H2.771V1H.924M0,0H3.694V6.3H0Z"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_553"
+                    data-name="Сгруппировать 553"
+                    transform="translate(182.86 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_553"
+                      data-name="Прямоугольник 553"
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_553_-_Рамка"
+                      data-name="Прямоугольник 553 - Рамка"
+                      d="M.924,1V7.549H2.771V1H.924M0,0H3.694V8.549H0Z"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_532"
+                    data-name="Сгруппировать 532"
+                    transform="translate(199.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_532"
+                      data-name="Прямоугольник 532"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_532_-_Рамка"
+                      data-name="Прямоугольник 532 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_533"
+                    data-name="Сгруппировать 533"
+                    transform="translate(202.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_533"
+                      data-name="Прямоугольник 533"
+                      width="2"
+                      height="12.93"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_533_-_Рамка"
+                      data-name="Прямоугольник 533 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.006a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_535"
+                    data-name="Сгруппировать 535"
+                    transform="translate(208.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_535"
+                      data-name="Прямоугольник 535"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_535_-_Рамка"
+                      data-name="Прямоугольник 535 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_537"
+                    data-name="Сгруппировать 537"
+                    transform="translate(199.165 328.433)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_537"
+                      data-name="Прямоугольник 537"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_537_-_Рамка"
+                      data-name="Прямоугольник 537 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(205.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_539"
+                      data-name="Прямоугольник 539"
+                      width="2"
+                      height="11.083"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_539_-_Рамка"
+                      data-name="Прямоугольник 539 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924v9.236a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_540"
+                    data-name="Сгруппировать 540"
+                    transform="translate(208.165 332.127)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_540"
+                      data-name="Прямоугольник 540"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_540_-_Рамка"
+                      data-name="Прямоугольник 540 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_541"
+                    data-name="Сгруппировать 541"
+                    transform="translate(211.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_541"
+                      data-name="Прямоугольник 541"
+                      width="2"
+                      height="13.853"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_541_-_Рамка"
+                      data-name="Прямоугольник 541 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.93a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_542"
+                    data-name="Сгруппировать 542"
+                    transform="translate(199.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_542"
+                      data-name="Прямоугольник 542"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_542_-_Рамка"
+                      data-name="Прямоугольник 542 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_543"
+                    data-name="Сгруппировать 543"
+                    transform="translate(202.165 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_543"
+                      data-name="Прямоугольник 543"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_543_-_Рамка"
+                      data-name="Прямоугольник 543 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_545"
+                    data-name="Сгруппировать 545"
+                    transform="translate(208.165 340.439)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_545"
+                      data-name="Прямоугольник 545"
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_545_-_Рамка"
+                      data-name="Прямоугольник 545 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V2.771a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_546"
+                    data-name="Сгруппировать 546"
+                    transform="translate(211.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_546"
+                      data-name="Прямоугольник 546"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_546_-_Рамка"
+                      data-name="Прямоугольник 546 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_547"
+                    data-name="Сгруппировать 547"
+                    transform="translate(199.165 343.21)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_547"
+                      data-name="Прямоугольник 547"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_547_-_Рамка"
+                      data-name="Прямоугольник 547 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_548"
+                    data-name="Сгруппировать 548"
+                    transform="translate(202.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_548"
+                      data-name="Прямоугольник 548"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_548_-_Рамка"
+                      data-name="Прямоугольник 548 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_549"
+                    data-name="Сгруппировать 549"
+                    transform="translate(205.165 334.898)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_549"
+                      data-name="Прямоугольник 549"
+                      width="2"
+                      height="16.624"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_549_-_Рамка"
+                      data-name="Прямоугольник 549 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V15.7a.964.964,0,0,1-1,.924A.964.964,0,0,1,0,15.7V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_550"
+                    data-name="Сгруппировать 550"
+                    transform="translate(208.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_550"
+                      data-name="Прямоугольник 550"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_550_-_Рамка"
+                      data-name="Прямоугольник 550 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_551"
+                    data-name="Сгруппировать 551"
+                    transform="translate(211.165 346.904)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_551"
+                      data-name="Прямоугольник 551"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_551_-_Рамка"
+                      data-name="Прямоугольник 551 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <small>1</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.63"
+                viewBox="0 0 30.305 28.63"
+              >
+                <g
+                  id="Сгруппировать_2542"
+                  data-name="Сгруппировать 2542"
+                  transform="translate(-182.86 -322.892)"
+                >
+                  <g
+                    id="Сгруппировать_552"
+                    data-name="Сгруппировать 552"
+                    transform="translate(191.861 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_552"
+                      data-name="Прямоугольник 552"
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_552_-_Рамка"
+                      data-name="Прямоугольник 552 - Рамка"
+                      d="M.924,1V5.3H2.771V1H.924M0,0H3.694V6.3H0Z"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_553"
+                    data-name="Сгруппировать 553"
+                    transform="translate(182.86 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_553"
+                      data-name="Прямоугольник 553"
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_553_-_Рамка"
+                      data-name="Прямоугольник 553 - Рамка"
+                      d="M.924,1V7.549H2.771V1H.924M0,0H3.694V8.549H0Z"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_532"
+                    data-name="Сгруппировать 532"
+                    transform="translate(199.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_532"
+                      data-name="Прямоугольник 532"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_532_-_Рамка"
+                      data-name="Прямоугольник 532 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_533"
+                    data-name="Сгруппировать 533"
+                    transform="translate(202.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_533"
+                      data-name="Прямоугольник 533"
+                      width="2"
+                      height="12.93"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_533_-_Рамка"
+                      data-name="Прямоугольник 533 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.006a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_535"
+                    data-name="Сгруппировать 535"
+                    transform="translate(208.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_535"
+                      data-name="Прямоугольник 535"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_535_-_Рамка"
+                      data-name="Прямоугольник 535 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_537"
+                    data-name="Сгруппировать 537"
+                    transform="translate(199.165 328.433)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_537"
+                      data-name="Прямоугольник 537"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_537_-_Рамка"
+                      data-name="Прямоугольник 537 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(205.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_539"
+                      data-name="Прямоугольник 539"
+                      width="2"
+                      height="11.083"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_539_-_Рамка"
+                      data-name="Прямоугольник 539 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924v9.236a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_540"
+                    data-name="Сгруппировать 540"
+                    transform="translate(208.165 332.127)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_540"
+                      data-name="Прямоугольник 540"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_540_-_Рамка"
+                      data-name="Прямоугольник 540 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_541"
+                    data-name="Сгруппировать 541"
+                    transform="translate(211.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_541"
+                      data-name="Прямоугольник 541"
+                      width="2"
+                      height="13.853"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_541_-_Рамка"
+                      data-name="Прямоугольник 541 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.93a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_542"
+                    data-name="Сгруппировать 542"
+                    transform="translate(199.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_542"
+                      data-name="Прямоугольник 542"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_542_-_Рамка"
+                      data-name="Прямоугольник 542 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_543"
+                    data-name="Сгруппировать 543"
+                    transform="translate(202.165 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_543"
+                      data-name="Прямоугольник 543"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_543_-_Рамка"
+                      data-name="Прямоугольник 543 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_545"
+                    data-name="Сгруппировать 545"
+                    transform="translate(208.165 340.439)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_545"
+                      data-name="Прямоугольник 545"
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_545_-_Рамка"
+                      data-name="Прямоугольник 545 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V2.771a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_546"
+                    data-name="Сгруппировать 546"
+                    transform="translate(211.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_546"
+                      data-name="Прямоугольник 546"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_546_-_Рамка"
+                      data-name="Прямоугольник 546 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_547"
+                    data-name="Сгруппировать 547"
+                    transform="translate(199.165 343.21)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_547"
+                      data-name="Прямоугольник 547"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_547_-_Рамка"
+                      data-name="Прямоугольник 547 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_548"
+                    data-name="Сгруппировать 548"
+                    transform="translate(202.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_548"
+                      data-name="Прямоугольник 548"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_548_-_Рамка"
+                      data-name="Прямоугольник 548 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_549"
+                    data-name="Сгруппировать 549"
+                    transform="translate(205.165 334.898)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_549"
+                      data-name="Прямоугольник 549"
+                      width="2"
+                      height="16.624"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_549_-_Рамка"
+                      data-name="Прямоугольник 549 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V15.7a.964.964,0,0,1-1,.924A.964.964,0,0,1,0,15.7V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_550"
+                    data-name="Сгруппировать 550"
+                    transform="translate(208.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_550"
+                      data-name="Прямоугольник 550"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_550_-_Рамка"
+                      data-name="Прямоугольник 550 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_551"
+                    data-name="Сгруппировать 551"
+                    transform="translate(211.165 346.904)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_551"
+                      data-name="Прямоугольник 551"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_551_-_Рамка"
+                      data-name="Прямоугольник 551 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <small>1</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.63"
+                viewBox="0 0 30.305 28.63"
+              >
+                <g
+                  id="Сгруппировать_2542"
+                  data-name="Сгруппировать 2542"
+                  transform="translate(-182.86 -322.892)"
+                >
+                  <g
+                    id="Сгруппировать_552"
+                    data-name="Сгруппировать 552"
+                    transform="translate(191.861 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_552"
+                      data-name="Прямоугольник 552"
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_552_-_Рамка"
+                      data-name="Прямоугольник 552 - Рамка"
+                      d="M.924,1V5.3H2.771V1H.924M0,0H3.694V6.3H0Z"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_553"
+                    data-name="Сгруппировать 553"
+                    transform="translate(182.86 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_553"
+                      data-name="Прямоугольник 553"
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_553_-_Рамка"
+                      data-name="Прямоугольник 553 - Рамка"
+                      d="M.924,1V7.549H2.771V1H.924M0,0H3.694V8.549H0Z"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_532"
+                    data-name="Сгруппировать 532"
+                    transform="translate(199.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_532"
+                      data-name="Прямоугольник 532"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_532_-_Рамка"
+                      data-name="Прямоугольник 532 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_533"
+                    data-name="Сгруппировать 533"
+                    transform="translate(202.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_533"
+                      data-name="Прямоугольник 533"
+                      width="2"
+                      height="12.93"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_533_-_Рамка"
+                      data-name="Прямоугольник 533 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.006a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_535"
+                    data-name="Сгруппировать 535"
+                    transform="translate(208.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_535"
+                      data-name="Прямоугольник 535"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_535_-_Рамка"
+                      data-name="Прямоугольник 535 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_537"
+                    data-name="Сгруппировать 537"
+                    transform="translate(199.165 328.433)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_537"
+                      data-name="Прямоугольник 537"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_537_-_Рамка"
+                      data-name="Прямоугольник 537 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(205.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_539"
+                      data-name="Прямоугольник 539"
+                      width="2"
+                      height="11.083"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_539_-_Рамка"
+                      data-name="Прямоугольник 539 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924v9.236a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_540"
+                    data-name="Сгруппировать 540"
+                    transform="translate(208.165 332.127)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_540"
+                      data-name="Прямоугольник 540"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_540_-_Рамка"
+                      data-name="Прямоугольник 540 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_541"
+                    data-name="Сгруппировать 541"
+                    transform="translate(211.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_541"
+                      data-name="Прямоугольник 541"
+                      width="2"
+                      height="13.853"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_541_-_Рамка"
+                      data-name="Прямоугольник 541 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.93a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_542"
+                    data-name="Сгруппировать 542"
+                    transform="translate(199.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_542"
+                      data-name="Прямоугольник 542"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_542_-_Рамка"
+                      data-name="Прямоугольник 542 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_543"
+                    data-name="Сгруппировать 543"
+                    transform="translate(202.165 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_543"
+                      data-name="Прямоугольник 543"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_543_-_Рамка"
+                      data-name="Прямоугольник 543 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_545"
+                    data-name="Сгруппировать 545"
+                    transform="translate(208.165 340.439)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_545"
+                      data-name="Прямоугольник 545"
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_545_-_Рамка"
+                      data-name="Прямоугольник 545 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V2.771a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_546"
+                    data-name="Сгруппировать 546"
+                    transform="translate(211.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_546"
+                      data-name="Прямоугольник 546"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_546_-_Рамка"
+                      data-name="Прямоугольник 546 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_547"
+                    data-name="Сгруппировать 547"
+                    transform="translate(199.165 343.21)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_547"
+                      data-name="Прямоугольник 547"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_547_-_Рамка"
+                      data-name="Прямоугольник 547 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_548"
+                    data-name="Сгруппировать 548"
+                    transform="translate(202.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_548"
+                      data-name="Прямоугольник 548"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_548_-_Рамка"
+                      data-name="Прямоугольник 548 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_549"
+                    data-name="Сгруппировать 549"
+                    transform="translate(205.165 334.898)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_549"
+                      data-name="Прямоугольник 549"
+                      width="2"
+                      height="16.624"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_549_-_Рамка"
+                      data-name="Прямоугольник 549 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V15.7a.964.964,0,0,1-1,.924A.964.964,0,0,1,0,15.7V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_550"
+                    data-name="Сгруппировать 550"
+                    transform="translate(208.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_550"
+                      data-name="Прямоугольник 550"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_550_-_Рамка"
+                      data-name="Прямоугольник 550 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_551"
+                    data-name="Сгруппировать 551"
+                    transform="translate(211.165 346.904)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_551"
+                      data-name="Прямоугольник 551"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_551_-_Рамка"
+                      data-name="Прямоугольник 551 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <small>1</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.63"
+                viewBox="0 0 30.305 28.63"
+              >
+                <g
+                  id="Сгруппировать_2542"
+                  data-name="Сгруппировать 2542"
+                  transform="translate(-182.86 -322.892)"
+                >
+                  <g
+                    id="Сгруппировать_552"
+                    data-name="Сгруппировать 552"
+                    transform="translate(191.861 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_552"
+                      data-name="Прямоугольник 552"
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_552_-_Рамка"
+                      data-name="Прямоугольник 552 - Рамка"
+                      d="M.924,1V5.3H2.771V1H.924M0,0H3.694V6.3H0Z"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_553"
+                    data-name="Сгруппировать 553"
+                    transform="translate(182.86 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_553"
+                      data-name="Прямоугольник 553"
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_553_-_Рамка"
+                      data-name="Прямоугольник 553 - Рамка"
+                      d="M.924,1V7.549H2.771V1H.924M0,0H3.694V8.549H0Z"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_532"
+                    data-name="Сгруппировать 532"
+                    transform="translate(199.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_532"
+                      data-name="Прямоугольник 532"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_532_-_Рамка"
+                      data-name="Прямоугольник 532 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_533"
+                    data-name="Сгруппировать 533"
+                    transform="translate(202.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_533"
+                      data-name="Прямоугольник 533"
+                      width="2"
+                      height="12.93"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_533_-_Рамка"
+                      data-name="Прямоугольник 533 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.006a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_535"
+                    data-name="Сгруппировать 535"
+                    transform="translate(208.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_535"
+                      data-name="Прямоугольник 535"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_535_-_Рамка"
+                      data-name="Прямоугольник 535 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_537"
+                    data-name="Сгруппировать 537"
+                    transform="translate(199.165 328.433)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_537"
+                      data-name="Прямоугольник 537"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_537_-_Рамка"
+                      data-name="Прямоугольник 537 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(205.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_539"
+                      data-name="Прямоугольник 539"
+                      width="2"
+                      height="11.083"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_539_-_Рамка"
+                      data-name="Прямоугольник 539 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924v9.236a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_540"
+                    data-name="Сгруппировать 540"
+                    transform="translate(208.165 332.127)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_540"
+                      data-name="Прямоугольник 540"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_540_-_Рамка"
+                      data-name="Прямоугольник 540 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_541"
+                    data-name="Сгруппировать 541"
+                    transform="translate(211.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_541"
+                      data-name="Прямоугольник 541"
+                      width="2"
+                      height="13.853"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_541_-_Рамка"
+                      data-name="Прямоугольник 541 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.93a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_542"
+                    data-name="Сгруппировать 542"
+                    transform="translate(199.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_542"
+                      data-name="Прямоугольник 542"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_542_-_Рамка"
+                      data-name="Прямоугольник 542 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_543"
+                    data-name="Сгруппировать 543"
+                    transform="translate(202.165 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_543"
+                      data-name="Прямоугольник 543"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_543_-_Рамка"
+                      data-name="Прямоугольник 543 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_545"
+                    data-name="Сгруппировать 545"
+                    transform="translate(208.165 340.439)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_545"
+                      data-name="Прямоугольник 545"
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_545_-_Рамка"
+                      data-name="Прямоугольник 545 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V2.771a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_546"
+                    data-name="Сгруппировать 546"
+                    transform="translate(211.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_546"
+                      data-name="Прямоугольник 546"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_546_-_Рамка"
+                      data-name="Прямоугольник 546 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_547"
+                    data-name="Сгруппировать 547"
+                    transform="translate(199.165 343.21)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_547"
+                      data-name="Прямоугольник 547"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_547_-_Рамка"
+                      data-name="Прямоугольник 547 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_548"
+                    data-name="Сгруппировать 548"
+                    transform="translate(202.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_548"
+                      data-name="Прямоугольник 548"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_548_-_Рамка"
+                      data-name="Прямоугольник 548 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_549"
+                    data-name="Сгруппировать 549"
+                    transform="translate(205.165 334.898)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_549"
+                      data-name="Прямоугольник 549"
+                      width="2"
+                      height="16.624"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_549_-_Рамка"
+                      data-name="Прямоугольник 549 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V15.7a.964.964,0,0,1-1,.924A.964.964,0,0,1,0,15.7V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_550"
+                    data-name="Сгруппировать 550"
+                    transform="translate(208.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_550"
+                      data-name="Прямоугольник 550"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_550_-_Рамка"
+                      data-name="Прямоугольник 550 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_551"
+                    data-name="Сгруппировать 551"
+                    transform="translate(211.165 346.904)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_551"
+                      data-name="Прямоугольник 551"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_551_-_Рамка"
+                      data-name="Прямоугольник 551 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <small>1</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+          <button
+            class="h-[90px] btn bg-[#212B35] w-full rounded-[15px] p-2 flex flex-col items-center gap-[2px]"
+            type="button"
+          >
+            <span
+              class="flex items-center justify-between text-gray w-full text-[32px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30.305"
+                height="28.63"
+                viewBox="0 0 30.305 28.63"
+              >
+                <g
+                  id="Сгруппировать_2542"
+                  data-name="Сгруппировать 2542"
+                  transform="translate(-182.86 -322.892)"
+                >
+                  <g
+                    id="Сгруппировать_552"
+                    data-name="Сгруппировать 552"
+                    transform="translate(191.861 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_552"
+                      data-name="Прямоугольник 552"
+                      width="3.694"
+                      height="6.304"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_552_-_Рамка"
+                      data-name="Прямоугольник 552 - Рамка"
+                      d="M.924,1V5.3H2.771V1H.924M0,0H3.694V6.3H0Z"
+                      transform="translate(6.304) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_553"
+                    data-name="Сгруппировать 553"
+                    transform="translate(182.86 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_553"
+                      data-name="Прямоугольник 553"
+                      width="3.694"
+                      height="8.549"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_553_-_Рамка"
+                      data-name="Прямоугольник 553 - Рамка"
+                      d="M.924,1V7.549H2.771V1H.924M0,0H3.694V8.549H0Z"
+                      transform="translate(8.549) rotate(90)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_532"
+                    data-name="Сгруппировать 532"
+                    transform="translate(199.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_532"
+                      data-name="Прямоугольник 532"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_532_-_Рамка"
+                      data-name="Прямоугольник 532 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_533"
+                    data-name="Сгруппировать 533"
+                    transform="translate(202.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_533"
+                      data-name="Прямоугольник 533"
+                      width="2"
+                      height="12.93"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_533_-_Рамка"
+                      data-name="Прямоугольник 533 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.006a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_535"
+                    data-name="Сгруппировать 535"
+                    transform="translate(208.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_535"
+                      data-name="Прямоугольник 535"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_535_-_Рамка"
+                      data-name="Прямоугольник 535 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_537"
+                    data-name="Сгруппировать 537"
+                    transform="translate(199.165 328.433)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_537"
+                      data-name="Прямоугольник 537"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_537_-_Рамка"
+                      data-name="Прямоугольник 537 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_539"
+                    data-name="Сгруппировать 539"
+                    transform="translate(205.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_539"
+                      data-name="Прямоугольник 539"
+                      width="2"
+                      height="11.083"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_539_-_Рамка"
+                      data-name="Прямоугольник 539 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924v9.236a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_540"
+                    data-name="Сгруппировать 540"
+                    transform="translate(208.165 332.127)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_540"
+                      data-name="Прямоугольник 540"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_540_-_Рамка"
+                      data-name="Прямоугольник 540 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_541"
+                    data-name="Сгруппировать 541"
+                    transform="translate(211.165 322.892)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_541"
+                      data-name="Прямоугольник 541"
+                      width="2"
+                      height="13.853"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_541_-_Рамка"
+                      data-name="Прямоугольник 541 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V12.93a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_542"
+                    data-name="Сгруппировать 542"
+                    transform="translate(199.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_542"
+                      data-name="Прямоугольник 542"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_542_-_Рамка"
+                      data-name="Прямоугольник 542 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_543"
+                    data-name="Сгруппировать 543"
+                    transform="translate(202.165 336.745)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_543"
+                      data-name="Прямоугольник 543"
+                      width="2"
+                      height="7.388"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_543_-_Рамка"
+                      data-name="Прямоугольник 543 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V6.465a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_545"
+                    data-name="Сгруппировать 545"
+                    transform="translate(208.165 340.439)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_545"
+                      data-name="Прямоугольник 545"
+                      width="2"
+                      height="3.694"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_545_-_Рамка"
+                      data-name="Прямоугольник 545 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V2.771a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_546"
+                    data-name="Сгруппировать 546"
+                    transform="translate(211.165 337.669)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_546"
+                      data-name="Прямоугольник 546"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_546_-_Рамка"
+                      data-name="Прямоугольник 546 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_547"
+                    data-name="Сгруппировать 547"
+                    transform="translate(199.165 343.21)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_547"
+                      data-name="Прямоугольник 547"
+                      width="2"
+                      height="8.312"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_547_-_Рамка"
+                      data-name="Прямоугольник 547 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V7.388a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_548"
+                    data-name="Сгруппировать 548"
+                    transform="translate(202.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_548"
+                      data-name="Прямоугольник 548"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_548_-_Рамка"
+                      data-name="Прямоугольник 548 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_549"
+                    data-name="Сгруппировать 549"
+                    transform="translate(205.165 334.898)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_549"
+                      data-name="Прямоугольник 549"
+                      width="2"
+                      height="16.624"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_549_-_Рамка"
+                      data-name="Прямоугольник 549 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V15.7a.964.964,0,0,1-1,.924A.964.964,0,0,1,0,15.7V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_550"
+                    data-name="Сгруппировать 550"
+                    transform="translate(208.165 345.057)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_550"
+                      data-name="Прямоугольник 550"
+                      width="2"
+                      height="6.465"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_550_-_Рамка"
+                      data-name="Прямоугольник 550 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V5.541a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                  <g
+                    id="Сгруппировать_551"
+                    data-name="Сгруппировать 551"
+                    transform="translate(211.165 346.904)"
+                    opacity="0.5"
+                  >
+                    <rect
+                      id="Прямоугольник_551"
+                      data-name="Прямоугольник 551"
+                      width="2"
+                      height="4.618"
+                      rx="1"
+                      fill="#fff"
+                    />
+                    <path
+                      id="Прямоугольник_551_-_Рамка"
+                      data-name="Прямоугольник 551 - Рамка"
+                      d="M1,.924v0H1M1,0A.964.964,0,0,1,2,.924V3.694a.964.964,0,0,1-1,.924.964.964,0,0,1-1-.924V.924A.964.964,0,0,1,1,0Z"
+                      fill="#fff"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <small>1</small>
+            </span>
+            <span class="text-gray text-[15px]">сектор</span>
+            <span class="text-blue text-xl">12470</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      </main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- Nice Select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

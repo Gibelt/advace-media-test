@@ -1,0 +1,79 @@
+<section class="appeals py-[20px]">
+  <div class="container">
+    <h1 class="text-[32px] font-light mb-1 leading-none">
+      Заблокировать кабинет
+    </h1>
+    <p class="mb-[15px]">
+      Временно запретить просмотр страницы, и ввод надписи на входе:
+    </p>
+
+    <div
+      class="input text-xl text-gray flex flex-col py-1 leading-none justify-around mb-[15px]"
+    >
+      <label>Ваша надпись на входе:</label>
+      <input class="" type="text" placeholder="Введите текст (не > 60 зн.)" />
+    </div>
+
+    <div class="flex items-center justify-between mb-[10px]">
+      <div class="flex items-center">
+        <div class="flex flex-col mr-[20px]">
+          <span class="text-xl">Заблокировать</span>
+          <span>Указать период</span>
+        </div>
+        <label class="radio">
+          <input class="radio__input" name="lock" type="radio" checked />
+          <span class="radio__box"></span>
+        </label>
+      </div>
+      <label class="switch flex-shrink-0" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+
+    <div class="grid grid-cols-2 gap-[20px] text-gray leading-none">
+      <div class="flex flex-col items-start">
+        <p class="leading-none mb-1">Начало периода</p>
+        <div class="grid grid-cols-[0.8fr_1fr] gap-[10px] w-[140px]">
+          <div class="flex flex-col w-[50px]">
+            <label class="mb-[12px]">Время</label>
+            <input
+              class="input-border-bottom text-black text-xl"
+              type="text"
+              value="06:00"
+            />
+          </div>
+          <div class="flex flex-col w-[80px]">
+            <label class="mb-[12px]">Дата</label>
+            <input
+              class="input-border-bottom text-black text-xl"
+              type="text"
+              value="10.03.22"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-start">
+        <p class="leading-none mb-1">Конец периода</p>
+        <div class="grid grid-cols-[0.8fr_1fr] gap-[10px] w-[140px]">
+          <div class="flex flex-col w-[50px]">
+            <label class="mb-[12px] w-auto">Время</label>
+            <input
+              class="input-border-bottom text-black text-xl w-auto"
+              type="text"
+              value="06:00"
+            />
+          </div>
+          <div class="flex flex-col w-[80px]">
+            <label class="mb-[12px] w-auto">Дата</label>
+            <input
+              class="input-border-bottom text-black text-xl w-auto"
+              type="text"
+              value="26.07.22"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

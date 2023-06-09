@@ -1,0 +1,118 @@
+<section class="cabinet-transfer py-[20px]">
+  <div class="container">
+    <h1 class="text-[32px] font-light mb-1 leading-none">
+      Перевод <br />
+      кабинета
+    </h1>
+    <p class="mb-[10px]">
+      Смена управляющего кабинета услуги или объекта с сохранением данных:
+    </p>
+
+    <div class="accordion-border accordion mb-[15px]">
+      <button
+        class="accordion-border__control accordion-control-btn h-[60px] px-[15px] py-[18px]"
+        type="button"
+      >
+        Гольф клуб Сколково
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="6"
+          viewBox="0 0 8 6"
+        >
+          <path d="M0,53.333l4,6,4-6Z" transform="translate(0 -53.333)" />
+        </svg>
+      </button>
+
+      <div class="accordion-border__content accordion-content">
+        <div class="accordion-border__inner">
+          <p>Выбрать кабинет</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between mb-[10px]">
+      <div class="flex items-center">
+        <div class="flex flex-col mr-[20px]">
+          <span class="text-xl">Перевод</span>
+          <span>Указать период</span>
+        </div>
+        <label class="radio">
+          <input class="radio__input" name="lock" type="radio" checked />
+          <span class="radio__box"></span>
+        </label>
+      </div>
+      <label class="switch flex-shrink-0" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+
+    <div class="grid grid-cols-2 gap-[20px] text-gray leading-none mb-[20px]">
+      <div class="flex flex-col items-start">
+        <p class="leading-none mb-1">Начало периода</p>
+        <div class="grid grid-cols-[0.8fr_1fr] gap-[10px] w-[140px]">
+          <div class="flex flex-col w-[50px]">
+            <label class="mb-[12px]">Время</label>
+            <input
+              class="input-border-bottom text-black text-xl"
+              type="text"
+              value="06:00"
+            />
+          </div>
+          <div class="flex flex-col w-[80px]">
+            <label class="mb-[12px]">Дата</label>
+            <input
+              class="input-border-bottom text-black text-xl"
+              type="text"
+              value="10.03.22"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="font-light text-[32px]">Переход</div>
+      <p class="mb-[20px]">
+        Введите номер ID кабинета нового управляющего. После подтверждения будет
+        произведен переход Кабинета в установленное вами время. Все права и
+        условия на управление перейдут новому владельцу
+      </p>
+
+      <div class="flex items-center mb-[20px]">
+        <img
+          class="w-[60px] h-[60px] object-cover rounded-full mr-[10px]"
+          src="https://images.unsplash.com/photo-1615567964485-0ee76b5b3410?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM0fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+          alt="img"
+        />
+
+        <div class="flex flex-col leading-[1.1]">
+          <span class="text-xl"> Григорий Отрепьев </span>
+          <span>ID: 7579086</span>
+          <span>Управляющий</span>
+        </div>
+      </div>
+      
+      <div class="mb-[20px]">
+        <p class="text-xl">Новый управляющий</p>
+        <p>
+          Кабинет нового управляющего должен быть заполнен, активен и
+          подтвержден модератором сайта
+        </p>
+      </div>
+
+      <form class="text-xl w-full flex flex-col">
+        <input
+          class="input w-full mb-[10px]"
+          type="text"
+          placeholder="Введите ID кабинета …"
+        />
+        <button class="w-full h-[60px] bg-blue rounded-none btn" type="button">
+          Отправить на заверение
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
