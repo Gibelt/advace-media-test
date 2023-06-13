@@ -1639,6 +1639,11 @@ body.no-scroll {
   height: 21px;
 }
 
+.btn-user__letter {
+  font-size: 22px;
+  display: none;
+}
+
 .mobile-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2152,10 +2157,11 @@ body.no-scroll {
 }
 
 .preference__main {
+  display: flex;
+  gap: 10px;
   position: fixed;
   bottom: 33px;
   z-index: 1;
-  min-width: 270px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
