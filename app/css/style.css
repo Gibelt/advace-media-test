@@ -1485,7 +1485,7 @@ body.no-scroll {
   gap: 16px;
 }
 
-.header__text {
+.header__logo {
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -1579,6 +1579,7 @@ body.no-scroll {
   height: 100%;
 }
 .header .btn-notification {
+  display: none;
   width: 25px;
   height: 25px;
   margin-right: 5px;
@@ -1594,6 +1595,7 @@ body.no-scroll {
       flex-shrink: 0;
 }
 .header .btn-golf {
+  display: none;
   width: 25px;
   height: 30px;
   margin-left: 5px;
@@ -1601,6 +1603,7 @@ body.no-scroll {
       flex-shrink: 0;
 }
 .header .btn-menu {
+  display: none;
   width: 22px;
   height: 22px;
   margin-left: 10px;
@@ -2156,7 +2159,7 @@ body.no-scroll {
   margin-bottom: 5px;
 }
 
-.preference__main {
+.quick-buttons__main {
   display: flex;
   gap: 10px;
   position: fixed;
